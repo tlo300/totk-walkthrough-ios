@@ -205,3 +205,68 @@ def test_html_to_markdown_table_cells_on_separate_lines():
     lines = [l.strip() for l in result.splitlines() if l.strip()]
     assert "Item" in lines
     assert "Location" in lines
+
+
+# ── download_images ───────────────────────────────────────────────────────────
+
+@responses_lib.activate
+def test_download_images_saves_file(tmp_path):
+    from scripts.scrape import download_images
+    responses_lib.add(
+        responses_lib.GET,
+        "https://cdn.ign.com/shrine.jpg",
+        body=b"\xff\xd8\xff\xe0fake",
+        content_type="image/jpeg",
+    )
+    session = requests.Session()
+    html = '<img src="https://cdn.ign.com/shrine.jpg" />'
+    download_images(session, html, tmp_path, delay=0)
+    assert (tmp_path / "image-001.jpg").exists()
+
+
+@responses_lib.activate
+def test_download_images_rewrites_src(tmp_path):
+    from scripts.scrape import download_images
+    responses_lib.add(
+        responses_lib.GET,
+        "https://cdn.ign.com/img1.jpg",
+        body=b"fakejpeg",
+        content_type="image/jpeg",
+    )
+    responses_lib.add(
+        responses_lib.GET,
+        "https://cdn.ign.com/img2.png",
+        body=b"fakepng",
+        content_type="image/png",
+    )
+    session = requests.Session()
+    html = '<p><img src="https://cdn.ign.com/img1.jpg"/><img src="https://cdn.ign.com/img2.png"/></p>'
+    result = download_images(session, html, tmp_path, delay=0)
+    assert 'src="image-001.jpg"' in result
+    assert 'src="image-002.png"' in result
+    assert "cdn.ign.com" not in result
+
+
+@responses_lib.activate
+def test_download_images_sequential_naming(tmp_path):
+    from scripts.scrape import download_images
+    for i in range(1, 4):
+        responses_lib.add(
+            responses_lib.GET,
+            f"https://cdn.ign.com/img{i}.jpg",
+            body=b"fake",
+        )
+    session = requests.Session()
+    html = "".join(f'<img src="https://cdn.ign.com/img{i}.jpg"/>' for i in range(1, 4))
+    download_images(session, html, tmp_path, delay=0)
+    assert (tmp_path / "image-001.jpg").exists()
+    assert (tmp_path / "image-002.jpg").exists()
+    assert (tmp_path / "image-003.jpg").exists()
+
+
+def test_download_images_no_images_returns_unchanged_html(tmp_path):
+    from scripts.scrape import download_images
+    session = requests.Session()
+    html = "<p>No images here.</p>"
+    result = download_images(session, html, tmp_path, delay=0)
+    assert result == html

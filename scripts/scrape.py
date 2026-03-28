@@ -109,3 +109,40 @@ def html_to_markdown(html: str) -> str:
     converter.body_width = 0  # no line wrapping
 
     return converter.handle(str(soup)).strip()
+
+
+def download_images(
+    session: requests.Session,
+    content_html: str,
+    out_dir: Path,
+    delay: float,
+) -> str:
+    """Download all images referenced in content_html into out_dir.
+
+    Images are renamed image-001.ext, image-002.ext, etc. Returns modified
+    HTML with src attributes updated to the new filenames.
+    """
+    soup = BeautifulSoup(content_html, "html.parser")
+    images = soup.find_all("img")
+    if not images:
+        return content_html
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for i, img in enumerate(images, start=1):
+        src = img.get("src", "").strip()
+        if not src:
+            continue
+        ext = Path(urlparse(src).path).suffix or ".jpg"
+        filename = f"image-{i:03d}{ext}"
+        time.sleep(delay)
+        try:
+            resp = session.get(src, headers={"User-Agent": "TOTK-Walkthrough-Scraper/1.0"}, timeout=30)
+            resp.raise_for_status()
+            (out_dir / filename).write_bytes(resp.content)
+            print(f"  Saved: {filename}")
+        except Exception as exc:
+            print(f"  WARNING: could not download {src}: {exc}")
+            continue
+        img["src"] = filename
+
+    return str(soup)
