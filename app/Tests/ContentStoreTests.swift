@@ -40,6 +40,21 @@ final class ContentStoreTests: XCTestCase {
         XCTAssertThrowsError(try store.contentBlocks(for: missing))
     }
 
+    func test_load_populatesShrines() async throws {
+        let store = ContentStore(contentURL: fixturesURL)
+        try await store.load()
+        XCTAssertEqual(store.shrines.count, 1)
+        XCTAssertEqual(store.shrines[0].slug, "test-shrine")
+    }
+
+    func test_contentBlocks_returnsBlocksForShrine() async throws {
+        let store = ContentStore(contentURL: fixturesURL)
+        try await store.load()
+        let shrine = store.shrines[0]
+        let blocks = try store.contentBlocks(for: shrine)
+        XCTAssertFalse(blocks.isEmpty)
+    }
+
     func test_questType_shrine_decodesCorrectly() throws {
         let json = #"{"slug":"s","title":"S","type":"shrine"}"#
         let quest = try JSONDecoder().decode(Quest.self, from: Data(json.utf8))
