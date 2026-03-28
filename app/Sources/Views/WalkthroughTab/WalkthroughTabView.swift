@@ -4,13 +4,13 @@ import SwiftUI
 struct WalkthroughTabView: View {
     @EnvironmentObject private var contentStore: ContentStore
     @EnvironmentObject private var progressStore: ProgressStore
+    @EnvironmentObject private var themeManager: ThemeManager
+    @State private var showingSettings = false
 
     private var completionFraction: Double {
         let total = contentStore.quests.count
         guard total > 0 else { return 0 }
-        let done = contentStore.quests.filter { quest in
-            isQuestComplete(quest)
-        }.count
+        let done = contentStore.quests.filter { isQuestComplete($0) }.count
         return Double(done) / Double(total)
     }
 
@@ -31,34 +31,60 @@ struct WalkthroughTabView: View {
                         HStack {
                             Text("Main Quest Progress")
                                 .font(.subheadline.weight(.semibold))
+                                .foregroundStyle(themeManager.colors.primaryText)
                             Spacer()
                             Text("\(Int(completionFraction * Double(contentStore.quests.count))) / \(contentStore.quests.count)")
                                 .font(.subheadline)
-                                .foregroundColor(.green)
+                                .foregroundStyle(themeManager.colors.accent)
                         }
                         ProgressView(value: completionFraction)
-                            .tint(.green)
+                            .tint(themeManager.colors.progressFill)
                     }
                     .padding(.vertical, 4)
+                    .listRowBackground(themeManager.colors.cardBackground)
 
                     BookmarkCard(quests: contentStore.quests)
+                        .listRowBackground(themeManager.colors.cardBackground)
                 }
 
-                Section("Quest Order") {
+                Section {
                     ForEach(contentStore.quests) { quest in
                         NavigationLink(destination: QuestDetailView(quest: quest)) {
                             HStack(spacing: 12) {
                                 Image(systemName: isQuestComplete(quest) ? "checkmark.circle.fill" : "circle")
-                                    .foregroundColor(isQuestComplete(quest) ? .green : .secondary)
+                                    .foregroundStyle(isQuestComplete(quest) ? themeManager.colors.checkpointDone : themeManager.colors.secondaryText)
                                 Text(quest.title)
-                                    .foregroundColor(isQuestComplete(quest) ? .secondary : .primary)
+                                    .foregroundStyle(isQuestComplete(quest) ? themeManager.colors.secondaryText : themeManager.colors.primaryText)
                                     .strikethrough(isQuestComplete(quest))
                             }
                         }
+                        .listRowBackground(themeManager.colors.cardBackground)
+                    }
+                } header: {
+                    Text("Quest Order")
+                        .foregroundStyle(themeManager.colors.sectionLabel)
+                }
+            }
+            .scrollContentBackground(.hidden)
+            .background(themeManager.colors.background)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Walkthrough")
+                        .font(themeManager.headingFont(size: 20))
+                        .foregroundStyle(themeManager.colors.accent)
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button { showingSettings = true } label: {
+                        Image(systemName: "gearshape")
+                            .foregroundStyle(themeManager.colors.accent)
                     }
                 }
             }
-            .navigationTitle("Walkthrough")
+            .toolbarBackground(themeManager.colors.navBackground, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .sheet(isPresented: $showingSettings) {
+                SettingsSheet().environmentObject(themeManager)
+            }
         }
     }
 }
