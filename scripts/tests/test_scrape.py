@@ -142,3 +142,57 @@ def test_extract_content_html_returns_empty_string_when_selector_missing():
     from scripts.scrape import extract_content_html
     result = extract_content_html("<html><body><p>hi</p></body></html>", "div.missing")
     assert result == ""
+
+
+# ── html_to_markdown ──────────────────────────────────────────────────────────
+
+def test_html_to_markdown_paragraph():
+    from scripts.scrape import html_to_markdown
+    result = html_to_markdown("<p>Enter the shrine and interact.</p>")
+    assert "Enter the shrine and interact." in result
+
+
+def test_html_to_markdown_h2_heading():
+    from scripts.scrape import html_to_markdown
+    result = html_to_markdown("<h2>Walkthrough</h2><p>Some text.</p>")
+    assert "## Walkthrough" in result
+
+
+def test_html_to_markdown_h3_heading():
+    from scripts.scrape import html_to_markdown
+    result = html_to_markdown("<h3>Puzzle 1</h3><p>Details.</p>")
+    assert "### Puzzle 1" in result
+
+
+def test_html_to_markdown_image_no_alt_text():
+    from scripts.scrape import html_to_markdown
+    result = html_to_markdown('<img src="image-001.jpeg" alt="A shrine interior" />')
+    assert "![](image-001.jpeg)" in result
+    assert "A shrine interior" not in result
+
+
+def test_html_to_markdown_image_no_alt_attribute():
+    from scripts.scrape import html_to_markdown
+    result = html_to_markdown('<img src="image-002.jpeg" />')
+    assert "![](image-002.jpeg)" in result
+
+
+def test_html_to_markdown_table_plain_text_no_pipes():
+    from scripts.scrape import html_to_markdown
+    html = """<table>
+      <tr><th>Item</th><th>Location</th></tr>
+      <tr><td>Bow</td><td>Chest</td></tr>
+    </table>"""
+    result = html_to_markdown(html)
+    assert "Item" in result
+    assert "Location" in result
+    assert "Bow" in result
+    assert "Chest" in result
+    assert "|" not in result  # no markdown table pipe syntax
+
+
+def test_html_to_markdown_strips_links():
+    from scripts.scrape import html_to_markdown
+    result = html_to_markdown('<p>See <a href="https://example.com">this page</a>.</p>')
+    assert "this page" in result
+    assert "https://example.com" not in result

@@ -72,3 +72,37 @@ def extract_content_html(html: str, selector: str) -> str:
     soup = BeautifulSoup(html, "html.parser")
     el = soup.select_one(selector)
     return str(el) if el else ""
+
+
+def html_to_markdown(html: str) -> str:
+    """Convert content area HTML to Markdown per spec rules.
+
+    - Paragraphs and headings are preserved as Markdown
+    - Images become ![](src) — alt text is stripped
+    - Tables become plain text (each cell on its own line, rows separated by blank lines)
+    - Links are stripped (text preserved, URLs removed)
+    """
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Convert tables to plain text before passing to html2text
+    for table in soup.find_all("table"):
+        rows = []
+        for tr in table.find_all("tr"):
+            cells = [cell.get_text(strip=True) for cell in tr.find_all(["td", "th"])]
+            non_empty = [c for c in cells if c]
+            if non_empty:
+                rows.append("\n".join(non_empty))
+        replacement = soup.new_tag("div")
+        replacement.string = "\n\n".join(rows)
+        table.replace_with(replacement)
+
+    # Strip alt attributes so html2text outputs ![](src) with no alt text
+    for img in soup.find_all("img"):
+        img.attrs.pop("alt", None)
+
+    converter = html2text_lib.HTML2Text()
+    converter.ignore_links = True
+    converter.ignore_images = False
+    converter.body_width = 0  # no line wrapping
+
+    return converter.handle(str(soup)).strip()
