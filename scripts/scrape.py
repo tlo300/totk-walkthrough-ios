@@ -176,6 +176,9 @@ def scrape(config_path: Path) -> None:
     # 1. Fetch index page and collect item links
     index_html = _fetch(session, index_url, delay=0).text
     items = collect_items(index_html, item_links_selector, base_url)
+    # Deduplicate by URL — index pages sometimes link the same page multiple times
+    seen: set[str] = set()
+    items = [(t, u) for t, u in items if not (u in seen or seen.add(u))]  # type: ignore[func-returns-value]
     print(f"Found {len(items)} items on index page.")
 
     index_entries: list[dict] = []
