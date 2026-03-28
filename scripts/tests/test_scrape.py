@@ -68,3 +68,25 @@ def test_collect_items_ignores_non_matching_links():
     items = collect_items(_INDEX_HTML, "a[data-cy='styled-link']", "https://www.ign.com")
     urls = [u for _, u in items]
     assert not any("Other" in u for u in urls)
+
+
+# ── slugify_url ───────────────────────────────────────────────────────────────
+
+def test_slugify_url_basic():
+    from scripts.scrape import slugify_url
+    assert slugify_url("https://www.ign.com/wikis/totk/Ukouh_Shrine") == "ukouh-shrine"
+
+
+def test_slugify_url_underscores_become_hyphens():
+    from scripts.scrape import slugify_url
+    assert slugify_url("https://www.ign.com/wikis/totk/Gutanbac_Shrine") == "gutanbac-shrine"
+
+
+def test_slugify_url_already_hyphenated():
+    from scripts.scrape import slugify_url
+    assert slugify_url("https://www.ign.com/wikis/totk/side-quests") == "side-quests"
+
+
+def test_slugify_url_lowercases():
+    from scripts.scrape import slugify_url
+    assert slugify_url("https://www.ign.com/wikis/totk/BIGNAME") == "bigname"

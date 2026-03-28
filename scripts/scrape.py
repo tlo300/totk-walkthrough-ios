@@ -47,3 +47,13 @@ def collect_items(html: str, selector: str, base_url: str) -> list[tuple[str, st
         absolute_url = urljoin(base_url, href)
         items.append((title, absolute_url))
     return items
+
+
+def slugify_url(url: str) -> str:
+    """Derive a slug from the final path segment of a URL.
+
+    "https://www.ign.com/wikis/totk/Ukouh_Shrine" → "ukouh-shrine"
+    """
+    path = urlparse(url).path
+    stem = PurePosixPath(path).name
+    return stem.lower().replace("_", "-")
