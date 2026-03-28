@@ -10,17 +10,8 @@ struct WalkthroughTabView: View {
     private var completionFraction: Double {
         let total = contentStore.quests.count
         guard total > 0 else { return 0 }
-        let done = contentStore.quests.filter { isQuestComplete($0) }.count
+        let done = contentStore.quests.filter { progressStore.isQuestComplete($0.slug) }.count
         return Double(done) / Double(total)
-    }
-
-    private func isQuestComplete(_ quest: Quest) -> Bool {
-        guard let blocks = try? contentStore.contentBlocks(for: quest) else { return false }
-        let checkpointIDs = blocks.compactMap { block -> String? in
-            if case .checkpoint(let id, _) = block { return id }
-            return nil
-        }
-        return !checkpointIDs.isEmpty && checkpointIDs.allSatisfy { progressStore.isCheckpointComplete($0) }
     }
 
     var body: some View {
@@ -49,14 +40,31 @@ struct WalkthroughTabView: View {
 
                 Section {
                     ForEach(contentStore.quests) { quest in
-                        NavigationLink(destination: QuestDetailView(quest: quest)) {
-                            HStack(spacing: 12) {
-                                Image(systemName: isQuestComplete(quest) ? "checkmark.circle.fill" : "circle")
-                                    .foregroundStyle(isQuestComplete(quest) ? themeManager.colors.checkpointDone : themeManager.colors.secondaryText)
-                                Text(quest.title)
-                                    .foregroundStyle(isQuestComplete(quest) ? themeManager.colors.secondaryText : themeManager.colors.primaryText)
-                                    .strikethrough(isQuestComplete(quest))
+                        HStack(spacing: 12) {
+                            Button {
+                                progressStore.toggleQuest(quest.slug)
+                            } label: {
+                                Image(systemName: progressStore.isQuestComplete(quest.slug) ? "checkmark.circle.fill" : "circle")
+                                    .foregroundStyle(progressStore.isQuestComplete(quest.slug) ? themeManager.colors.checkpointDone : themeManager.colors.secondaryText)
                             }
+                            .buttonStyle(.plain)
+
+                            NavigationLink(destination: QuestDetailView(quest: quest)) {
+                                Text(quest.title)
+                                    .foregroundStyle(progressStore.isQuestComplete(quest.slug) ? themeManager.colors.secondaryText : themeManager.colors.primaryText)
+                                    .strikethrough(progressStore.isQuestComplete(quest.slug))
+                            }
+                        }
+                        .swipeActions(edge: .leading) {
+                            Button {
+                                progressStore.toggleQuest(quest.slug)
+                            } label: {
+                                Label(
+                                    progressStore.isQuestComplete(quest.slug) ? "Undo" : "Done",
+                                    systemImage: progressStore.isQuestComplete(quest.slug) ? "arrow.uturn.backward" : "checkmark"
+                                )
+                            }
+                            .tint(progressStore.isQuestComplete(quest.slug) ? .gray : .green)
                         }
                         .listRowBackground(themeManager.colors.cardBackground)
                     }
