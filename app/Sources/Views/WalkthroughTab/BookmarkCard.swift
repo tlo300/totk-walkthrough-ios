@@ -4,6 +4,7 @@ import SwiftUI
 struct BookmarkCard: View {
     let quests: [Quest]
     @EnvironmentObject private var progressStore: ProgressStore
+    @EnvironmentObject private var themeManager: ThemeManager
 
     private var currentQuest: Quest? {
         guard let slug = progressStore.bookmark?.questSlug else { return nil }
@@ -15,19 +16,23 @@ struct BookmarkCard: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Currently On")
                     .font(.caption.weight(.semibold))
-                    .foregroundColor(.yellow)
+                    .foregroundStyle(themeManager.colors.accent)
                     .textCase(.uppercase)
                 Text(quest.title)
                     .font(.headline)
-                    .foregroundColor(.primary)
+                    .foregroundStyle(themeManager.colors.primaryText)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(12)
-            .background(Color(.secondarySystemBackground))
+            .background(themeManager.colors.cardBackground)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color.yellow.opacity(0.6), lineWidth: 1)
+                    .strokeBorder(themeManager.colors.cardBorder, lineWidth: 1)
+            )
+            .shadow(
+                color: themeManager.colors.glow ?? .clear,
+                radius: 4, x: 0, y: 0
             )
         }
     }
