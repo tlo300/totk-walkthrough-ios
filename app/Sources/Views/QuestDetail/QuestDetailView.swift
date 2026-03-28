@@ -11,7 +11,12 @@ struct QuestDetailView: View {
     @State private var loadError: String?
 
     private var questContentURL: URL {
-        let folder = quest.type == .main ? "quests" : "side-quests"
+        let folder: String
+        switch quest.type {
+        case .main: folder = "quests"
+        case .side: folder = "side-quests"
+        case .shrine: folder = "shrines"
+        }
         return contentStore.contentURL
             .appendingPathComponent(folder)
             .appendingPathComponent(quest.slug)
