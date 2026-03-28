@@ -30,15 +30,15 @@ jobs:
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO
 
-      - name: Export IPA (unsigned)
+      - name: Package IPA (unsigned)
         run: |
-          xcodebuild -exportArchive \
-            -archivePath build/TOTKWalkthrough.xcarchive \
-            -exportPath build/ipa \
-            -exportOptionsPlist scripts/export-options.plist
+          mkdir -p build/ipa/Payload
+          cp -r build/TOTKWalkthrough.xcarchive/Products/Applications/TOTKWalkthrough.app \
+            build/ipa/Payload/TOTKWalkthrough.app
+          cd build/ipa && zip -r TOTKWalkthrough.ipa Payload/
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
           name: TOTKWalkthrough-unsigned
-          path: build/ipa/*.ipa
+          path: build/ipa/TOTKWalkthrough.ipa
