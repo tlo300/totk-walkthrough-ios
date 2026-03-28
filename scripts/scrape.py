@@ -29,3 +29,21 @@ def load_config(path: Path) -> dict:
     if missing:
         raise ValueError(f"Missing required config fields: {sorted(missing)}")
     return cfg
+
+
+def collect_items(html: str, selector: str, base_url: str) -> list[tuple[str, str]]:
+    """Parse the index page HTML and return (title, absolute_url) pairs.
+
+    Only links matching selector are returned. Relative hrefs are resolved
+    against base_url (e.g. "https://www.ign.com").
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    items = []
+    for a in soup.select(selector):
+        href = a.get("href", "").strip()
+        if not href:
+            continue
+        title = a.get_text(strip=True)
+        absolute_url = urljoin(base_url, href)
+        items.append((title, absolute_url))
+    return items

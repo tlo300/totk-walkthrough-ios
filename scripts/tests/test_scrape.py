@@ -31,3 +31,40 @@ def test_load_config_missing_field_raises(tmp_path):
     cfg_file.write_text("index_url: https://example.com\n")
     with pytest.raises(ValueError, match="Missing required config fields"):
         load_config(cfg_file)
+
+
+# ── collect_items ─────────────────────────────────────────────────────────────
+
+_INDEX_HTML = """
+<html><body>
+  <a data-cy="styled-link" href="/wikis/totk/Ukouh_Shrine">Ukouh Shrine</a>
+  <a data-cy="styled-link" href="/wikis/totk/Gutanbac_Shrine">Gutanbac Shrine</a>
+  <a href="/wikis/totk/Other">Should be ignored</a>
+</body></html>
+"""
+
+def test_collect_items_returns_correct_count():
+    from scripts.scrape import collect_items
+    items = collect_items(_INDEX_HTML, "a[data-cy='styled-link']", "https://www.ign.com")
+    assert len(items) == 2
+
+
+def test_collect_items_titles():
+    from scripts.scrape import collect_items
+    items = collect_items(_INDEX_HTML, "a[data-cy='styled-link']", "https://www.ign.com")
+    assert items[0][0] == "Ukouh Shrine"
+    assert items[1][0] == "Gutanbac Shrine"
+
+
+def test_collect_items_absolute_urls():
+    from scripts.scrape import collect_items
+    items = collect_items(_INDEX_HTML, "a[data-cy='styled-link']", "https://www.ign.com")
+    assert items[0][1] == "https://www.ign.com/wikis/totk/Ukouh_Shrine"
+    assert items[1][1] == "https://www.ign.com/wikis/totk/Gutanbac_Shrine"
+
+
+def test_collect_items_ignores_non_matching_links():
+    from scripts.scrape import collect_items
+    items = collect_items(_INDEX_HTML, "a[data-cy='styled-link']", "https://www.ign.com")
+    urls = [u for _, u in items]
+    assert not any("Other" in u for u in urls)
