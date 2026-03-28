@@ -57,3 +57,17 @@ def slugify_url(url: str) -> str:
     path = urlparse(url).path
     stem = PurePosixPath(path).name
     return stem.lower().replace("_", "-")
+
+
+def extract_title(html: str, selector: str, fallback: str) -> str:
+    """Extract the page title using selector, or return fallback if not found."""
+    soup = BeautifulSoup(html, "html.parser")
+    el = soup.select_one(selector)
+    return el.get_text(strip=True) if el else fallback
+
+
+def extract_content_html(html: str, selector: str) -> str:
+    """Return the outer HTML of the first element matching selector, or "" if not found."""
+    soup = BeautifulSoup(html, "html.parser")
+    el = soup.select_one(selector)
+    return str(el) if el else ""

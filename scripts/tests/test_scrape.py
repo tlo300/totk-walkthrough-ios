@@ -90,3 +90,50 @@ def test_slugify_url_already_hyphenated():
 def test_slugify_url_lowercases():
     from scripts.scrape import slugify_url
     assert slugify_url("https://www.ign.com/wikis/totk/BIGNAME") == "bigname"
+
+
+# ── extract_title / extract_content_html ──────────────────────────────────────
+
+_DETAIL_HTML = """
+<html><body>
+  <h1>Ukouh Shrine</h1>
+  <div class="wiki-page-container">
+    <section class="wiki-section wiki-html">
+      <h2>Walkthrough</h2>
+      <p>Enter the shrine and interact with the Steward Construct.</p>
+    </section>
+    <section class="wiki-section wiki-html">
+      <p>Use Ultrahand to lift the stone slab.</p>
+    </section>
+  </div>
+  <div class="sidebar">Should not appear in output</div>
+</body></html>
+"""
+
+def test_extract_title_from_selector():
+    from scripts.scrape import extract_title
+    assert extract_title(_DETAIL_HTML, "h1", "fallback") == "Ukouh Shrine"
+
+
+def test_extract_title_falls_back_when_selector_missing():
+    from scripts.scrape import extract_title
+    assert extract_title(_DETAIL_HTML, "h99", "fallback title") == "fallback title"
+
+
+def test_extract_content_html_returns_container_html():
+    from scripts.scrape import extract_content_html
+    result = extract_content_html(_DETAIL_HTML, "div.wiki-page-container")
+    assert "Enter the shrine" in result
+    assert "Use Ultrahand" in result
+
+
+def test_extract_content_html_excludes_outside_elements():
+    from scripts.scrape import extract_content_html
+    result = extract_content_html(_DETAIL_HTML, "div.wiki-page-container")
+    assert "Should not appear in output" not in result
+
+
+def test_extract_content_html_returns_empty_string_when_selector_missing():
+    from scripts.scrape import extract_content_html
+    result = extract_content_html("<html><body><p>hi</p></body></html>", "div.missing")
+    assert result == ""
