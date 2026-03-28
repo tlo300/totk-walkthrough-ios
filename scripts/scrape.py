@@ -6,6 +6,7 @@ Usage:
 from __future__ import annotations
 
 import json
+import re
 import time
 from pathlib import Path, PurePosixPath
 from urllib.parse import urljoin, urlparse
@@ -57,7 +58,9 @@ def slugify_url(url: str) -> str:
     """
     path = urlparse(url).path.rstrip("/")
     stem = PurePosixPath(path).name
-    return stem.lower().replace("_", "-")
+    slug = stem.lower().replace("_", "-")
+    # Strip characters that are invalid in Windows directory names
+    return re.sub(r'[<>:"/\\|?*]', "", slug)
 
 
 def extract_title(html: str, selector: str, fallback: str) -> str:
@@ -130,7 +133,7 @@ def download_images(
     out_dir.mkdir(parents=True, exist_ok=True)
     for i, img in enumerate(images, start=1):
         src = img.get("src", "").strip()
-        if not src:
+        if not src or src.startswith("data:"):
             continue
         ext = Path(urlparse(src).path).suffix or ".jpg"
         filename = f"image-{i:03d}{ext}"
