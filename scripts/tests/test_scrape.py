@@ -92,6 +92,11 @@ def test_slugify_url_lowercases():
     assert slugify_url("https://www.ign.com/wikis/totk/BIGNAME") == "bigname"
 
 
+def test_slugify_url_trailing_slash():
+    from scripts.scrape import slugify_url
+    assert slugify_url("https://www.ign.com/wikis/totk/Ukouh_Shrine/") == "ukouh-shrine"
+
+
 # ── extract_title / extract_content_html ──────────────────────────────────────
 
 _DETAIL_HTML = """

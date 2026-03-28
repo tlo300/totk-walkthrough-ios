@@ -53,8 +53,9 @@ def slugify_url(url: str) -> str:
     """Derive a slug from the final path segment of a URL.
 
     "https://www.ign.com/wikis/totk/Ukouh_Shrine" → "ukouh-shrine"
+    Trailing slashes are stripped before extraction.
     """
-    path = urlparse(url).path
+    path = urlparse(url).path.rstrip("/")
     stem = PurePosixPath(path).name
     return stem.lower().replace("_", "-")
 
