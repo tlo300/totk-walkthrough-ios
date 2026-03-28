@@ -158,7 +158,7 @@ def _fetch(session: requests.Session, url: str, delay: float) -> requests.Respon
     return resp
 
 
-def scrape(config_path: Path) -> None:
+def scrape(config_path: Path, limit: int | None = None) -> None:
     """Run the full scrape pipeline defined by a YAML config file."""
     cfg = load_config(config_path)
     index_url: str = cfg["index_url"]
@@ -179,6 +179,8 @@ def scrape(config_path: Path) -> None:
     # Deduplicate by URL — index pages sometimes link the same page multiple times
     seen: set[str] = set()
     items = [(t, u) for t, u in items if not (u in seen or seen.add(u))]  # type: ignore[func-returns-value]
+    if limit:
+        items = items[:limit]
     print(f"Found {len(items)} items on index page.")
 
     index_entries: list[dict] = []
@@ -224,7 +226,9 @@ def scrape(config_path: Path) -> None:
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) != 2:
-        print("Usage: python -m scripts.scrape <config.yaml>")
-        sys.exit(1)
-    scrape(Path(sys.argv[1]))
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("config", type=Path)
+    parser.add_argument("--limit", type=int, default=None, help="Only scrape the first N items")
+    args = parser.parse_args()
+    scrape(args.config, limit=args.limit)
