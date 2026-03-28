@@ -287,7 +287,7 @@ def test_download_images_skips_failed_download(tmp_path):
     # File should NOT be saved
     assert not list(tmp_path.glob("image-*.jpg"))
     # The src should remain unchanged (download failed, no local file to point to)
-    assert "broken.jpg" in result or "cdn.ign.com" in result
+    assert "cdn.ign.com/broken.jpg" in result
 
 
 # ── scrape (integration) ──────────────────────────────────────────────────────
@@ -366,3 +366,24 @@ def test_scrape_skips_existing_items(tmp_path):
 
     # content.md must be untouched
     assert (output_dir / "ukouh-shrine" / "content.md").read_text() == "pre-existing"
+
+    # Skipped items must still appear in index.json (resumability invariant)
+    assert (output_dir / "index.json").exists()
+    idx = json.loads((output_dir / "index.json").read_text())
+    assert any(q["slug"] == "ukouh-shrine" for q in idx["quests"])
+
+
+@responses_lib.activate
+def test_scrape_skips_item_on_detail_fetch_error(tmp_path):
+    from scripts.scrape import scrape
+    output_dir = tmp_path / "output"
+    cfg = _write_config(tmp_path, output_dir)
+    responses_lib.add(responses_lib.GET, "https://www.ign.com/wikis/totk/Shrines", body=_INDEX_PAGE)
+    responses_lib.add(responses_lib.GET, "https://www.ign.com/wikis/totk/Ukouh_Shrine", status=500)
+    # Should not raise — failed detail fetch is logged and skipped
+    scrape(cfg)
+    # content.md should NOT be created for the failed item
+    assert not (output_dir / "ukouh-shrine" / "content.md").exists()
+    # The item should NOT appear in index.json (it was skipped, not just resumable)
+    idx = json.loads((output_dir / "index.json").read_text())
+    assert not any(q["slug"] == "ukouh-shrine" for q in idx["quests"])

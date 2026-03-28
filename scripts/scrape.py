@@ -142,6 +142,7 @@ def download_images(
             print(f"  Saved: {filename}")
         except Exception as exc:
             print(f"  WARNING: could not download {src}: {exc}")
+            # Leave img["src"] unchanged — original URL stays in Markdown as best-effort fallback
             continue
         img["src"] = filename
 
