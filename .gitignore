@@ -24,3 +24,6 @@ DerivedData/
 
 # Environment files
 .env
+
+# Git worktrees (local only)
+.worktrees/
