@@ -1,0 +1,17 @@
+{
+  "quests": [
+    {
+      "id": 1,
+      "slug": "ukouh-shrine",
+      "title": "Ukouh Shrine",
+      "type": "shrine"
+    },
+    {
+      "id": 2,
+      "slug": "in-isa-shrine",
+      "title": "In-isa Shrine",
+      "type": "shrine"
+    }
+  ],
+  "sideQuests": []
+}
