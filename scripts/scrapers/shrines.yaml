@@ -1,0 +1,7 @@
+index_url: "https://www.ign.com/wikis/the-legend-of-zelda-tears-of-the-kingdom/All_Shrine_Locations_and_Solutions"
+content_type: "shrine"
+output_dir: "app/Resources/Content/shrines"
+item_links: "a[data-cy='styled-link']"
+title_selector: "h1"
+content_area: "div.wiki-page-container"
+delay_seconds: 1.5
