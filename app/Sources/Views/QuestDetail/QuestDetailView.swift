@@ -42,6 +42,14 @@ struct QuestDetailView: View {
                     .foregroundStyle(themeManager.colors.accent)
                     .lineLimit(1)
             }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    progressStore.toggleQuest(quest.slug)
+                } label: {
+                    Image(systemName: progressStore.isQuestComplete(quest.slug) ? "checkmark.circle.fill" : "circle")
+                        .foregroundStyle(progressStore.isQuestComplete(quest.slug) ? themeManager.colors.checkpointDone : themeManager.colors.accent)
+                }
+            }
         }
         .toolbarBackground(themeManager.colors.navBackground, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
