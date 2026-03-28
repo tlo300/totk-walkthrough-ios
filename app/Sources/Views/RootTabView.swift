@@ -2,6 +2,8 @@
 import SwiftUI
 
 struct RootTabView: View {
+    @EnvironmentObject private var themeManager: ThemeManager
+
     var body: some View {
         TabView {
             WalkthroughTabView()
@@ -21,5 +23,6 @@ struct RootTabView: View {
                     Label("Progress", systemImage: "chart.bar")
                 }
         }
+        .tint(themeManager.colors.tabActive)
     }
 }

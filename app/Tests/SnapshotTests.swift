@@ -9,6 +9,7 @@ final class SnapshotTests: XCTestCase {
     // Shared fixture stores
     private var contentStore: ContentStore!
     private var progressStore: ProgressStore!
+    private var themeManager: ThemeManager!
 
     override func setUpWithError() throws {
         let fixturesURL = Bundle(for: type(of: self)).bundleURL
@@ -16,6 +17,7 @@ final class SnapshotTests: XCTestCase {
             .appendingPathComponent("Fixtures")
         contentStore = ContentStore(contentURL: fixturesURL)
         progressStore = ProgressStore(defaults: UserDefaults(suiteName: UUID().uuidString)!)
+        themeManager = ThemeManager()
     }
 
     private func snapshotView<V: View>(_ view: V, named name: String, record: Bool = false) {
@@ -23,6 +25,7 @@ final class SnapshotTests: XCTestCase {
             view
                 .environmentObject(contentStore)
                 .environmentObject(progressStore)
+                .environmentObject(themeManager)
                 .preferredColorScheme(.dark)
         )
         vc.view.frame = CGRect(x: 0, y: 0, width: 390, height: 844) // iPhone 14 size
