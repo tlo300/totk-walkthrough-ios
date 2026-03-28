@@ -1,0 +1,44 @@
+name: Build IPA
+
+on:
+  workflow_dispatch:
+    inputs:
+      model_variant:
+        description: "Model variant (unused currently, reserved for future)"
+        required: false
+        default: "1B"
+
+jobs:
+  build-ipa:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install xcodegen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build archive
+        run: |
+          xcodebuild archive \
+            -scheme TOTKWalkthrough \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/TOTKWalkthrough.xcarchive \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Export IPA (unsigned)
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath build/TOTKWalkthrough.xcarchive \
+            -exportPath build/ipa \
+            -exportOptionsPlist scripts/export-options.plist
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TOTKWalkthrough-unsigned
+          path: build/ipa/*.ipa
