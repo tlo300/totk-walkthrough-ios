@@ -21,7 +21,7 @@ jobs:
       - run: python -m pytest scripts/tests/ -v --cov=scripts --cov-report=term-missing
 
   ios-tests:
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
 
