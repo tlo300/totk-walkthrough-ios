@@ -16,7 +16,7 @@ targets:
     sources:
       - app/Sources
     resources:
-      - path: app/Resources
+      - path: app/Resources/Content
         buildPhase: resources
     info:
       path: app/Info.plist
