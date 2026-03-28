@@ -1,0 +1,8 @@
+{
+  "quests": [
+    { "slug": "test-quest", "title": "Test Quest", "type": "main" }
+  ],
+  "sideQuests": [
+    { "slug": "test-side", "title": "Test Side Quest", "type": "side" }
+  ]
+}

@@ -1,0 +1,9 @@
+// ModelConfig.swift — Central configuration constants. All tuneable values live here.
+import Foundation
+
+enum ModelConfig {
+    static let contentBundlePath = "Content"
+    static let questOrderFilename = "quest-order.json"
+    static let progressStoreKey = "com.totk.progress"
+    static let progressBookmarkKey = "com.totk.bookmark"
+}
