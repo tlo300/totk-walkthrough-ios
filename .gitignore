@@ -1,5 +1,5 @@
 # Word source docs — never committed
-content/
+/content/
 
 # Claude Code local settings (machine-specific)
 .claude/settings.local.json

@@ -1,0 +1,175 @@
+{
+  "quests": [
+    {
+      "slug": "prologue---beneath-hyrule-castle",
+      "title": "Prologue - Beneath Hyrule Castle",
+      "type": "main"
+    },
+    {
+      "slug": "great-sky-island---find-princess-zelda-and-the-closed-door",
+      "title": "Great Sky Island - Find Princess Zelda and The Closed Door",
+      "type": "main"
+    },
+    {
+      "slug": "to-the-kingdom-of-hyrule",
+      "title": "To the Kingdom of Hyrule",
+      "type": "main"
+    },
+    {
+      "slug": "crisis-at-hyrule-castle---find-captain-hoz",
+      "title": "Crisis at Hyrule Castle - Find Captain Hoz",
+      "type": "main"
+    },
+    {
+      "slug": "camera-work-in-the-depths",
+      "title": "Camera Work in the Depths",
+      "type": "main"
+    },
+    {
+      "slug": "to-rito-village",
+      "title": "To Rito Village",
+      "type": "main"
+    },
+    {
+      "slug": "impa-and-the-geoglyphs",
+      "title": "Impa and the Geoglyphs",
+      "type": "main"
+    },
+    {
+      "slug": "the-dragons-tears",
+      "title": "The Dragon’s Tears",
+      "type": "main"
+    },
+    {
+      "slug": "the-forgotten-temple",
+      "title": "The Forgotten Temple",
+      "type": "main"
+    },
+    {
+      "slug": "tulin-of-rito-village",
+      "title": "Tulin of Rito Village",
+      "type": "main"
+    },
+    {
+      "slug": "the-wind-temple",
+      "title": "The Wind Temple",
+      "type": "main"
+    },
+    {
+      "slug": "a-mystery-in-the-depths",
+      "title": "A Mystery in the Depths",
+      "type": "main"
+    },
+    {
+      "slug": "regional-phenomena---to-goron-city",
+      "title": "Regional Phenomena - To Goron City",
+      "type": "main"
+    },
+    {
+      "slug": "yunobo-of-goron-city",
+      "title": "Yunobo of Goron City",
+      "type": "main"
+    },
+    {
+      "slug": "the-fire-temple",
+      "title": "The Fire Temple",
+      "type": "main"
+    },
+    {
+      "slug": "regional-phenomena---to-zoras-domain",
+      "title": "Regional Phenomena - To Zora's Domain",
+      "type": "main"
+    },
+    {
+      "slug": "the-sludge-covered-statue",
+      "title": "The Sludge-Covered Statue",
+      "type": "main"
+    },
+    {
+      "slug": "restoring-the-zora-armor",
+      "title": "Restoring the Zora Armor",
+      "type": "main"
+    },
+    {
+      "slug": "the-broken-slate",
+      "title": "The Broken Slate",
+      "type": "main"
+    },
+    {
+      "slug": "clues-to-the-sky",
+      "title": "Clues to the Sky",
+      "type": "main"
+    },
+    {
+      "slug": "sidon-of-the-zora",
+      "title": "Sidon of the Zora",
+      "type": "main"
+    },
+    {
+      "slug": "the-water-temple",
+      "title": "The Water Temple",
+      "type": "main"
+    },
+    {
+      "slug": "regional-phenomena---to-gerudo-town",
+      "title": "Regional Phenomena - To Gerudo Town",
+      "type": "main"
+    },
+    {
+      "slug": "riju-of-gerudo-town",
+      "title": "Riju of Gerudo Town",
+      "type": "main"
+    },
+    {
+      "slug": "the-lightning-temple",
+      "title": "The Lightning Temple",
+      "type": "main"
+    },
+    {
+      "slug": "crisis-at-hyrule-castle---the-floating-castle",
+      "title": "Crisis at Hyrule Castle - The Floating Castle",
+      "type": "main"
+    },
+    {
+      "slug": "find-the-fifth-sage",
+      "title": "Find the Fifth Sage",
+      "type": "main"
+    },
+    {
+      "slug": "secret-of-the-ring-ruins",
+      "title": "Secret of the Ring Ruins",
+      "type": "main"
+    },
+    {
+      "slug": "guidance-from-ages-past",
+      "title": "Guidance from Ages Past",
+      "type": "main"
+    },
+    {
+      "slug": "trail-of-the-master-sword",
+      "title": "Trail of the Master Sword",
+      "type": "main"
+    },
+    {
+      "slug": "recovering-the-heros-sword",
+      "title": "Recovering the Hero's Sword",
+      "type": "main"
+    },
+    {
+      "slug": "defeat-ganondorf",
+      "title": "Defeat Ganondorf",
+      "type": "main"
+    },
+    {
+      "slug": "side-quests",
+      "title": "Side Quests",
+      "type": "main"
+    },
+    {
+      "slug": "the-dragon-tears-geoflyph-locations",
+      "title": "The Dragon Tears (Geoflyph Locations)",
+      "type": "main"
+    }
+  ],
+  "sideQuests": []
+}
