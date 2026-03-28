@@ -3,13 +3,31 @@
     {
       "id": 1,
       "slug": "ukouh-shrine",
-      "title": "Ukouh Shrine",
+      "title": "Ukouh Shrine Guide",
       "type": "shrine"
     },
     {
       "id": 2,
       "slug": "in-isa-shrine",
-      "title": "In-isa Shrine",
+      "title": "In-isa Shrine Guide",
+      "type": "shrine"
+    },
+    {
+      "id": 3,
+      "slug": "gutanbac-shrine",
+      "title": "Gutanbac Shrine Guide",
+      "type": "shrine"
+    },
+    {
+      "id": 4,
+      "slug": "nachoyah-shrine",
+      "title": "Nachoyah Shrine Guide",
+      "type": "shrine"
+    },
+    {
+      "id": 5,
+      "slug": "yamiyo-shrine",
+      "title": "Yamiyo Shrine Guide",
       "type": "shrine"
     }
   ],
