@@ -131,12 +131,15 @@ def download_images(
         return content_html
 
     out_dir.mkdir(parents=True, exist_ok=True)
-    for i, img in enumerate(images, start=1):
+    counter = 0
+    for img in images:
         src = img.get("src", "").strip()
         if not src or src.startswith("data:"):
+            img.decompose()  # Remove placeholder/tracker images entirely
             continue
+        counter += 1
         ext = Path(urlparse(src).path).suffix or ".jpg"
-        filename = f"image-{i:03d}{ext}"
+        filename = f"image-{counter:03d}{ext}"
         try:
             time.sleep(delay)
             resp = session.get(src, headers={"User-Agent": "TOTK-Walkthrough-Scraper/1.0"}, timeout=30)
@@ -169,6 +172,7 @@ def scrape(config_path: Path, limit: int | None = None) -> None:
     output_dir = Path(cfg["output_dir"])
     item_links_selector: str = cfg["item_links"]
     title_selector: str = cfg.get("title_selector", "h1")
+    title_strip: str = cfg.get("title_strip", "")
     content_area_selector: str = cfg["content_area"]
     delay: float = float(cfg["delay_seconds"])
     parsed = urlparse(index_url)
@@ -206,6 +210,8 @@ def scrape(config_path: Path, limit: int | None = None) -> None:
             continue
 
         title = extract_title(detail_html, title_selector, fallback=link_title)
+        if title_strip and title.endswith(title_strip):
+            title = title[: -len(title_strip)].strip()
         content_html = extract_content_html(detail_html, content_area_selector)
         if not content_html:
             print(f"WARNING: content_area selector '{content_area_selector}' found nothing on {detail_url}")
