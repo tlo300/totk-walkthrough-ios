@@ -32,6 +32,9 @@ __pycache__/
 # Environment files
 .env
 
+# Font files — manually sourced (not committed)
+app/Sources/Resources/Fonts/*.otf
+
 # Git worktrees (local only)
 .worktrees/
 

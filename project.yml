@@ -32,6 +32,8 @@ targets:
         UILaunchScreen: {}
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
+        UIAppFonts:
+          - HyliaSerif.otf
 
   TOTKWalkthroughTests:
     type: bundle.unit-test
