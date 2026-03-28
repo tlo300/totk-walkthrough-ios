@@ -1,0 +1,41 @@
+name: TOTKWalkthrough
+options:
+  bundleIdPrefix: com.totk
+  deploymentTarget:
+    iOS: "18.0"
+
+packages:
+  swift-snapshot-testing:
+    url: https://github.com/pointfreeco/swift-snapshot-testing
+    from: "1.17.0"
+
+targets:
+  TOTKWalkthrough:
+    type: application
+    platform: iOS
+    sources:
+      - app/Sources
+    resources:
+      - path: app/Resources
+        buildPhase: resources
+    info:
+      path: app/Info.plist
+      properties:
+        CFBundleName: TOTKWalkthrough
+        CFBundleDisplayName: TOTK Walkthrough
+        CFBundleIdentifier: com.totk.walkthrough
+        CFBundleVersion: "1"
+        CFBundleShortVersionString: "1.0"
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+
+  TOTKWalkthroughTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - app/Tests
+    dependencies:
+      - target: TOTKWalkthrough
+      - package: swift-snapshot-testing
+        product: SnapshotTesting
