@@ -59,6 +59,7 @@ struct QuestDetailView: View {
     @ViewBuilder
     private var completeButton: some View {
         let isComplete = progressStore.isQuestComplete(quest.slug)
+        let actionLabel = quest.type == .shrine ? "Mark Shrine Complete" : "Mark Quest Complete"
         Button {
             progressStore.toggleQuest(quest.slug)
         } label: {
@@ -66,7 +67,7 @@ struct QuestDetailView: View {
                 if isComplete {
                     Image(systemName: "checkmark.circle.fill")
                 }
-                Text(isComplete ? "Completed" : "Mark Quest Complete")
+                Text(isComplete ? "Completed" : actionLabel)
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 12)
