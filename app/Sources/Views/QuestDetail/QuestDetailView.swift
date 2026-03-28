@@ -5,6 +5,7 @@ struct QuestDetailView: View {
     let quest: Quest
     @EnvironmentObject private var contentStore: ContentStore
     @EnvironmentObject private var progressStore: ProgressStore
+    @EnvironmentObject private var themeManager: ThemeManager
 
     @State private var blocks: [ContentBlock] = []
     @State private var loadError: String?
@@ -21,7 +22,7 @@ struct QuestDetailView: View {
             LazyVStack(alignment: .leading, spacing: 14) {
                 if let error = loadError {
                     Text("Could not load quest content: \(error)")
-                        .foregroundColor(.secondary)
+                        .foregroundStyle(themeManager.colors.secondaryText)
                         .padding()
                 } else {
                     ForEach(Array(blocks.enumerated()), id: \.offset) { _, block in
@@ -31,8 +32,17 @@ struct QuestDetailView: View {
             }
             .padding()
         }
-        .navigationTitle(quest.title)
-        .navigationBarTitleDisplayMode(.large)
+        .background(themeManager.colors.background)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(quest.title)
+                    .font(themeManager.headingFont(size: 18))
+                    .foregroundStyle(themeManager.colors.accent)
+                    .lineLimit(1)
+            }
+        }
+        .toolbarBackground(themeManager.colors.navBackground, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
         .onAppear { loadBlocks() }
     }
 
@@ -43,11 +53,11 @@ struct QuestDetailView: View {
             if let attributed = try? AttributedString(markdown: markdown) {
                 Text(attributed)
                     .font(.body)
-                    .foregroundColor(.primary)
+                    .foregroundStyle(themeManager.colors.primaryText)
             } else {
                 Text(markdown)
                     .font(.body)
-                    .foregroundColor(.primary)
+                    .foregroundStyle(themeManager.colors.primaryText)
             }
 
         case .image(let filename):
@@ -57,6 +67,10 @@ struct QuestDetailView: View {
                     .resizable()
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .strokeBorder(themeManager.colors.cardBorder, lineWidth: 1)
+                    )
             }
 
         case .checkpoint(let id, let label):
