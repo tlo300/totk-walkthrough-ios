@@ -29,15 +29,16 @@ def read_content_doc(path: Path):
     main_quests: list[str] = []
     side_quests: list[str] = []
     in_side = False
+    numbered = re.compile(r"^\d+[\.\)]\s+")
     for para in doc.paragraphs:
         text = para.text.strip()
         if not text:
             continue
         lower = text.lower()
-        if "side quest" in lower and para.style.name != "List Paragraph":
+        if "side quest" in lower and not numbered.match(text):
             in_side = True
             continue
-        if para.style.name != "List Paragraph":
+        if not numbered.match(text):
             continue
         title = re.sub(r"^\d+[\.\)]\s*", "", text).strip()
         if not title:
