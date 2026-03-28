@@ -196,3 +196,12 @@ def test_html_to_markdown_strips_links():
     result = html_to_markdown('<p>See <a href="https://example.com">this page</a>.</p>')
     assert "this page" in result
     assert "https://example.com" not in result
+
+
+def test_html_to_markdown_table_cells_on_separate_lines():
+    from scripts.scrape import html_to_markdown
+    html = "<table><tr><th>Item</th><th>Location</th></tr></table>"
+    result = html_to_markdown(html)
+    lines = [l.strip() for l in result.splitlines() if l.strip()]
+    assert "Item" in lines
+    assert "Location" in lines

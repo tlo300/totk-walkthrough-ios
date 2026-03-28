@@ -84,17 +84,20 @@ def html_to_markdown(html: str) -> str:
     """
     soup = BeautifulSoup(html, "html.parser")
 
-    # Convert tables to plain text before passing to html2text
+    # Convert tables to plain text: one <p> per row, cells joined by <br>
     for table in soup.find_all("table"):
-        rows = []
+        container = soup.new_tag("div")
         for tr in table.find_all("tr"):
             cells = [cell.get_text(strip=True) for cell in tr.find_all(["td", "th"])]
             non_empty = [c for c in cells if c]
             if non_empty:
-                rows.append("\n".join(non_empty))
-        replacement = soup.new_tag("div")
-        replacement.string = "\n\n".join(rows)
-        table.replace_with(replacement)
+                p = soup.new_tag("p")
+                for i, cell_text in enumerate(non_empty):
+                    if i > 0:
+                        p.append(soup.new_tag("br"))
+                    p.append(cell_text)
+                container.append(p)
+        table.replace_with(container)
 
     # Strip alt attributes so html2text outputs ![](src) with no alt text
     for img in soup.find_all("img"):
