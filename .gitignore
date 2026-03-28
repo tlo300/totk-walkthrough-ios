@@ -1,3 +1,6 @@
+# Salesforce DX (VS Code extension side-effect)
+.sfdx/
+
 # Word source docs — never committed
 /content/
 
