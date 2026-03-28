@@ -1,0 +1,26 @@
+# Content folder - Word documents for the iOS app (not committed to repo)
+content/
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
+
+# macOS
+.DS_Store
+
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Python virtualenv
+.venv/
+
+# Environment files
+.env
