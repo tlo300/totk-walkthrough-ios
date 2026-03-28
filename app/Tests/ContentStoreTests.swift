@@ -39,4 +39,10 @@ final class ContentStoreTests: XCTestCase {
         let missing = Quest(slug: "does-not-exist", title: "Missing", type: .main)
         XCTAssertThrowsError(try store.contentBlocks(for: missing))
     }
+
+    func test_questType_shrine_decodesCorrectly() throws {
+        let json = #"{"slug":"s","title":"S","type":"shrine"}"#
+        let quest = try JSONDecoder().decode(Quest.self, from: Data(json.utf8))
+        XCTAssertEqual(quest.type, .shrine)
+    }
 }
