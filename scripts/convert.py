@@ -66,7 +66,17 @@ def convert_quest_doc(docx_path: Path, output_dir: Path) -> None:
             lines.append("")
 
         text = para.text.strip()
-        if text:
+        if not text:
+            continue
+
+        if para.style.name == "Checkpoint":
+            checkpoint_id = slugify(text)
+            lines.append("~~~checkpoint")
+            lines.append(f"id: {checkpoint_id}")
+            lines.append(f"label: {text}")
+            lines.append("~~~")
+            lines.append("")
+        else:
             lines.append(text)
             lines.append("")
 

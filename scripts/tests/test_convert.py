@@ -65,3 +65,32 @@ def test_convert_quest_doc_image_appears_between_paragraphs(tmp_path):
     idx_gloom = content.index("Watch out for Gloom Hands")
     idx_enter = content.index("Enter the underground passage")
     assert idx_gloom < idx_image < idx_enter
+
+# ── Checkpoint detection ──────────────────────────────────────────────────────
+
+def test_checkpoint_paragraph_emits_checkpoint_block(tmp_path):
+    from scripts.convert import convert_quest_doc
+    convert_quest_doc(FIXTURES / "quest-with-checkpoint.docx", tmp_path)
+    content = (tmp_path / "content.md").read_text(encoding="utf-8")
+    assert "~~~checkpoint" in content
+
+def test_checkpoint_block_contains_label(tmp_path):
+    from scripts.convert import convert_quest_doc
+    convert_quest_doc(FIXTURES / "quest-with-checkpoint.docx", tmp_path)
+    content = (tmp_path / "content.md").read_text(encoding="utf-8")
+    assert "label: Reached the castle gates?" in content
+
+def test_checkpoint_block_contains_id(tmp_path):
+    from scripts.convert import convert_quest_doc
+    convert_quest_doc(FIXTURES / "quest-with-checkpoint.docx", tmp_path)
+    content = (tmp_path / "content.md").read_text(encoding="utf-8")
+    assert "id: reached-the-castle-gates" in content
+
+def test_checkpoint_text_not_emitted_as_plain_paragraph(tmp_path):
+    from scripts.convert import convert_quest_doc
+    convert_quest_doc(FIXTURES / "quest-with-checkpoint.docx", tmp_path)
+    content = (tmp_path / "content.md").read_text(encoding="utf-8")
+    # The raw checkpoint text should only appear inside the block, not as a bare paragraph
+    lines = content.splitlines()
+    bare = [l for l in lines if l.strip() == "Reached the castle gates?"]
+    assert bare == []
