@@ -6,4 +6,5 @@ enum ModelConfig {
     static let questOrderFilename = "quest-order.json"
     static let progressStoreKey = "com.totk.progress"
     static let progressBookmarkKey = "com.totk.bookmark"
+    static let progressQuestsKey = "com.totk.quests"
 }
