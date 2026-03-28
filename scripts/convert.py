@@ -1,7 +1,6 @@
 """Convert TOTK walkthrough Word docs to Markdown + JSON for the iOS app bundle."""
 from __future__ import annotations
 import re
-import json
 from pathlib import Path
 from docx import Document
 

@@ -1,7 +1,6 @@
 """Run once to generate test fixtures: python scripts/tests/create_fixtures.py"""
 from pathlib import Path
 from docx import Document
-from docx.shared import Pt
 
 fixtures = Path(__file__).parent / "fixtures"
 fixtures.mkdir(exist_ok=True)
