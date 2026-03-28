@@ -3,6 +3,10 @@ name: Build IPA
 on:
   workflow_dispatch:
     inputs:
+      release:
+        description: "Release number (e.g. R1, R2)"
+        required: true
+        default: "R1"
       model_variant:
         description: "Model variant (unused currently, reserved for future)"
         required: false
@@ -38,10 +42,10 @@ jobs:
           mkdir -p build/ipa/Payload/TOTKWalkthrough.app/Content
           cp -r app/Resources/Content/ \
             build/ipa/Payload/TOTKWalkthrough.app/Content/
-          cd build/ipa && zip -r TOTKWalkthrough.ipa Payload/
+          cd build/ipa && zip -r "TOTKWalkthrough-${{ github.event.inputs.release }}.ipa" Payload/
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TOTKWalkthrough-unsigned
-          path: build/ipa/TOTKWalkthrough.ipa
+          name: "TOTKWalkthrough-${{ github.event.inputs.release }}"
+          path: "build/ipa/TOTKWalkthrough-${{ github.event.inputs.release }}.ipa"
