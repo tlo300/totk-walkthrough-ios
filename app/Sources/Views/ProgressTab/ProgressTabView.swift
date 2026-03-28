@@ -8,49 +8,41 @@ struct ProgressTabView: View {
     @State private var showingResetConfirm = false
     @State private var showingSettings = false
 
-    private var completedCount: Int {
-        progressStore.completedCheckpoints.count
+    private var completedMainCount: Int {
+        contentStore.quests.filter { progressStore.isQuestComplete($0.slug) }.count
     }
 
-    private var totalCheckpoints: Int {
-        contentStore.quests.compactMap { quest in
-            try? contentStore.contentBlocks(for: quest)
-        }
-        .flatMap { $0 }
-        .filter { if case .checkpoint = $0 { return true }; return false }
-        .count
+    private var completedSideCount: Int {
+        contentStore.sideQuests.filter { progressStore.isQuestComplete($0.slug) }.count
     }
 
     var body: some View {
         NavigationStack {
             List {
                 Section {
-                    LabeledContent("Total Quests", value: "\(contentStore.quests.count)")
+                    LabeledContent("Completed", value: "\(completedMainCount) / \(contentStore.quests.count)")
                         .foregroundStyle(themeManager.colors.primaryText)
                         .listRowBackground(themeManager.colors.cardBackground)
+                    if contentStore.quests.count > 0 {
+                        ProgressView(value: Double(completedMainCount), total: Double(contentStore.quests.count))
+                            .tint(themeManager.colors.progressFill)
+                            .listRowBackground(themeManager.colors.cardBackground)
+                    }
                 } header: {
                     Text("Main Quests").foregroundStyle(themeManager.colors.sectionLabel)
                 }
 
                 Section {
-                    LabeledContent("Total Side Quests", value: "\(contentStore.sideQuests.count)")
+                    LabeledContent("Completed", value: "\(completedSideCount) / \(contentStore.sideQuests.count)")
                         .foregroundStyle(themeManager.colors.primaryText)
                         .listRowBackground(themeManager.colors.cardBackground)
-                } header: {
-                    Text("Side Quests").foregroundStyle(themeManager.colors.sectionLabel)
-                }
-
-                Section {
-                    LabeledContent("Completed", value: "\(completedCount) / \(totalCheckpoints)")
-                        .foregroundStyle(themeManager.colors.primaryText)
-                        .listRowBackground(themeManager.colors.cardBackground)
-                    if totalCheckpoints > 0 {
-                        ProgressView(value: Double(completedCount), total: Double(totalCheckpoints))
+                    if contentStore.sideQuests.count > 0 {
+                        ProgressView(value: Double(completedSideCount), total: Double(contentStore.sideQuests.count))
                             .tint(themeManager.colors.progressFill)
                             .listRowBackground(themeManager.colors.cardBackground)
                     }
                 } header: {
-                    Text("Checkpoints").foregroundStyle(themeManager.colors.sectionLabel)
+                    Text("Side Quests").foregroundStyle(themeManager.colors.sectionLabel)
                 }
 
                 Section {
@@ -82,7 +74,7 @@ struct ProgressTabView: View {
                                 titleVisibility: .visible) {
                 Button("Reset", role: .destructive) { progressStore.reset() }
             } message: {
-                Text("This will clear all completed checkpoints and your bookmark.")
+                Text("This will clear all completed quests and your bookmark.")
             }
             .sheet(isPresented: $showingSettings) {
                 SettingsSheet().environmentObject(themeManager)

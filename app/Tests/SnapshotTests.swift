@@ -20,7 +20,7 @@ final class SnapshotTests: XCTestCase {
         themeManager = ThemeManager()
     }
 
-    private func snapshotView<V: View>(_ view: V, named name: String, record: Bool = true) {
+    private func snapshotView<V: View>(_ view: V, named name: String, record: Bool = false) {
         let vc = UIHostingController(rootView:
             view
                 .environmentObject(contentStore)

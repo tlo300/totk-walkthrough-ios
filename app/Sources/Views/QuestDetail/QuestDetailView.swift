@@ -28,6 +28,8 @@ struct QuestDetailView: View {
                     ForEach(Array(blocks.enumerated()), id: \.offset) { _, block in
                         blockView(block)
                     }
+
+                    completeButton
                 }
             }
             .padding()
@@ -44,6 +46,32 @@ struct QuestDetailView: View {
         .toolbarBackground(themeManager.colors.navBackground, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .onAppear { loadBlocks() }
+    }
+
+    @ViewBuilder
+    private var completeButton: some View {
+        let isComplete = progressStore.isQuestComplete(quest.slug)
+        Button {
+            progressStore.toggleQuest(quest.slug)
+        } label: {
+            HStack(spacing: 8) {
+                if isComplete {
+                    Image(systemName: "checkmark.circle.fill")
+                }
+                Text(isComplete ? "Completed" : "Mark Quest Complete")
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 12)
+            .background(isComplete ? themeManager.colors.cardBackground : themeManager.colors.accent)
+            .foregroundStyle(isComplete ? themeManager.colors.secondaryText : themeManager.colors.accentText)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(themeManager.colors.cardBorder, lineWidth: isComplete ? 1 : 0)
+            )
+        }
+        .buttonStyle(.plain)
+        .padding(.top, 8)
     }
 
     @ViewBuilder

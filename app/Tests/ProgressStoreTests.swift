@@ -6,33 +6,32 @@ import XCTest
 final class ProgressStoreTests: XCTestCase {
 
     private func makeStore() -> ProgressStore {
-        // Isolated UserDefaults so tests don't affect each other
         let suite = UUID().uuidString
         return ProgressStore(defaults: UserDefaults(suiteName: suite)!)
     }
 
-    func test_initialState_noCompletedCheckpoints() {
+    func test_initialState_noCompletedQuests() {
         let store = makeStore()
-        XCTAssertTrue(store.completedCheckpoints.isEmpty)
+        XCTAssertTrue(store.completedQuests.isEmpty)
     }
 
-    func test_markCheckpoint_addsToCompleted() {
+    func test_toggleQuest_marksComplete() {
         let store = makeStore()
-        store.markCheckpoint("gate-reached")
-        XCTAssertTrue(store.completedCheckpoints.contains("gate-reached"))
+        store.toggleQuest("find-zelda")
+        XCTAssertTrue(store.isQuestComplete("find-zelda"))
     }
 
-    func test_markCheckpoint_isIdempotent() {
+    func test_toggleQuest_togglesOff() {
         let store = makeStore()
-        store.markCheckpoint("gate-reached")
-        store.markCheckpoint("gate-reached")
-        XCTAssertEqual(store.completedCheckpoints.count, 1)
+        store.toggleQuest("find-zelda")
+        store.toggleQuest("find-zelda")
+        XCTAssertFalse(store.isQuestComplete("find-zelda"))
     }
 
-    func test_isCheckpointComplete_returnsTrueAfterMark() {
+    func test_toggleQuest_doesNotAffectOtherQuests() {
         let store = makeStore()
-        store.markCheckpoint("cp-1")
-        XCTAssertTrue(store.isCheckpointComplete("cp-1"))
+        store.toggleQuest("find-zelda")
+        XCTAssertFalse(store.isQuestComplete("other-quest"))
     }
 
     func test_setBookmark_persists() {
@@ -43,12 +42,12 @@ final class ProgressStoreTests: XCTestCase {
         XCTAssertEqual(store.bookmark?.checkpointIndex, 2)
     }
 
-    func test_reset_clearsCheckpointsAndBookmark() {
+    func test_reset_clearsQuestsAndBookmark() {
         let store = makeStore()
-        store.markCheckpoint("cp-1")
+        store.toggleQuest("find-zelda")
         store.setBookmark(ProgressStore.Bookmark(questSlug: "find-zelda", checkpointIndex: 0))
         store.reset()
-        XCTAssertTrue(store.completedCheckpoints.isEmpty)
+        XCTAssertTrue(store.completedQuests.isEmpty)
         XCTAssertNil(store.bookmark)
     }
 
@@ -56,9 +55,9 @@ final class ProgressStoreTests: XCTestCase {
         let suite = UUID().uuidString
         let defaults = UserDefaults(suiteName: suite)!
         let store1 = ProgressStore(defaults: defaults)
-        store1.markCheckpoint("persistent-cp")
+        store1.toggleQuest("persistent-quest")
 
         let store2 = ProgressStore(defaults: defaults)
-        XCTAssertTrue(store2.completedCheckpoints.contains("persistent-cp"))
+        XCTAssertTrue(store2.isQuestComplete("persistent-quest"))
     }
 }

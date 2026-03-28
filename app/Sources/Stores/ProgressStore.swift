@@ -1,4 +1,4 @@
-// ProgressStore.swift — Persists checkpoint completion state and the current bookmark.
+// ProgressStore.swift — Persists quest completion state and the current bookmark.
 import Foundation
 
 @MainActor
@@ -9,7 +9,7 @@ final class ProgressStore: ObservableObject {
         let checkpointIndex: Int
     }
 
-    @Published private(set) var completedCheckpoints: Set<String> = []
+    @Published private(set) var completedQuests: Set<String> = []
     @Published private(set) var bookmark: Bookmark?
 
     private let defaults: UserDefaults
@@ -19,13 +19,17 @@ final class ProgressStore: ObservableObject {
         load()
     }
 
-    func isCheckpointComplete(_ id: String) -> Bool {
-        completedCheckpoints.contains(id)
+    func isQuestComplete(_ slug: String) -> Bool {
+        completedQuests.contains(slug)
     }
 
-    func markCheckpoint(_ id: String) {
-        completedCheckpoints.insert(id)
-        persist()
+    func toggleQuest(_ slug: String) {
+        if completedQuests.contains(slug) {
+            completedQuests.remove(slug)
+        } else {
+            completedQuests.insert(slug)
+        }
+        persistQuests()
     }
 
     func setBookmark(_ bookmark: Bookmark) {
@@ -36,17 +40,17 @@ final class ProgressStore: ObservableObject {
     }
 
     func reset() {
-        completedCheckpoints = []
+        completedQuests = []
         bookmark = nil
-        defaults.removeObject(forKey: ModelConfig.progressStoreKey)
+        defaults.removeObject(forKey: ModelConfig.progressQuestsKey)
         defaults.removeObject(forKey: ModelConfig.progressBookmarkKey)
     }
 
     // MARK: - Private
 
     private func load() {
-        if let saved = defaults.object(forKey: ModelConfig.progressStoreKey) as? [String] {
-            completedCheckpoints = Set(saved)
+        if let saved = defaults.object(forKey: ModelConfig.progressQuestsKey) as? [String] {
+            completedQuests = Set(saved)
         }
         if let data = defaults.data(forKey: ModelConfig.progressBookmarkKey),
            let saved = try? JSONDecoder().decode(Bookmark.self, from: data) {
@@ -54,7 +58,7 @@ final class ProgressStore: ObservableObject {
         }
     }
 
-    private func persist() {
-        defaults.set(Array(completedCheckpoints), forKey: ModelConfig.progressStoreKey)
+    private func persistQuests() {
+        defaults.set(Array(completedQuests), forKey: ModelConfig.progressQuestsKey)
     }
 }
