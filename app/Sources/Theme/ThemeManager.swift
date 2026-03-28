@@ -2,8 +2,12 @@
 import SwiftUI
 
 final class ThemeManager: ObservableObject {
-    @AppStorage("appTheme")      var selectedTheme: AppTheme = .parchment
-    @AppStorage("useHyliaSerif") var useHyliaSerif: Bool = true
+    @AppStorage("appTheme") var selectedTheme: AppTheme = .parchment {
+        willSet { objectWillChange.send() }
+    }
+    @AppStorage("useHyliaSerif") var useHyliaSerif: Bool = true {
+        willSet { objectWillChange.send() }
+    }
 
     var colors: ThemeColors { selectedTheme.colors }
 

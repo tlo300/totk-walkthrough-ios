@@ -37,6 +37,12 @@ final class ThemeTests: XCTestCase {
 
 final class ThemeManagerTests: XCTestCase {
 
+    override func setUp() {
+        super.setUp()
+        UserDefaults.standard.removeObject(forKey: "appTheme")
+        UserDefaults.standard.removeObject(forKey: "useHyliaSerif")
+    }
+
     func test_defaultTheme_isParchment() {
         let manager = ThemeManager()
         XCTAssertEqual(manager.selectedTheme, .parchment)
