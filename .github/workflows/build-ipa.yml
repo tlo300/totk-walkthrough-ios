@@ -35,6 +35,8 @@ jobs:
           mkdir -p build/ipa/Payload
           cp -r build/TOTKWalkthrough.xcarchive/Products/Applications/TOTKWalkthrough.app \
             build/ipa/Payload/TOTKWalkthrough.app
+          cp -r app/Resources/Content \
+            build/ipa/Payload/TOTKWalkthrough.app/Content
           cd build/ipa && zip -r TOTKWalkthrough.ipa Payload/
 
       - name: Upload IPA artifact
