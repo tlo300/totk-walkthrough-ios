@@ -12,7 +12,7 @@ final class ContentStore: ObservableObject {
     @Published private(set) var quests: [Quest] = []
     @Published private(set) var sideQuests: [Quest] = []
 
-    private let contentURL: URL
+    let contentURL: URL
 
     init(contentURL: URL = Bundle.main.url(forResource: ModelConfig.contentBundlePath,
                                             withExtension: nil)

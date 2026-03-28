@@ -9,8 +9,11 @@ struct QuestDetailView: View {
     @State private var blocks: [ContentBlock] = []
     @State private var loadError: String?
 
-    private var questFolder: String {
-        quest.type == .main ? "quests" : "side-quests"
+    private var questContentURL: URL {
+        let folder = quest.type == .main ? "quests" : "side-quests"
+        return contentStore.contentURL
+            .appendingPathComponent(folder)
+            .appendingPathComponent(quest.slug)
     }
 
     var body: some View {
@@ -48,8 +51,8 @@ struct QuestDetailView: View {
             }
 
         case .image(let filename):
-            let imageName = "\(questFolder)/\(quest.slug)/\(filename)"
-            if let uiImage = UIImage(named: imageName) {
+            let imagePath = questContentURL.appendingPathComponent(filename).path
+            if let uiImage = UIImage(contentsOfFile: imagePath) {
                 Image(uiImage: uiImage)
                     .resizable()
                     .scaledToFit()
