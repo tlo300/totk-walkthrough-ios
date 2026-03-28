@@ -14,7 +14,7 @@ enum AppTheme: String, CaseIterable {
         }
     }
 
-    var description: String {
+    var themeDescription: String {
         switch self {
         case .parchment:   return "Warm map scroll aesthetic"
         case .zonaiDark:   return "Ancient tech, glowing green"
