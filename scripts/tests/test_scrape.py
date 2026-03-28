@@ -288,3 +288,81 @@ def test_download_images_skips_failed_download(tmp_path):
     assert not list(tmp_path.glob("image-*.jpg"))
     # The src should remain unchanged (download failed, no local file to point to)
     assert "broken.jpg" in result or "cdn.ign.com" in result
+
+
+# ── scrape (integration) ──────────────────────────────────────────────────────
+
+def _write_config(tmp_path, output_dir, extra=""):
+    cfg = tmp_path / "test.yaml"
+    cfg.write_text(f"""
+index_url: "https://www.ign.com/wikis/totk/Shrines"
+content_type: "shrine"
+output_dir: "{output_dir.as_posix()}"
+item_links: "a[data-cy='styled-link']"
+title_selector: "h1"
+content_area: "div.wiki-page-container"
+delay_seconds: 0
+{extra}
+""")
+    return cfg
+
+
+_INDEX_PAGE = """<html><body>
+  <a data-cy="styled-link" href="/wikis/totk/Ukouh_Shrine">Ukouh Shrine</a>
+</body></html>"""
+
+_DETAIL_PAGE = """<html><body>
+  <h1>Ukouh Shrine</h1>
+  <div class="wiki-page-container">
+    <p>Enter the shrine and interact with the Steward Construct.</p>
+  </div>
+</body></html>"""
+
+
+@responses_lib.activate
+def test_scrape_writes_index_json(tmp_path):
+    from scripts.scrape import scrape
+    output_dir = tmp_path / "output"
+    cfg = _write_config(tmp_path, output_dir)
+    responses_lib.add(responses_lib.GET, "https://www.ign.com/wikis/totk/Shrines", body=_INDEX_PAGE)
+    responses_lib.add(responses_lib.GET, "https://www.ign.com/wikis/totk/Ukouh_Shrine", body=_DETAIL_PAGE)
+    scrape(cfg)
+    assert (output_dir / "index.json").exists()
+    idx = json.loads((output_dir / "index.json").read_text())
+    assert idx["quests"][0]["slug"] == "ukouh-shrine"
+    assert idx["quests"][0]["title"] == "Ukouh Shrine"
+    assert idx["quests"][0]["type"] == "shrine"
+    assert idx["quests"][0]["id"] == 1
+    assert idx["sideQuests"] == []
+
+
+@responses_lib.activate
+def test_scrape_writes_content_md(tmp_path):
+    from scripts.scrape import scrape
+    output_dir = tmp_path / "output"
+    cfg = _write_config(tmp_path, output_dir)
+    responses_lib.add(responses_lib.GET, "https://www.ign.com/wikis/totk/Shrines", body=_INDEX_PAGE)
+    responses_lib.add(responses_lib.GET, "https://www.ign.com/wikis/totk/Ukouh_Shrine", body=_DETAIL_PAGE)
+    scrape(cfg)
+    md = (output_dir / "ukouh-shrine" / "content.md").read_text(encoding="utf-8")
+    assert "Enter the shrine and interact with the Steward Construct." in md
+
+
+@responses_lib.activate
+def test_scrape_skips_existing_items(tmp_path):
+    from scripts.scrape import scrape
+    output_dir = tmp_path / "output"
+    cfg = _write_config(tmp_path, output_dir)
+
+    # Pre-create content.md to simulate a resume
+    slug_dir = output_dir / "ukouh-shrine"
+    slug_dir.mkdir(parents=True)
+    (slug_dir / "content.md").write_text("pre-existing")
+
+    responses_lib.add(responses_lib.GET, "https://www.ign.com/wikis/totk/Shrines", body=_INDEX_PAGE)
+    # No detail page mock — if scraper fetches it, responses raises ConnectionError
+
+    scrape(cfg)
+
+    # content.md must be untouched
+    assert (output_dir / "ukouh-shrine" / "content.md").read_text() == "pre-existing"

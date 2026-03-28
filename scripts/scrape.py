@@ -146,3 +146,81 @@ def download_images(
         img["src"] = filename
 
     return str(soup)
+
+
+def _fetch(session: requests.Session, url: str, delay: float) -> requests.Response:
+    """Sleep for delay seconds, then GET url. Raises on HTTP errors."""
+    time.sleep(delay)
+    resp = session.get(url, headers={"User-Agent": "TOTK-Walkthrough-Scraper/1.0"}, timeout=30)
+    resp.raise_for_status()
+    print(f"Fetched: {url}")
+    return resp
+
+
+def scrape(config_path: Path) -> None:
+    """Run the full scrape pipeline defined by a YAML config file."""
+    cfg = load_config(config_path)
+    index_url: str = cfg["index_url"]
+    content_type: str = cfg["content_type"]
+    output_dir = Path(cfg["output_dir"])
+    item_links_selector: str = cfg["item_links"]
+    title_selector: str = cfg.get("title_selector", "h1")
+    content_area_selector: str = cfg["content_area"]
+    delay: float = float(cfg["delay_seconds"])
+    parsed = urlparse(index_url)
+    base_url = f"{parsed.scheme}://{parsed.netloc}"
+
+    session = requests.Session()
+
+    # 1. Fetch index page and collect item links
+    index_html = _fetch(session, index_url, delay=0).text
+    items = collect_items(index_html, item_links_selector, base_url)
+    print(f"Found {len(items)} items on index page.")
+
+    index_entries: list[dict] = []
+
+    # 2. Process each item
+    for position, (link_title, detail_url) in enumerate(items, start=1):
+        slug = slugify_url(detail_url)
+        slug_dir = output_dir / slug
+
+        if (slug_dir / "content.md").exists():
+            print(f"Skipping {slug} (already exists)")
+            index_entries.append({"id": position, "slug": slug, "title": link_title, "type": content_type})
+            continue
+
+        # Fetch detail page
+        try:
+            detail_html = _fetch(session, detail_url, delay=delay).text
+        except Exception as exc:
+            print(f"ERROR fetching {detail_url}: {exc} — skipping")
+            continue
+
+        title = extract_title(detail_html, title_selector, fallback=link_title)
+        content_html = extract_content_html(detail_html, content_area_selector)
+        if not content_html:
+            print(f"WARNING: content_area selector '{content_area_selector}' found nothing on {detail_url}")
+
+        slug_dir.mkdir(parents=True, exist_ok=True)
+        content_html = download_images(session, content_html, slug_dir, delay=delay)
+        markdown = html_to_markdown(content_html)
+
+        (slug_dir / "content.md").write_text(markdown, encoding="utf-8")
+        print(f"Wrote: {slug_dir / 'content.md'}")
+
+        index_entries.append({"id": position, "slug": slug, "title": title, "type": content_type})
+
+    # 3. Write index.json
+    output_dir.mkdir(parents=True, exist_ok=True)
+    index_data = {"quests": index_entries, "sideQuests": []}
+    index_path = output_dir / "index.json"
+    index_path.write_text(json.dumps(index_data, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Wrote: {index_path}")
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) != 2:
+        print("Usage: python -m scripts.scrape <config.yaml>")
+        sys.exit(1)
+    scrape(Path(sys.argv[1]))
