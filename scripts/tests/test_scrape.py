@@ -270,3 +270,21 @@ def test_download_images_no_images_returns_unchanged_html(tmp_path):
     html = "<p>No images here.</p>"
     result = download_images(session, html, tmp_path, delay=0)
     assert result == html
+
+
+@responses_lib.activate
+def test_download_images_skips_failed_download(tmp_path):
+    from scripts.scrape import download_images
+    responses_lib.add(
+        responses_lib.GET,
+        "https://cdn.ign.com/broken.jpg",
+        status=404,
+    )
+    session = requests.Session()
+    html = '<img src="https://cdn.ign.com/broken.jpg" />'
+    # Should not raise — failed download is logged and skipped
+    result = download_images(session, html, tmp_path, delay=0)
+    # File should NOT be saved
+    assert not list(tmp_path.glob("image-*.jpg"))
+    # The src should remain unchanged (download failed, no local file to point to)
+    assert "broken.jpg" in result or "cdn.ign.com" in result

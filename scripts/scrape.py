@@ -134,8 +134,8 @@ def download_images(
             continue
         ext = Path(urlparse(src).path).suffix or ".jpg"
         filename = f"image-{i:03d}{ext}"
-        time.sleep(delay)
         try:
+            time.sleep(delay)
             resp = session.get(src, headers={"User-Agent": "TOTK-Walkthrough-Scraper/1.0"}, timeout=30)
             resp.raise_for_status()
             (out_dir / filename).write_bytes(resp.content)
