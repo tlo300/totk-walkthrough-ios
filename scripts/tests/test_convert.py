@@ -94,3 +94,28 @@ def test_checkpoint_text_not_emitted_as_plain_paragraph(tmp_path):
     lines = content.splitlines()
     bare = [l for l in lines if l.strip() == "Reached the castle gates?"]
     assert bare == []
+
+import subprocess, sys
+
+# ── CLI integration ───────────────────────────────────────────────────────────
+
+def test_cli_produces_quest_order_json(tmp_path):
+    """Full pipeline: given a content dir structure, CLI writes app bundle output."""
+    # Set up a minimal content/ structure in tmp_path
+    content_dir = tmp_path / "content"
+    quest_dir = content_dir / "quests"
+    quest_dir.mkdir(parents=True)
+    import shutil
+    shutil.copy(FIXTURES / "quest-order.docx", content_dir / "quest-order.docx")
+    shutil.copy(FIXTURES / "quest-with-checkpoint.docx", quest_dir / "find-princess-zelda.docx")
+
+    output_dir = tmp_path / "output"
+    result = subprocess.run(
+        [sys.executable, "-m", "scripts.convert",
+         "--content", str(content_dir),
+         "--output", str(output_dir)],
+        capture_output=True, text=True
+    )
+    assert result.returncode == 0, result.stderr
+    assert (output_dir / "quest-order.json").exists()
+    assert (output_dir / "quests" / "find-princess-zelda" / "content.md").exists()

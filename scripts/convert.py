@@ -1,6 +1,8 @@
 """Convert TOTK walkthrough Word docs to Markdown + JSON for the iOS app bundle."""
 from __future__ import annotations
 import re
+import json
+import argparse
 from pathlib import Path
 from docx import Document
 
@@ -81,3 +83,47 @@ def convert_quest_doc(docx_path: Path, output_dir: Path) -> None:
             lines.append("")
 
     (output_dir / "content.md").write_text("\n".join(lines), encoding="utf-8")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Convert TOTK walkthrough Word docs to app bundle content.")
+    parser.add_argument("--content", type=Path, default=Path("content"),
+                        help="Path to source content directory (default: content/)")
+    parser.add_argument("--output", type=Path, default=Path("app/Resources/Content"),
+                        help="Path to output directory (default: app/Resources/Content)")
+    args = parser.parse_args()
+
+    content_dir: Path = args.content
+    output_dir: Path = args.output
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # 1. Parse quest order → quest-order.json
+    quest_order_path = content_dir / "quest-order.docx"
+    if not quest_order_path.exists():
+        raise FileNotFoundError(f"Missing quest order doc: {quest_order_path}")
+    quest_data = parse_quest_order(quest_order_path)
+
+    # 2. Convert each main quest doc
+    quests_src = content_dir / "quests"
+    quests_out = output_dir / "quests"
+    for quest in quest_data["quests"]:
+        src = quests_src / f"{quest['slug']}.docx"
+        if src.exists():
+            convert_quest_doc(src, quests_out / quest["slug"])
+
+    # 3. Convert each side quest doc
+    side_src = content_dir / "side-quests"
+    side_out = output_dir / "side-quests"
+    for quest in quest_data["sideQuests"]:
+        src = side_src / f"{quest['slug']}.docx"
+        if src.exists():
+            convert_quest_doc(src, side_out / quest["slug"])
+
+    # 4. Write quest-order.json
+    quest_order_out = output_dir / "quest-order.json"
+    quest_order_out.write_text(json.dumps(quest_data, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Wrote {quest_order_out}")
+
+
+if __name__ == "__main__":
+    main()
