@@ -1,22 +1,23 @@
 """
 Generate iOS app icon PNGs from the SVG source.
 
-Requires: cairosvg
-Install:  pip install cairosvg
+Requires: svglib reportlab Pillow
+Install:  pip install svglib reportlab Pillow
 
 Usage:
     python scripts/generate_icon.py
 """
 
 from pathlib import Path
-import cairosvg
+from io import BytesIO
+from svglib.svglib import svg2rlg
+from reportlab.graphics import renderPM
+from PIL import Image
 
 REPO_ROOT = Path(__file__).parent.parent
 SVG_SOURCE = REPO_ROOT / "assets" / "icon_source.svg"
 APPICONSET = REPO_ROOT / "app" / "Sources" / "Assets.xcassets" / "AppIcon.appiconset"
 
-# Modern iOS only requires 1024x1024; Xcode generates the rest.
-# Include the common sizes here for completeness / older toolchains.
 SIZES = [
     ("Icon-20@2x.png", 40),
     ("Icon-20@3x.png", 60),
@@ -30,11 +31,18 @@ SIZES = [
 ]
 
 APPICONSET.mkdir(parents=True, exist_ok=True)
-svg_data = SVG_SOURCE.read_bytes()
+
+drawing = svg2rlg(str(SVG_SOURCE))
+# Render at full SVG size (1024x1024) first, then downsample with Pillow for quality
+buf = BytesIO()
+renderPM.drawToFile(drawing, buf, fmt="PNG", dpi=72)
+buf.seek(0)
+source_img = Image.open(buf).convert("RGBA")
 
 for filename, size in SIZES:
     out_path = APPICONSET / filename
-    cairosvg.svg2png(bytestring=svg_data, write_to=str(out_path), output_width=size, output_height=size)
+    resized = source_img.resize((size, size), Image.LANCZOS)
+    resized.save(str(out_path), "PNG")
     print(f"  wrote {filename} ({size}x{size})")
 
 print("Done — icons written to", APPICONSET)
