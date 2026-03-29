@@ -18,5 +18,4 @@ struct Quest: Identifiable, Codable, Hashable {
 
 struct QuestOrder: Codable {
     let quests: [Quest]
-    let sideQuests: [Quest]
 }
