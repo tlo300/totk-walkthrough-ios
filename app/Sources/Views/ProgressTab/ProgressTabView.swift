@@ -16,6 +16,10 @@ struct ProgressTabView: View {
         contentStore.sideQuests.filter { progressStore.isQuestComplete($0.slug) }.count
     }
 
+    private var completedAdventureCount: Int {
+        contentStore.adventures.filter { progressStore.isQuestComplete($0.slug) }.count
+    }
+
     private var completedShrineCount: Int {
         contentStore.shrines.filter { progressStore.isQuestComplete($0.slug) }.count
     }
@@ -47,6 +51,19 @@ struct ProgressTabView: View {
                     }
                 } header: {
                     Text("Side Quests").foregroundStyle(themeManager.colors.sectionLabel)
+                }
+
+                Section {
+                    LabeledContent("Completed", value: "\(completedAdventureCount) / \(contentStore.adventures.count)")
+                        .foregroundStyle(themeManager.colors.primaryText)
+                        .listRowBackground(themeManager.colors.cardBackground)
+                    if contentStore.adventures.count > 0 {
+                        ProgressView(value: Double(completedAdventureCount), total: Double(contentStore.adventures.count))
+                            .tint(themeManager.colors.progressFill)
+                            .listRowBackground(themeManager.colors.cardBackground)
+                    }
+                } header: {
+                    Text("Adventures").foregroundStyle(themeManager.colors.sectionLabel)
                 }
 
                 Section {

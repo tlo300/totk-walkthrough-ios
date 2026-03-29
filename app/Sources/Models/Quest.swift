@@ -3,7 +3,7 @@ import Foundation
 
 enum QuestType: String, Codable {
     case main
-    case side
+    case side = "side-quest"
     case shrine
     case adventure
 }
