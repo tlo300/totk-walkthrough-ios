@@ -2,74 +2,998 @@
   "quests": [
     {
       "id": 1,
-      "slug": "zelda-tears-of-the-kingdom-switch-2-edition-guide",
-      "title": "Zelda: Tears of The Kingdom Switch 2 Edition Guide",
+      "slug": "spotting-spot",
+      "title": "Spotting Spot",
       "type": "side-quest"
     },
     {
       "id": 2,
-      "slug": "zelda-notes-voice-memories",
-      "title": "Zelda Notes Voice Memories",
+      "slug": "village-attacked-by-pirates",
+      "title": "Village Attacked by Pirates",
       "type": "side-quest"
     },
     {
       "id": 3,
-      "slug": "everything-new-in-zelda-tears-of-the-kingdom-switch-2",
-      "title": "Everything New In Zelda: Tears of the Kingdom Switch 2",
+      "slug": "today%e2%80%99s-menu",
+      "title": "Today's Menu",
       "type": "side-quest"
     },
     {
       "id": 4,
-      "slug": "zelda-tears-of-the-kingdom-switch-2-edition-guide",
-      "title": "Switch 2 Edition guides",
+      "slug": "the-incomplete-stable",
+      "title": "The Incomplete Stable",
       "type": "side-quest"
     },
     {
       "id": 5,
-      "slug": "list-of-shrine-quests",
-      "title": "List of Shrine Quests Tears of the Kingdom",
+      "slug": "wanted-stone-talus",
+      "title": "WANTED: Stone Talus",
       "type": "side-quest"
     },
     {
       "id": 6,
-      "slug": "list-of-side-quests-and-side-adventures",
-      "title": "List of Side Quests and Side Adventures",
+      "slug": "wanted-molduga",
+      "title": "WANTED: Molduga",
       "type": "side-quest"
     },
     {
       "id": 7,
-      "slug": "list-of-side-quests-and-side-adventures",
-      "title": "List of Side Quests",
+      "slug": "wanted-hinox",
+      "title": "WANTED: Hinox",
       "type": "side-quest"
     },
     {
       "id": 8,
-      "slug": "evm8n",
-      "title": "on Amazon:",
+      "slug": "unknown-sky-giant",
+      "title": "Unknown Sky Giant",
       "type": "side-quest"
     },
     {
       "id": 9,
-      "slug": "jv18g",
-      "title": "Zelda 3D lamp,",
+      "slug": "unknown-three-headed-monster",
+      "title": "Unknown Three-Headed Monster",
       "type": "side-quest"
     },
     {
       "id": 10,
-      "slug": "pboxd",
-      "title": "ToTK unisex hoodie",
+      "slug": "unknown-huge-silhouette",
+      "title": "Unknown Huge Silhouette",
       "type": "side-quest"
     },
     {
       "id": 11,
-      "slug": "the-legend-of-zelda-master-sword-tamashii-nations-proplica",
-      "title": "collectible Master Sword Proplica",
+      "slug": "fell-into-a-well!",
+      "title": "Fell into a Well!",
       "type": "side-quest"
     },
     {
       "id": 12,
-      "slug": "terms-of-use",
-      "title": "Learn more",
+      "slug": "the-horse-guard%e2%80%99s-request",
+      "title": "The Horse Guard's Request",
+      "type": "side-quest"
+    },
+    {
+      "id": 13,
+      "slug": "a-picture-for-outskirt-stable",
+      "title": "A Picture for Outskirt Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 14,
+      "slug": "pony-points-card",
+      "title": "Pony Points Card",
+      "type": "side-quest"
+    },
+    {
+      "id": 15,
+      "slug": "feathered-fugitives",
+      "title": "Feathered Fugitives",
+      "type": "side-quest"
+    },
+    {
+      "id": 16,
+      "slug": "a-picture-for-riverside-stable",
+      "title": "A Picture for Riverside Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 17,
+      "slug": "misko%27s-treasure-of-awakening-iii",
+      "title": "Misko's Treasure of Awakening III",
+      "type": "side-quest"
+    },
+    {
+      "id": 18,
+      "slug": "mask-of-awakening",
+      "title": "Mask of Awakening",
+      "type": "side-quest"
+    },
+    {
+      "id": 19,
+      "slug": "horse-drawn-dreams",
+      "title": "Horse-Drawn Dreams",
+      "type": "side-quest"
+    },
+    {
+      "id": 20,
+      "slug": "a-picture-for-new-serenne-stable",
+      "title": "A Picture for New Serenne Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 21,
+      "slug": "a-picture-for-tabantha-bridge-stable",
+      "title": "A Picture for Tabantha Bridge Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 22,
+      "slug": "the-mother-goddess-statue",
+      "title": "The Mother Goddess Statue Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 23,
+      "slug": "white-sword-of-the-sky",
+      "title": "White Sword of the Sky",
+      "type": "side-quest"
+    },
+    {
+      "id": 24,
+      "slug": "genli%27s-home-cooking",
+      "title": "Genli's Home Cooking",
+      "type": "side-quest"
+    },
+    {
+      "id": 25,
+      "slug": "treasure-of-the-secret-springs",
+      "title": "Treasure of the Secret Springs",
+      "type": "side-quest"
+    },
+    {
+      "id": 26,
+      "slug": "vah-medoh-divine-helm",
+      "title": "Vah Medoh Divine Helm",
+      "type": "side-quest"
+    },
+    {
+      "id": 27,
+      "slug": "molli-the-fletcher%27s-quest",
+      "title": "Molli the Fletcher's Quest",
+      "type": "side-quest"
+    },
+    {
+      "id": 28,
+      "slug": "legacy-of-the-rito",
+      "title": "Legacy of the Rito",
+      "type": "side-quest"
+    },
+    {
+      "id": 29,
+      "slug": "great-eagle-bow",
+      "title": "Great Eagle Bow",
+      "type": "side-quest"
+    },
+    {
+      "id": 30,
+      "slug": "fish-for-fletching",
+      "title": "Fish for Fletching",
+      "type": "side-quest"
+    },
+    {
+      "id": 31,
+      "slug": "the-rito-rope-bridge",
+      "title": "The Rito Rope Bridge",
+      "type": "side-quest"
+    },
+    {
+      "id": 32,
+      "slug": "cave-mushrooms-that-glow",
+      "title": "Cave Mushrooms That Glow",
+      "type": "side-quest"
+    },
+    {
+      "id": 33,
+      "slug": "misko%27s-treasure-of-awakening-ii",
+      "title": "Misko's Treasure of Awakening II",
+      "type": "side-quest"
+    },
+    {
+      "id": 34,
+      "slug": "trousers-of-awakening",
+      "title": "Trousers of Awakening",
+      "type": "side-quest"
+    },
+    {
+      "id": 35,
+      "slug": "a-picture-for-snowfield-stable",
+      "title": "A Picture for Snowfield Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 36,
+      "slug": "the-captured-tent",
+      "title": "The Captured Tent",
+      "type": "side-quest"
+    },
+    {
+      "id": 37,
+      "slug": "who-finds-the-haven",
+      "title": "Who Finds the Haven",
+      "type": "side-quest"
+    },
+    {
+      "id": 38,
+      "slug": "crossing-the-cold-pool",
+      "title": "Crossing the Cold Pool",
+      "type": "side-quest"
+    },
+    {
+      "id": 39,
+      "slug": "open-the-door",
+      "title": "Open the Door",
+      "type": "side-quest"
+    },
+    {
+      "id": 40,
+      "slug": "supply-eyeing-fliers",
+      "title": "Supply-Eyeing Fliers",
+      "type": "side-quest"
+    },
+    {
+      "id": 41,
+      "slug": "the-blocked-cave",
+      "title": "The Blocked Cave",
+      "type": "side-quest"
+    },
+    {
+      "id": 42,
+      "slug": "the-duchess-who-disappeared",
+      "title": "The Duchess Who Disappeared Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 43,
+      "slug": "kaneli%e2%80%99s-flight-training",
+      "title": "Kaneli’s Flight Training",
+      "type": "side-quest"
+    },
+    {
+      "id": 44,
+      "slug": "hebra%27s-colossal-fossil",
+      "title": "Hebra's Colossal Fossil",
+      "type": "side-quest"
+    },
+    {
+      "id": 45,
+      "slug": "the-north-lomei-prophecy",
+      "title": "North Lomei Labyrinth Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 46,
+      "slug": "evil-spirit-armor-set",
+      "title": "Evil Spirit Armor Set Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 47,
+      "slug": "secrets-within",
+      "title": "Secrets Within",
+      "type": "side-quest"
+    },
+    {
+      "id": 48,
+      "slug": "master-the-vehicle-prototype",
+      "title": "Master the Vehicle Prototype",
+      "type": "side-quest"
+    },
+    {
+      "id": 49,
+      "slug": "home-on-arrange",
+      "title": "Home on Arrange",
+      "type": "side-quest"
+    },
+    {
+      "id": 50,
+      "slug": "the-tarrey-town-race-is-on!",
+      "title": "The Tarrey Town Race Is On!",
+      "type": "side-quest"
+    },
+    {
+      "id": 51,
+      "slug": "strongest-in-the-world",
+      "title": "Strongest in the World",
+      "type": "side-quest"
+    },
+    {
+      "id": 52,
+      "slug": "the-gathering-pirates",
+      "title": "The Gathering Pirates",
+      "type": "side-quest"
+    },
+    {
+      "id": 53,
+      "slug": "a-picture-for-east-akkala-stable",
+      "title": "A Picture for East Akkala Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 54,
+      "slug": "eldin%27s-colossal-fossil",
+      "title": "Eldin's Colossal Fossil",
+      "type": "side-quest"
+    },
+    {
+      "id": 55,
+      "slug": "one-hit-wonder!",
+      "title": "One-Hit Wonder!",
+      "type": "side-quest"
+    },
+    {
+      "id": 56,
+      "slug": "a-picture-for-south-akkala-stable",
+      "title": "A Picture for South Akkala Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 57,
+      "slug": "goddess-statue-of-power",
+      "title": "Goddess Statue of Power Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 58,
+      "slug": "lomei-labyrinth-island",
+      "title": "Lomei Labyrinth Island Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 59,
+      "slug": "where-are-the-wells%3f",
+      "title": "Where Are the Wells - Well Locations Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 60,
+      "slug": "amber-dealer",
+      "title": "Amber Dealer",
+      "type": "side-quest"
+    },
+    {
+      "id": 61,
+      "slug": "the-ancient-city-gorondia!",
+      "title": "The Ancient City Gorondia!",
+      "type": "side-quest"
+    },
+    {
+      "id": 62,
+      "slug": "the-ancient-city-gorondia%3f",
+      "title": "The Ancient City Gorondia?",
+      "type": "side-quest"
+    },
+    {
+      "id": 63,
+      "slug": "soul-of-the-gorons",
+      "title": "Soul of the Gorons",
+      "type": "side-quest"
+    },
+    {
+      "id": 64,
+      "slug": "boulder-breaker",
+      "title": "Boulder Breaker",
+      "type": "side-quest"
+    },
+    {
+      "id": 65,
+      "slug": "moon-gazing-gorons",
+      "title": "Moon-Gazing Gorons Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 66,
+      "slug": "the-hidden-treasure-at-lizard-lakes",
+      "title": "The Hidden Treasure at Lizard Lakes",
+      "type": "side-quest"
+    },
+    {
+      "id": 67,
+      "slug": "vah-rudania-divine-helmet",
+      "title": "Vah Rudania Divine Helm",
+      "type": "side-quest"
+    },
+    {
+      "id": 68,
+      "slug": "simmerstone-springs",
+      "title": "Simmerstone Springs",
+      "type": "side-quest"
+    },
+    {
+      "id": 69,
+      "slug": "cash-in-on-ripened-flint",
+      "title": "Cash In on Ripened Flint",
+      "type": "side-quest"
+    },
+    {
+      "id": 70,
+      "slug": "meat-for-meat",
+      "title": "Meat for Meat",
+      "type": "side-quest"
+    },
+    {
+      "id": 71,
+      "slug": "rock-roast-or-dust",
+      "title": "Rock Roast or Dust",
+      "type": "side-quest"
+    },
+    {
+      "id": 72,
+      "slug": "mine-cart-land-open-for-business!",
+      "title": "Mine-Cart Land: Open for Business!",
+      "type": "side-quest"
+    },
+    {
+      "id": 73,
+      "slug": "mine-cart-land-quickshot-course",
+      "title": "Mine-Cart Land: Quickshot Course",
+      "type": "side-quest"
+    },
+    {
+      "id": 74,
+      "slug": "mine-cart-land-death-mountain",
+      "title": "Mine-Cart Land: Death Mountain",
+      "type": "side-quest"
+    },
+    {
+      "id": 75,
+      "slug": "a-picture-for-foothill-stable",
+      "title": "A Picture for Foothill Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 76,
+      "slug": "the-abandoned-laborer",
+      "title": "The Abandoned Laborer",
+      "type": "side-quest"
+    },
+    {
+      "id": 77,
+      "slug": "misko%27s-cave-of-chests",
+      "title": "Misko's Cave of Chests",
+      "type": "side-quest"
+    },
+    {
+      "id": 78,
+      "slug": "ember-trousers",
+      "title": "Ember Trousers",
+      "type": "side-quest"
+    },
+    {
+      "id": 79,
+      "slug": "misko%27s-treasure-the-fierce-deity",
+      "title": "Misko's Treasure: The Fierce Deity Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 80,
+      "slug": "fierce-deity-sword",
+      "title": "Fierce Deity Sword",
+      "type": "side-quest"
+    },
+    {
+      "id": 81,
+      "slug": "misko%27s-treasure-twins-manuscript",
+      "title": "Misko's Treasure: Twins Manuscript",
+      "type": "side-quest"
+    },
+    {
+      "id": 82,
+      "slug": "tingle%27s-shirt",
+      "title": "Tingle's Shirt",
+      "type": "side-quest"
+    },
+    {
+      "id": 83,
+      "slug": "misko%27s-treasure-pirate-manuscript",
+      "title": "Misko's Treasure: Pirate Manuscript",
+      "type": "side-quest"
+    },
+    {
+      "id": 84,
+      "slug": "tingle%27s-tights",
+      "title": "Tingle's Tights",
+      "type": "side-quest"
+    },
+    {
+      "id": 85,
+      "slug": "misko%27s-treasure-heroines-manuscript",
+      "title": "Misko's Treasure: Heroines Manuscript",
+      "type": "side-quest"
+    },
+    {
+      "id": 86,
+      "slug": "tingle%27s-hood",
+      "title": "Tingle's Hood",
+      "type": "side-quest"
+    },
+    {
+      "id": 87,
+      "slug": "misko%27s-treasure-of-awakening-i",
+      "title": "Misko's Treasure of Awakening I",
+      "type": "side-quest"
+    },
+    {
+      "id": 88,
+      "slug": "tunic-of-awakening",
+      "title": "Tunic of Awakening",
+      "type": "side-quest"
+    },
+    {
+      "id": 89,
+      "slug": "a-picture-for-wetland-stable",
+      "title": "A Picture for Wetland Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 90,
+      "slug": "an-uninvited-guest",
+      "title": "An Uninvited Guest",
+      "type": "side-quest"
+    },
+    {
+      "id": 91,
+      "slug": "a-picture-for-dueling-peaks-stable",
+      "title": "A Picture for Dueling Peaks Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 92,
+      "slug": "out-of-the-inn",
+      "title": "Out of the Inn",
+      "type": "side-quest"
+    },
+    {
+      "id": 93,
+      "slug": "follow-the-cuccos",
+      "title": "Follow the Cuccos",
+      "type": "side-quest"
+    },
+    {
+      "id": 94,
+      "slug": "a-trip-through-history",
+      "title": "A Trip Through History",
+      "type": "side-quest"
+    },
+    {
+      "id": 95,
+      "slug": "thunderwing-butterfly",
+      "title": "Thunderwing Butterfly",
+      "type": "side-quest"
+    },
+    {
+      "id": 96,
+      "slug": "codgers%27-quarrel",
+      "title": "Codgers' Quarrel",
+      "type": "side-quest"
+    },
+    {
+      "id": 97,
+      "slug": "gloom-borne-illness",
+      "title": "Gloom-Borne Illness",
+      "type": "side-quest"
+    },
+    {
+      "id": 98,
+      "slug": "a-new-champion%27s-tunic",
+      "title": "A New Champion's Tunic",
+      "type": "side-quest"
+    },
+    {
+      "id": 99,
+      "slug": "champion%27s-leathers",
+      "title": "Champion's Leathers",
+      "type": "side-quest"
+    },
+    {
+      "id": 100,
+      "slug": "teach-me-a-lesson-i",
+      "title": "Teach Me a Lesson I",
+      "type": "side-quest"
+    },
+    {
+      "id": 101,
+      "slug": "teach-me-a-lesson-ii",
+      "title": "Teach Me a Lesson II",
+      "type": "side-quest"
+    },
+    {
+      "id": 102,
+      "slug": "dantz%27s-prize-cows",
+      "title": "Dantz's Prize Cows",
+      "type": "side-quest"
+    },
+    {
+      "id": 103,
+      "slug": "homegrown-in-hateno",
+      "title": "Homegrown in Hateno",
+      "type": "side-quest"
+    },
+    {
+      "id": 104,
+      "slug": "photographing-a-chuchu",
+      "title": "Photographing a Chuchu",
+      "type": "side-quest"
+    },
+    {
+      "id": 105,
+      "slug": "uma%27s-garden",
+      "title": "Uma's Garden",
+      "type": "side-quest"
+    },
+    {
+      "id": 106,
+      "slug": "manny%27s-beloved",
+      "title": "Manny's Beloved",
+      "type": "side-quest"
+    },
+    {
+      "id": 107,
+      "slug": "lurelin-resort-project",
+      "title": "Lurelin Resort Project",
+      "type": "side-quest"
+    },
+    {
+      "id": 108,
+      "slug": "dad%27s-blue-shirt",
+      "title": "Dad's Blue Shirt",
+      "type": "side-quest"
+    },
+    {
+      "id": 109,
+      "slug": "island-lobster-shirt",
+      "title": "Island Lobster Shirt",
+      "type": "side-quest"
+    },
+    {
+      "id": 110,
+      "slug": "a-way-to-trade,-washed-away",
+      "title": "A Way to Trade, Washed Away",
+      "type": "side-quest"
+    },
+    {
+      "id": 111,
+      "slug": "rattled-ralera",
+      "title": "Rattled Ralera",
+      "type": "side-quest"
+    },
+    {
+      "id": 112,
+      "slug": "a-bottled-cry-for-help",
+      "title": "A Bottled Cry for Help",
+      "type": "side-quest"
+    },
+    {
+      "id": 113,
+      "slug": "seeking-the-pirate-hideout",
+      "title": "Seeking the Pirate Hideout",
+      "type": "side-quest"
+    },
+    {
+      "id": 114,
+      "slug": "ousting-the-giants",
+      "title": "Ousting The Giants",
+      "type": "side-quest"
+    },
+    {
+      "id": 115,
+      "slug": "a-picture-for-lakeside-stable",
+      "title": "A Picture for Lakeside Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 116,
+      "slug": "a-picture-for-highland-stable",
+      "title": "A Picture for Highland Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 117,
+      "slug": "goddess-statue-of-courage",
+      "title": "Goddess Statue of Courage",
+      "type": "side-quest"
+    },
+    {
+      "id": 118,
+      "slug": "gerudo%27s-colossal-fossil",
+      "title": "Gerudo's Colossal Fossil",
+      "type": "side-quest"
+    },
+    {
+      "id": 119,
+      "slug": "the-heroines%27-secret",
+      "title": "The Heroines' Secret",
+      "type": "side-quest"
+    },
+    {
+      "id": 120,
+      "slug": "treasure-of-the-gerudo-desert",
+      "title": "Treasure of the Gerudo Desert Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 121,
+      "slug": "vah-naboris-divine-helm",
+      "title": "Vah Naboris Divine Helm",
+      "type": "side-quest"
+    },
+    {
+      "id": 122,
+      "slug": "pride-of-the-gerudo",
+      "title": "Pride of the Gerudo",
+      "type": "side-quest"
+    },
+    {
+      "id": 123,
+      "slug": "scimitar-of-the-seven",
+      "title": "Scimitar of the Seven",
+      "type": "side-quest"
+    },
+    {
+      "id": 124,
+      "slug": "daybreaker",
+      "title": "Daybreaker",
+      "type": "side-quest"
+    },
+    {
+      "id": 125,
+      "slug": "dalia%27s-game",
+      "title": "Dalia's Game",
+      "type": "side-quest"
+    },
+    {
+      "id": 126,
+      "slug": "the-mysterious-eighth",
+      "title": "The Mysterious Eighth Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 127,
+      "slug": "the-missing-owner",
+      "title": "The Missing Owner",
+      "type": "side-quest"
+    },
+    {
+      "id": 128,
+      "slug": "to-the-ruins!",
+      "title": "To the Ruins! Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 129,
+      "slug": "decorate-with-passion",
+      "title": "Decorate with Passion Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 130,
+      "slug": "lost-in-the-dunes",
+      "title": "Lost in the Dunes Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 131,
+      "slug": "a-picture-for-closed-stable-i",
+      "title": "A Picture for Closed Stable I Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 132,
+      "slug": "a-picture-for-closed-stable-ii",
+      "title": "A Picture for Closed Stable II Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 133,
+      "slug": "piaffe,-packed-away",
+      "title": "Piaffe, Packed Away",
+      "type": "side-quest"
+    },
+    {
+      "id": 134,
+      "slug": "gleeok-guts",
+      "title": "Gleeok Guts",
+      "type": "side-quest"
+    },
+    {
+      "id": 135,
+      "slug": "disaster-in-gerudo-canyon",
+      "title": "Disaster in Gerudo Canyon",
+      "type": "side-quest"
+    },
+    {
+      "id": 136,
+      "slug": "the-great-tumbleweed-purge",
+      "title": "The Great Tumbleweed Purge",
+      "type": "side-quest"
+    },
+    {
+      "id": 137,
+      "slug": "heat-endurance-contest!",
+      "title": "Heat-Endurance Contest!",
+      "type": "side-quest"
+    },
+    {
+      "id": 138,
+      "slug": "cold-endurance-contest!",
+      "title": "Cold-Endurance Contest!",
+      "type": "side-quest"
+    },
+    {
+      "id": 139,
+      "slug": "the-icelesss-icehouse",
+      "title": "The Iceless Icehouse",
+      "type": "side-quest"
+    },
+    {
+      "id": 140,
+      "slug": "the-south-lomei-prophecy",
+      "title": "South Lomei Labyrinth",
+      "type": "side-quest"
+    },
+    {
+      "id": 141,
+      "slug": "whirly-swirly-things",
+      "title": "Whirly Swirly Things Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 142,
+      "slug": "endura-carrot",
+      "title": "Endura Carrot",
+      "type": "side-quest"
+    },
+    {
+      "id": 143,
+      "slug": "the-secret-room",
+      "title": "The Secret Room",
+      "type": "side-quest"
+    },
+    {
+      "id": 144,
+      "slug": "walton%27s-treasure-hunt",
+      "title": "Walton's Treasure Hunt",
+      "type": "side-quest"
+    },
+    {
+      "id": 145,
+      "slug": "a-picture-for-woodland-stable",
+      "title": "A Picture for Woodland Stable",
+      "type": "side-quest"
+    },
+    {
+      "id": 146,
+      "slug": "the-treasure-hunters",
+      "title": "The Treasure Hunters",
+      "type": "side-quest"
+    },
+    {
+      "id": 147,
+      "slug": "true-treasure",
+      "title": "True Treasure",
+      "type": "side-quest"
+    },
+    {
+      "id": 148,
+      "slug": "secret-treasure-under-the-great-fish",
+      "title": "Secret Treasure Under the Great Fish Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 149,
+      "slug": "vah-ruta-divine-helm",
+      "title": "Vah Ruta Divine Helm",
+      "type": "side-quest"
+    },
+    {
+      "id": 150,
+      "slug": "the-never-ending-lecture",
+      "title": "The Never-Ending Lecture Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 151,
+      "slug": "the-moonlit-princess",
+      "title": "The Moonlit Princess Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 152,
+      "slug": "zora-sword",
+      "title": "Zora Sword",
+      "type": "side-quest"
+    },
+    {
+      "id": 153,
+      "slug": "the-fort-at-ja%27abu-ridge",
+      "title": "The Fort at Ja'Abu Ridge",
+      "type": "side-quest"
+    },
+    {
+      "id": 154,
+      "slug": "glory-of-the-zora",
+      "title": "Glory of the Zora",
+      "type": "side-quest"
+    },
+    {
+      "id": 155,
+      "slug": "lightscale-trident",
+      "title": "Lightscale Trident",
+      "type": "side-quest"
+    },
+    {
+      "id": 156,
+      "slug": "a-crabulous-deal",
+      "title": "A Crabulous Deal",
+      "type": "side-quest"
+    },
+    {
+      "id": 157,
+      "slug": "a-wife-wafted-away",
+      "title": "A Wife Wafted Away Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 158,
+      "slug": "a-token-of-friendship",
+      "title": "A Token of Friendship",
+      "type": "side-quest"
+    },
+    {
+      "id": 159,
+      "slug": "the-blue-stone",
+      "title": "The Blue Stone",
+      "type": "side-quest"
+    },
+    {
+      "id": 160,
+      "slug": "the-ultimate-dish%3f",
+      "title": "The Ultimate Dish?",
+      "type": "side-quest"
+    },
+    {
+      "id": 161,
+      "slug": "mired-in-muck",
+      "title": "Mired in Muck",
+      "type": "side-quest"
+    },
+    {
+      "id": 162,
+      "slug": "zora-spear",
+      "title": "Zora Spear",
+      "type": "side-quest"
+    },
+    {
+      "id": 163,
+      "slug": "goddess-statue-of-wisdom",
+      "title": "Goddess Statue of Wisdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 164,
+      "slug": "ancient-blades-below",
+      "title": "Ancient Blades Below",
+      "type": "side-quest"
+    },
+    {
+      "id": 165,
+      "slug": "the-shrine-explorer",
+      "title": "The Shrine Explorer",
+      "type": "side-quest"
+    },
+    {
+      "id": 166,
+      "slug": "ancient-hero%27s-aspect",
+      "title": "Ancient Hero’s Aspect",
       "type": "side-quest"
     }
   ],
