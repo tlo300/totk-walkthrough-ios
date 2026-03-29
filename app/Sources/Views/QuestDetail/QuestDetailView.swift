@@ -16,6 +16,7 @@ struct QuestDetailView: View {
         case .main: folder = "quests"
         case .side: folder = "side-quests"
         case .shrine: folder = "shrines"
+        case .adventure: folder = "adventures"
         }
         return contentStore.contentURL
             .appendingPathComponent(folder)
