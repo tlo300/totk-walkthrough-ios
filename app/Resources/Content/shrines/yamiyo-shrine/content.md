@@ -1,3 +1,5 @@
+![](image-001.jpg)
+
 Yamiyo Shrine (Combat Training: Throwing) in The Legend of Zelda: Tears of the Kingdom is a shrine located in the Central Hyrule Region. This page contains a guide for how to locate and enter the shrine, a walkthrough for the shrine itself, and puzzle solutions as well as treasure chest locations for the TotK Yamiyo shrine. 
 
 ### Treasure and Rewards
@@ -8,6 +10,8 @@ Yamiyo Shrine (Combat Training: Throwing) in The Legend of Zelda: Tears of the K
 
 ##  Location/How to Reach
 
+![](image-002.jpg)
+
 Yamiyo Shrine can be found in the Romani Plains in Central Hyrule, due east of Hyrule Castle Town Ruins and north east of Lookout Landing and the Lookout Landing Skyview Tower. 
 
   * **Coordinates:** 0332, 0470, 0029
@@ -15,6 +19,8 @@ Yamiyo Shrine can be found in the Romani Plains in Central Hyrule, due east of H
 
 
 ## Walkthrough and Puzzle Solutions
+
+![](image-003.jpg)
 
 Your goal here is to defeat the construct in the center of the arena on the platform. You must use the Throw Material command to do so. Approach the bushes with the Fire Fruit. 
 
@@ -24,9 +30,17 @@ Your goal here is to defeat the construct in the center of the arena on the plat
 
 
 
+![](image-004.jpg)
+
+![](image-005.jpg)
+
   * **Throw Material (Enemy Is Moving):** The trial then asks you to throw the fruit again at the construct, but this time you must do it when it stops moving. When it stops, move in close and throw the fruit to kill the construct.
 
 
+
+![](image-006.jpg)
+
+![](image-007.jpg)
 
 Now, search the enemy platform, there are ladders on the rear side, for the dropped weapons and Zonai Charge. 
 
