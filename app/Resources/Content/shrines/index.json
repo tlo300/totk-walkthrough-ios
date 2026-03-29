@@ -1,941 +1,161 @@
 {
   "quests": [
-    {
-      "id": 1,
-      "slug": "ukouh-shrine",
-      "title": "Ukouh Shrine Guide",
-      "type": "shrine"
-    },
-    {
-      "id": 2,
-      "slug": "in-isa-shrine",
-      "title": "In-isa Shrine Guide",
-      "type": "shrine"
-    },
-    {
-      "id": 3,
-      "slug": "gutanbac-shrine",
-      "title": "Gutanbac Shrine (The Shrine in the Snow)",
-      "type": "shrine"
-    },
-    {
-      "id": 4,
-      "slug": "nachoyah-shrine",
-      "title": "Nachoyah Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 5,
-      "slug": "yamiyo-shrine",
-      "title": "Yamiyo Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 6,
-      "slug": "kyononis-shrine",
-      "title": "Kyononis Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 7,
-      "slug": "ishodag-shrine",
-      "title": "Ishodag Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 8,
-      "slug": "sinakawak-shrine",
-      "title": "Sinakawak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 9,
-      "slug": "jiosin-shrine",
-      "title": "Jiosin Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 10,
-      "slug": "susuyai-shrine",
-      "title": "Susuyai Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 11,
-      "slug": "mayachin-shrine",
-      "title": "Mayachin Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 12,
-      "slug": "teniten-shrine",
-      "title": "Teniten Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 13,
-      "slug": "tajikats-shrine",
-      "title": "Tajikats Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 14,
-      "slug": "kamizun-shrine",
-      "title": "Kamizun Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 15,
-      "slug": "kyokugon-shrine",
-      "title": "Kyokugon Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 16,
-      "slug": "kyokugon-shrine",
-      "title": "Kyokugon Shrine guide",
-      "type": "shrine"
-    },
-    {
-      "id": 17,
-      "slug": "tsutsu-um-shrine",
-      "title": "Tsutsu-um Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 18,
-      "slug": "riogok-shrine",
-      "title": "Riogok Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 19,
-      "slug": "tadarok-shrine",
-      "title": "Tadarok Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 20,
-      "slug": "serutabomac-shrine",
-      "title": "Serutabomac Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 21,
-      "slug": "sepapa-shrine",
-      "title": "Sepapa Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 22,
-      "slug": "ren-iz-shrine",
-      "title": "Ren-iz Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 23,
-      "slug": "jojon-shrine",
-      "title": "Jojon Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 24,
-      "slug": "jojon-shrine",
-      "title": "Jojon Shrine guide",
-      "type": "shrine"
-    },
-    {
-      "id": 25,
-      "slug": "jinodok-shrine",
-      "title": "Jinodok Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 26,
-      "slug": "taunhiy-shrine",
-      "title": "Taunhiy Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 27,
-      "slug": "simosiwak-shrine",
-      "title": "Simosiwak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 28,
-      "slug": "mayam-shrine",
-      "title": "Mayam Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 29,
-      "slug": "orochium-shrine",
-      "title": "Orochium Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 30,
-      "slug": "nouda-shrine",
-      "title": "Nouda Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 31,
-      "slug": "oromuwak-shrine",
-      "title": "Oromuwak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 32,
-      "slug": "gatakis-shrine",
-      "title": "Gatakis Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 33,
-      "slug": "wao-os-shrine",
-      "title": "Wao-os Shrine - The White Bird's Guidance",
-      "type": "shrine"
-    },
-    {
-      "id": 34,
-      "slug": "sahirow-shrine",
-      "title": "Sahirow Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 35,
-      "slug": "tauyosipun-shrine",
-      "title": "Tauyosipun Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 36,
-      "slug": "otak-shrine",
-      "title": "Otak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 37,
-      "slug": "eutoum-shrine",
-      "title": "Eutoum Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 38,
-      "slug": "rutafu-um-shrine",
-      "title": "Rutafu-um Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 39,
-      "slug": "sisuran-shrine",
-      "title": "Sisuran Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 40,
-      "slug": "oshozan-u-shrine",
-      "title": "Oshozan-u Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 41,
-      "slug": "mayaotaki-shrine",
-      "title": "Mayaotaki Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 42,
-      "slug": "ganos-shrine",
-      "title": "Ganos Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 43,
-      "slug": "ga-ahisas-shrine",
-      "title": "Ga-ahisas Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 44,
-      "slug": "ijo-o-shrine",
-      "title": "Ijo-o Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 45,
-      "slug": "ijo-o-shrine",
-      "title": "how to get to this shrine in the Hebra Mountains Sky with the guide",
-      "type": "shrine"
-    },
-    {
-      "id": 46,
-      "slug": "kahatanaum-shrine",
-      "title": "Kahatanaum Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 47,
-      "slug": "mayaumekis-shrine",
-      "title": "Mayaumekis Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 48,
-      "slug": "taninoud-shrine",
-      "title": "Taninoud Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 49,
-      "slug": "tenbez-shrine",
-      "title": "Tenbez Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 50,
-      "slug": "mayausiy-shrine",
-      "title": "Mayausiy Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 51,
-      "slug": "ikatak-shrine",
-      "title": "Ikatak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 52,
-      "slug": "turakawak-shrine",
-      "title": "Turakawak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 53,
-      "slug": "iun-orok-shrine",
-      "title": "Iun-orok Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 54,
-      "slug": "iun-orok-shrine",
-      "title": "Iun-orok shrine guide",
-      "type": "shrine"
-    },
-    {
-      "id": 55,
-      "slug": "gasas-shrine",
-      "title": "Gasas Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 56,
-      "slug": "kiuyoyou-shrine",
-      "title": "Kiuyoyou Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 57,
-      "slug": "usazum-shrine",
-      "title": "Usazum Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 58,
-      "slug": "sonapan-shrine",
-      "title": "Sonapan Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 59,
-      "slug": "makurukis-shrine",
-      "title": "Makurukis Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 60,
-      "slug": "runakit-shrine",
-      "title": "Runakit Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 61,
-      "slug": "taki-ihaban-shrine",
-      "title": "Taki-ihaban Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 62,
-      "slug": "tenmaten-shrine",
-      "title": "Tenmaten Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 63,
-      "slug": "gemimik-shrine",
-      "title": "Gemimik Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 64,
-      "slug": "jochi-iu-shrine",
-      "title": "Jochi-iu Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 65,
-      "slug": "mayachideg-shrine",
-      "title": "Mayachideg Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 66,
-      "slug": "kamatukis-shrine",
-      "title": "Kamatukis Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 67,
-      "slug": "sinatanika-shrine",
-      "title": "Sinatanika Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 68,
-      "slug": "rasitakiwak-shrine",
-      "title": "Rasitakiwak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 69,
-      "slug": "jochi-ihiga-shrine",
-      "title": "Jochi-ihiga Shrine - Rock for Sale",
-      "type": "shrine"
-    },
-    {
-      "id": 70,
-      "slug": "gatanisis-shrine",
-      "title": "Gatanisis Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 71,
-      "slug": "rasiwak-shrine",
-      "title": "Rasiwak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 72,
-      "slug": "igashuk-shrine",
-      "title": "Igashuk Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 73,
-      "slug": "domizuin-shrine",
-      "title": "Domizuin Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 74,
-      "slug": "kimayat-shrine",
-      "title": "Kimayat Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 75,
-      "slug": "momosik-shrine",
-      "title": "Momosik Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 76,
-      "slug": "natak-shrine",
-      "title": "Natak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 77,
-      "slug": "gikaku-shrine",
-      "title": "Gikaku Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 78,
-      "slug": "mogisari-shrine",
-      "title": "Mogisari Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 79,
-      "slug": "timawak-shrine",
-      "title": "Timawak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 80,
-      "slug": "marakuguc-shrine",
-      "title": "Marakuguc Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 81,
-      "slug": "isisim-shrine",
-      "title": "Isisim Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 82,
-      "slug": "sitsum-shrine",
-      "title": "Sitsum Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 83,
-      "slug": "kikakin-shrine",
-      "title": "Kikakin Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 84,
-      "slug": "minetak-shrine",
-      "title": "Minetak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 85,
-      "slug": "sikukuu-shrine",
-      "title": "Sikukuu Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 86,
-      "slug": "mayak-shrine",
-      "title": "Mayak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 87,
-      "slug": "jiotak-shrine",
-      "title": "Jiotak Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 88,
-      "slug": "sibajitak-shrine",
-      "title": "Sibajitak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 89,
-      "slug": "moshapin-shrine",
-      "title": "Moshapin Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 90,
-      "slug": "kisinona-shrine",
-      "title": "Kisinona Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 91,
-      "slug": "kadaunar-shrine",
-      "title": "Kadaunar Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 92,
-      "slug": "utsushok-shrine",
-      "title": "Utsushok Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 93,
-      "slug": "joju-u-u-shrine",
-      "title": "Joju-u-u Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 94,
-      "slug": "utojis-shrine",
-      "title": "Utojis Shrine - Legend of the Soaring Spear Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 95,
-      "slug": "jiukoum-shrine",
-      "title": "Jiukoum Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 96,
-      "slug": "ishokin-shrine",
-      "title": "Ishokin Shrine - Ride the Giant Horse Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 97,
-      "slug": "joku-usin-shrine",
-      "title": "Joku-usin Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 98,
-      "slug": "joku-u-shrine",
-      "title": "Joku-u Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 99,
-      "slug": "miryotanog-shrine",
-      "title": "Miryotanog Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 100,
-      "slug": "kudanisar-shrine",
-      "title": "Kudanisar Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 101,
-      "slug": "soryotanog-shrine",
-      "title": "Soryotanog Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 102,
-      "slug": "mayatat-shrine",
-      "title": "Mayatat Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 103,
-      "slug": "siwakama-shrine",
-      "title": "Siwakama Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 104,
-      "slug": "chichim-shrine",
-      "title": "Chichim Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 105,
-      "slug": "irasak-shrine",
-      "title": "Irasak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 106,
-      "slug": "karahatag-shrine",
-      "title": "Karahatag Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 107,
-      "slug": "suariwak-shrine",
-      "title": "Suariwak Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 108,
-      "slug": "otutsum-shrine",
-      "title": "Otutsum Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 109,
-      "slug": "mayamats-shrine",
-      "title": "Mayamats Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 110,
-      "slug": "rotsumamu-shrine",
-      "title": "Rotsumamu Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 111,
-      "slug": "motsusis-shrine",
-      "title": "Motsusis Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 112,
-      "slug": "kitawak-shrine",
-      "title": "Kitawak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 113,
-      "slug": "rakakudaj-shrine",
-      "title": "Rakakudaj Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 114,
-      "slug": "turakamik-shrine",
-      "title": "Turakamik Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 115,
-      "slug": "rakashog-shrine",
-      "title": "Rakashog Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 116,
-      "slug": "mayasiar-shrine",
-      "title": "Mayasiar Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 117,
-      "slug": "siyamotsus-shrine",
-      "title": "Siyamotsus Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 118,
-      "slug": "morok-shrine",
-      "title": "Morok Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 119,
-      "slug": "tukarok-shrine",
-      "title": "Tukarok Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 120,
-      "slug": "jikais-shrine",
-      "title": "Jikais Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 121,
-      "slug": "jogou-shrine",
-      "title": "Jogou Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 122,
-      "slug": "zakusu-shrine",
-      "title": "Zakusu Shrine - The High Spring and the Light Rings",
-      "type": "shrine"
-    },
-    {
-      "id": 123,
-      "slug": "mogawak-shrine",
-      "title": "Mogawak Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 124,
-      "slug": "jonsau-shrine",
-      "title": "Jonsau Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 125,
-      "slug": "kurakat-shrine",
-      "title": "Kurakat Shrine - Dyeing to Find It",
-      "type": "shrine"
-    },
-    {
-      "id": 126,
-      "slug": "joniu-shrine",
-      "title": "Joniu Shrine Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 127,
-      "slug": "ihen-a-shrine",
-      "title": "Ihen-a Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 128,
-      "slug": "apogek-shrine",
-      "title": "Apogek Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 129,
-      "slug": "yomizuk-shrine",
-      "title": "Yomizuk Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 130,
-      "slug": "maoikes-shrine",
-      "title": "Maoikes Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 131,
-      "slug": "sihajog-shrine",
-      "title": "Sihajog Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 132,
-      "slug": "jirutagumac-shrine",
-      "title": "Jirutagumac Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 133,
-      "slug": "igoshon-shrine",
-      "title": "Igoshon Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 134,
-      "slug": "mayanas-shrine",
-      "title": "Mayanas Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 135,
-      "slug": "en-oma-shrine",
-      "title": "En-oma Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 136,
-      "slug": "susub-shrine",
-      "title": "Susub Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 137,
-      "slug": "jochisiu-shrine",
-      "title": "Jochisiu Shrine - Keys Born of Water Tears of the Kingdom",
-      "type": "shrine"
-    },
-    {
-      "id": 138,
-      "slug": "o-ogim-shrine",
-      "title": "O-ogim Shrine - The Lanayru Road Crystal",
-      "type": "shrine"
-    },
-    {
-      "id": 139,
-      "slug": "zanmik-shrine",
-      "title": "Zanmik Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 140,
-      "slug": "mayahisik-shrine",
-      "title": "Mayahisik Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 141,
-      "slug": "sifumim-shrine",
-      "title": "Sifumim Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 142,
-      "slug": "makasura-shrine",
-      "title": "Makasura Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 143,
-      "slug": "eshos-shrine",
-      "title": "Eshos Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 144,
-      "slug": "marari-in-shrine",
-      "title": "Marari-in Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 145,
-      "slug": "tokiy-shrine",
-      "title": "Tokiy Shrine - The Oakle's Navel Cave Crystal",
-      "type": "shrine"
-    },
-    {
-      "id": 146,
-      "slug": "anedamimik-shrine",
-      "title": "Anedamimik Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 147,
-      "slug": "bamitok-shrine",
-      "title": "Bamitok Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 148,
-      "slug": "josiu-shrine",
-      "title": "Josiu Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 149,
-      "slug": "ukoojisi-shrine",
-      "title": "Ukoojisi Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 150,
-      "slug": "kumamayn-shrine",
-      "title": "Kumamayn Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 151,
-      "slug": "yansamin-shrine",
-      "title": "Yansamin Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 152,
-      "slug": "musanokir-shrine",
-      "title": "Musanokir Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 153,
-      "slug": "ekochiu-shrine",
-      "title": "Ekochiu Shrine",
-      "type": "shrine"
-    },
-    {
-      "id": 154,
-      "slug": "pupunke-shrine",
-      "title": "Pupunke Shrine - A Pretty Stone and Five Golden Apples",
-      "type": "shrine"
-    },
-    {
-      "id": 155,
-      "slug": "ninjis-shrine",
-      "title": "Ninjis Shrine - Maca's Special Place",
-      "type": "shrine"
-    },
-    {
-      "id": 156,
-      "slug": "sakunbomar-shrine",
-      "title": "Sakunbomar Shrine - None Shall Pass",
-      "type": "shrine"
-    }
+    { "id": 1, "slug": "ukouh-shrine", "title": "Ukouh Shrine Guide", "type": "shrine", "region": "Great Sky Island" },
+    { "id": 2, "slug": "in-isa-shrine", "title": "In-isa Shrine Guide", "type": "shrine", "region": "Great Sky Island" },
+    { "id": 3, "slug": "gutanbac-shrine", "title": "Gutanbac Shrine (The Shrine in the Snow)", "type": "shrine", "region": "Great Sky Island" },
+    { "id": 4, "slug": "nachoyah-shrine", "title": "Nachoyah Shrine", "type": "shrine", "region": "Great Sky Island" },
+    { "id": 5, "slug": "yamiyo-shrine", "title": "Yamiyo Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 6, "slug": "kyononis-shrine", "title": "Kyononis Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 7, "slug": "ishodag-shrine", "title": "Ishodag Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 8, "slug": "sinakawak-shrine", "title": "Sinakawak Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 9, "slug": "jiosin-shrine", "title": "Jiosin Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 10, "slug": "susuyai-shrine", "title": "Susuyai Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 11, "slug": "mayachin-shrine", "title": "Mayachin Shrine Tears of the Kingdom", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 12, "slug": "teniten-shrine", "title": "Teniten Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 13, "slug": "tajikats-shrine", "title": "Tajikats Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 14, "slug": "kamizun-shrine", "title": "Kamizun Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 15, "slug": "kyokugon-shrine", "title": "Kyokugon Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 16, "slug": "kyokugon-shrine", "title": "Kyokugon Shrine guide", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 17, "slug": "tsutsu-um-shrine", "title": "Tsutsu-um Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 18, "slug": "riogok-shrine", "title": "Riogok Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 19, "slug": "tadarok-shrine", "title": "Tadarok Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 20, "slug": "serutabomac-shrine", "title": "Serutabomac Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 21, "slug": "sepapa-shrine", "title": "Sepapa Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 22, "slug": "ren-iz-shrine", "title": "Ren-iz Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 23, "slug": "jojon-shrine", "title": "Jojon Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 24, "slug": "jojon-shrine", "title": "Jojon Shrine guide", "type": "shrine", "region": "Akkala" },
+    { "id": 25, "slug": "jinodok-shrine", "title": "Jinodok Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 26, "slug": "taunhiy-shrine", "title": "Taunhiy Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 27, "slug": "simosiwak-shrine", "title": "Simosiwak Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 28, "slug": "mayam-shrine", "title": "Mayam Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 29, "slug": "orochium-shrine", "title": "Orochium Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 30, "slug": "nouda-shrine", "title": "Nouda Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 31, "slug": "oromuwak-shrine", "title": "Oromuwak Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 32, "slug": "gatakis-shrine", "title": "Gatakis Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 33, "slug": "wao-os-shrine", "title": "Wao-os Shrine - The White Bird's Guidance", "type": "shrine", "region": "Hebra" },
+    { "id": 34, "slug": "sahirow-shrine", "title": "Sahirow Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 35, "slug": "tauyosipun-shrine", "title": "Tauyosipun Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 36, "slug": "otak-shrine", "title": "Otak Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 37, "slug": "eutoum-shrine", "title": "Eutoum Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 38, "slug": "rutafu-um-shrine", "title": "Rutafu-um Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 39, "slug": "sisuran-shrine", "title": "Sisuran Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 40, "slug": "oshozan-u-shrine", "title": "Oshozan-u Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 41, "slug": "mayaotaki-shrine", "title": "Mayaotaki Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 42, "slug": "ganos-shrine", "title": "Ganos Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 43, "slug": "ga-ahisas-shrine", "title": "Ga-ahisas Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 44, "slug": "ijo-o-shrine", "title": "Ijo-o Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 45, "slug": "ijo-o-shrine", "title": "how to get to this shrine in the Hebra Mountains Sky with the guide", "type": "shrine", "region": "Hebra" },
+    { "id": 46, "slug": "kahatanaum-shrine", "title": "Kahatanaum Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 47, "slug": "mayaumekis-shrine", "title": "Mayaumekis Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 48, "slug": "taninoud-shrine", "title": "Taninoud Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 49, "slug": "tenbez-shrine", "title": "Tenbez Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 50, "slug": "mayausiy-shrine", "title": "Mayausiy Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 51, "slug": "ikatak-shrine", "title": "Ikatak Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 52, "slug": "turakawak-shrine", "title": "Turakawak Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 53, "slug": "iun-orok-shrine", "title": "Iun-orok Shrine Tears of the Kingdom", "type": "shrine", "region": "Lanayru" },
+    { "id": 54, "slug": "iun-orok-shrine", "title": "Iun-orok shrine guide", "type": "shrine", "region": "Lanayru" },
+    { "id": 55, "slug": "gasas-shrine", "title": "Gasas Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 56, "slug": "kiuyoyou-shrine", "title": "Kiuyoyou Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 57, "slug": "usazum-shrine", "title": "Usazum Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 58, "slug": "sonapan-shrine", "title": "Sonapan Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 59, "slug": "makurukis-shrine", "title": "Makurukis Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 60, "slug": "runakit-shrine", "title": "Runakit Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 61, "slug": "taki-ihaban-shrine", "title": "Taki-ihaban Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 62, "slug": "tenmaten-shrine", "title": "Tenmaten Shrine Tears of the Kingdom", "type": "shrine", "region": "Lanayru" },
+    { "id": 63, "slug": "gemimik-shrine", "title": "Gemimik Shrine Tears of the Kingdom", "type": "shrine", "region": "Akkala" },
+    { "id": 64, "slug": "jochi-iu-shrine", "title": "Jochi-iu Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 65, "slug": "mayachideg-shrine", "title": "Mayachideg Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 66, "slug": "kamatukis-shrine", "title": "Kamatukis Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 67, "slug": "sinatanika-shrine", "title": "Sinatanika Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 68, "slug": "rasitakiwak-shrine", "title": "Rasitakiwak Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 69, "slug": "jochi-ihiga-shrine", "title": "Jochi-ihiga Shrine - Rock for Sale", "type": "shrine", "region": "Lanayru" },
+    { "id": 70, "slug": "gatanisis-shrine", "title": "Gatanisis Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 71, "slug": "rasiwak-shrine", "title": "Rasiwak Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 72, "slug": "igashuk-shrine", "title": "Igashuk Shrine", "type": "shrine", "region": "Hebra" },
+    { "id": 73, "slug": "domizuin-shrine", "title": "Domizuin Shrine Tears of the Kingdom", "type": "shrine", "region": "Eldin" },
+    { "id": 74, "slug": "kimayat-shrine", "title": "Kimayat Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 75, "slug": "momosik-shrine", "title": "Momosik Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 76, "slug": "natak-shrine", "title": "Natak Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 77, "slug": "gikaku-shrine", "title": "Gikaku Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 78, "slug": "mogisari-shrine", "title": "Mogisari Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 79, "slug": "timawak-shrine", "title": "Timawak Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 80, "slug": "marakuguc-shrine", "title": "Marakuguc Shrine Tears of the Kingdom", "type": "shrine", "region": "Faron" },
+    { "id": 81, "slug": "isisim-shrine", "title": "Isisim Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 82, "slug": "sitsum-shrine", "title": "Sitsum Shrine", "type": "shrine", "region": "Central Hyrule" },
+    { "id": 83, "slug": "kikakin-shrine", "title": "Kikakin Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 84, "slug": "minetak-shrine", "title": "Minetak Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 85, "slug": "sikukuu-shrine", "title": "Sikukuu Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 86, "slug": "mayak-shrine", "title": "Mayak Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 87, "slug": "jiotak-shrine", "title": "Jiotak Shrine Tears of the Kingdom", "type": "shrine", "region": "Necluda" },
+    { "id": 88, "slug": "sibajitak-shrine", "title": "Sibajitak Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 89, "slug": "moshapin-shrine", "title": "Moshapin Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 90, "slug": "kisinona-shrine", "title": "Kisinona Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 91, "slug": "kadaunar-shrine", "title": "Kadaunar Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 92, "slug": "utsushok-shrine", "title": "Utsushok Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 93, "slug": "joju-u-u-shrine", "title": "Joju-u-u Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 94, "slug": "utojis-shrine", "title": "Utojis Shrine - Legend of the Soaring Spear Tears of the Kingdom", "type": "shrine", "region": "Gerudo" },
+    { "id": 95, "slug": "jiukoum-shrine", "title": "Jiukoum Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 96, "slug": "ishokin-shrine", "title": "Ishokin Shrine - Ride the Giant Horse Tears of the Kingdom", "type": "shrine", "region": "Gerudo" },
+    { "id": 97, "slug": "joku-usin-shrine", "title": "Joku-usin Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 98, "slug": "joku-u-shrine", "title": "Joku-u Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 99, "slug": "miryotanog-shrine", "title": "Miryotanog Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 100, "slug": "kudanisar-shrine", "title": "Kudanisar Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 101, "slug": "soryotanog-shrine", "title": "Soryotanog Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 102, "slug": "mayatat-shrine", "title": "Mayatat Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 103, "slug": "siwakama-shrine", "title": "Siwakama Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 104, "slug": "chichim-shrine", "title": "Chichim Shrine Tears of the Kingdom", "type": "shrine", "region": "Gerudo" },
+    { "id": 105, "slug": "irasak-shrine", "title": "Irasak Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 106, "slug": "karahatag-shrine", "title": "Karahatag Shrine Tears of the Kingdom", "type": "shrine", "region": "Gerudo" },
+    { "id": 107, "slug": "suariwak-shrine", "title": "Suariwak Shrine Tears of the Kingdom", "type": "shrine", "region": "Gerudo" },
+    { "id": 108, "slug": "otutsum-shrine", "title": "Otutsum Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 109, "slug": "mayamats-shrine", "title": "Mayamats Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 110, "slug": "rotsumamu-shrine", "title": "Rotsumamu Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 111, "slug": "motsusis-shrine", "title": "Motsusis Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 112, "slug": "kitawak-shrine", "title": "Kitawak Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 113, "slug": "rakakudaj-shrine", "title": "Rakakudaj Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 114, "slug": "turakamik-shrine", "title": "Turakamik Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 115, "slug": "rakashog-shrine", "title": "Rakashog Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 116, "slug": "mayasiar-shrine", "title": "Mayasiar Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 117, "slug": "siyamotsus-shrine", "title": "Siyamotsus Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 118, "slug": "morok-shrine", "title": "Morok Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 119, "slug": "tukarok-shrine", "title": "Tukarok Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 120, "slug": "jikais-shrine", "title": "Jikais Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 121, "slug": "jogou-shrine", "title": "Jogou Shrine Tears of the Kingdom", "type": "shrine", "region": "Eldin" },
+    { "id": 122, "slug": "zakusu-shrine", "title": "Zakusu Shrine - The High Spring and the Light Rings", "type": "shrine", "region": "Eldin" },
+    { "id": 123, "slug": "mogawak-shrine", "title": "Mogawak Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 124, "slug": "jonsau-shrine", "title": "Jonsau Shrine Tears of the Kingdom", "type": "shrine", "region": "Lanayru" },
+    { "id": 125, "slug": "kurakat-shrine", "title": "Kurakat Shrine - Dyeing to Find It", "type": "shrine", "region": "Necluda" },
+    { "id": 126, "slug": "joniu-shrine", "title": "Joniu Shrine Tears of the Kingdom", "type": "shrine", "region": "Lanayru" },
+    { "id": 127, "slug": "ihen-a-shrine", "title": "Ihen-a Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 128, "slug": "apogek-shrine", "title": "Apogek Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 129, "slug": "yomizuk-shrine", "title": "Yomizuk Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 130, "slug": "maoikes-shrine", "title": "Maoikes Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 131, "slug": "sihajog-shrine", "title": "Sihajog Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 132, "slug": "jirutagumac-shrine", "title": "Jirutagumac Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 133, "slug": "igoshon-shrine", "title": "Igoshon Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 134, "slug": "mayanas-shrine", "title": "Mayanas Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 135, "slug": "en-oma-shrine", "title": "En-oma Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 136, "slug": "susub-shrine", "title": "Susub Shrine", "type": "shrine", "region": "Faron" },
+    { "id": 137, "slug": "jochisiu-shrine", "title": "Jochisiu Shrine - Keys Born of Water Tears of the Kingdom", "type": "shrine", "region": "Lanayru" },
+    { "id": 138, "slug": "o-ogim-shrine", "title": "O-ogim Shrine - The Lanayru Road Crystal", "type": "shrine", "region": "Lanayru" },
+    { "id": 139, "slug": "zanmik-shrine", "title": "Zanmik Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 140, "slug": "mayahisik-shrine", "title": "Mayahisik Shrine", "type": "shrine", "region": "Lanayru" },
+    { "id": 141, "slug": "sifumim-shrine", "title": "Sifumim Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 142, "slug": "makasura-shrine", "title": "Makasura Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 143, "slug": "eshos-shrine", "title": "Eshos Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 144, "slug": "marari-in-shrine", "title": "Marari-in Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 145, "slug": "tokiy-shrine", "title": "Tokiy Shrine - The Oakle's Navel Cave Crystal", "type": "shrine", "region": "Necluda" },
+    { "id": 146, "slug": "anedamimik-shrine", "title": "Anedamimik Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 147, "slug": "bamitok-shrine", "title": "Bamitok Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 148, "slug": "josiu-shrine", "title": "Josiu Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 149, "slug": "ukoojisi-shrine", "title": "Ukoojisi Shrine", "type": "shrine", "region": "Akkala" },
+    { "id": 150, "slug": "kumamayn-shrine", "title": "Kumamayn Shrine", "type": "shrine", "region": "Necluda" },
+    { "id": 151, "slug": "yansamin-shrine", "title": "Yansamin Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 152, "slug": "musanokir-shrine", "title": "Musanokir Shrine", "type": "shrine", "region": "Gerudo" },
+    { "id": 153, "slug": "ekochiu-shrine", "title": "Ekochiu Shrine", "type": "shrine", "region": "Eldin" },
+    { "id": 154, "slug": "pupunke-shrine", "title": "Pupunke Shrine - A Pretty Stone and Five Golden Apples", "type": "shrine", "region": "Akkala" },
+    { "id": 155, "slug": "ninjis-shrine", "title": "Ninjis Shrine - Maca's Special Place", "type": "shrine", "region": "Necluda" },
+    { "id": 156, "slug": "sakunbomar-shrine", "title": "Sakunbomar Shrine - None Shall Pass", "type": "shrine", "region": "Eldin" }
   ],
   "sideQuests": []
 }
