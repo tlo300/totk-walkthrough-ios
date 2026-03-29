@@ -5,6 +5,7 @@ enum QuestType: String, Codable {
     case main
     case side
     case shrine
+    case adventure
 }
 
 struct Quest: Identifiable, Codable, Hashable {
