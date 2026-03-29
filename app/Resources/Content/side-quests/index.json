@@ -1,0 +1,77 @@
+{
+  "quests": [
+    {
+      "id": 1,
+      "slug": "zelda-tears-of-the-kingdom-switch-2-edition-guide",
+      "title": "Zelda: Tears of The Kingdom Switch 2 Edition Guide",
+      "type": "side-quest"
+    },
+    {
+      "id": 2,
+      "slug": "zelda-notes-voice-memories",
+      "title": "Zelda Notes Voice Memories",
+      "type": "side-quest"
+    },
+    {
+      "id": 3,
+      "slug": "everything-new-in-zelda-tears-of-the-kingdom-switch-2",
+      "title": "Everything New In Zelda: Tears of the Kingdom Switch 2",
+      "type": "side-quest"
+    },
+    {
+      "id": 4,
+      "slug": "zelda-tears-of-the-kingdom-switch-2-edition-guide",
+      "title": "Switch 2 Edition guides",
+      "type": "side-quest"
+    },
+    {
+      "id": 5,
+      "slug": "list-of-shrine-quests",
+      "title": "List of Shrine Quests Tears of the Kingdom",
+      "type": "side-quest"
+    },
+    {
+      "id": 6,
+      "slug": "list-of-side-quests-and-side-adventures",
+      "title": "List of Side Quests and Side Adventures",
+      "type": "side-quest"
+    },
+    {
+      "id": 7,
+      "slug": "list-of-side-quests-and-side-adventures",
+      "title": "List of Side Quests",
+      "type": "side-quest"
+    },
+    {
+      "id": 8,
+      "slug": "evm8n",
+      "title": "on Amazon:",
+      "type": "side-quest"
+    },
+    {
+      "id": 9,
+      "slug": "jv18g",
+      "title": "Zelda 3D lamp,",
+      "type": "side-quest"
+    },
+    {
+      "id": 10,
+      "slug": "pboxd",
+      "title": "ToTK unisex hoodie",
+      "type": "side-quest"
+    },
+    {
+      "id": 11,
+      "slug": "the-legend-of-zelda-master-sword-tamashii-nations-proplica",
+      "title": "collectible Master Sword Proplica",
+      "type": "side-quest"
+    },
+    {
+      "id": 12,
+      "slug": "terms-of-use",
+      "title": "Learn more",
+      "type": "side-quest"
+    }
+  ],
+  "sideQuests": []
+}

@@ -1,0 +1,407 @@
+{
+  "quests": [
+    {
+      "id": 1,
+      "slug": "hateno-village-research-lab",
+      "title": "Hateno Village Research Lab",
+      "type": "adventure"
+    },
+    {
+      "id": 2,
+      "slug": "messages-from-an-ancient-era",
+      "title": "Messages from an Ancient Era",
+      "type": "adventure"
+    },
+    {
+      "id": 3,
+      "slug": "who-goes-there%3f",
+      "title": "Who Goes There?",
+      "type": "adventure"
+    },
+    {
+      "id": 4,
+      "slug": "a-deal-with-the-statue",
+      "title": "A Deal With the Statue",
+      "type": "adventure"
+    },
+    {
+      "id": 5,
+      "slug": "bring-peace-to-hyrule-field!",
+      "title": "Bring Peace to Hyrule Field!",
+      "type": "adventure"
+    },
+    {
+      "id": 6,
+      "slug": "the-beckoning-woman",
+      "title": "The Beckoning Woman",
+      "type": "adventure"
+    },
+    {
+      "id": 7,
+      "slug": "serenade-to-kaysa",
+      "title": "Serenade to Kaysa",
+      "type": "adventure"
+    },
+    {
+      "id": 8,
+      "slug": "gourmets-gone-missing",
+      "title": "Gourmets Gone Missing",
+      "type": "adventure"
+    },
+    {
+      "id": 9,
+      "slug": "a-call-from-the-depths",
+      "title": "A Call from the Depths",
+      "type": "adventure"
+    },
+    {
+      "id": 10,
+      "slug": "the-beast-and-the-princess",
+      "title": "The Beast and the Princess",
+      "type": "adventure"
+    },
+    {
+      "id": 11,
+      "slug": "hestu%e2%80%99s-concerns",
+      "title": "Hestu's Concerns",
+      "type": "adventure"
+    },
+    {
+      "id": 12,
+      "slug": "where-to-find-hestu---inventory-expansion",
+      "title": "Hestu",
+      "type": "adventure"
+    },
+    {
+      "id": 13,
+      "slug": "white-goats-gone-missing",
+      "title": "White Goats Gone Missing",
+      "type": "adventure"
+    },
+    {
+      "id": 14,
+      "slug": "potential-princess-sightings!",
+      "title": "Potential Princess Sightings!",
+      "type": "adventure"
+    },
+    {
+      "id": 15,
+      "slug": "froggy-armor-set",
+      "title": "Froggy Armor",
+      "type": "adventure"
+    },
+    {
+      "id": 16,
+      "slug": "zelda%27s-golden-horse",
+      "title": "Zelda's Golden Horse",
+      "type": "adventure"
+    },
+    {
+      "id": 17,
+      "slug": "golden-horse",
+      "title": "Golden Horse",
+      "type": "adventure"
+    },
+    {
+      "id": 18,
+      "slug": "serenade-to-mija",
+      "title": "Serenade to Mija",
+      "type": "adventure"
+    },
+    {
+      "id": 19,
+      "slug": "the-hornist%27s-dramatic-escape",
+      "title": "The Hornist's Dramatic Escape",
+      "type": "adventure"
+    },
+    {
+      "id": 20,
+      "slug": "bring-peace-to-hebra!",
+      "title": "Bring Peace to Hebra!",
+      "type": "adventure"
+    },
+    {
+      "id": 21,
+      "slug": "for-our-princess!",
+      "title": "For Our Princess!",
+      "type": "adventure"
+    },
+    {
+      "id": 22,
+      "slug": "serenade-to-a-great-fairy",
+      "title": "Serenade to a Great Fairy",
+      "type": "adventure"
+    },
+    {
+      "id": 23,
+      "slug": "the-hunt-for-bubbul-gems!",
+      "title": "The Hunt for Bubbul Gems!",
+      "type": "adventure"
+    },
+    {
+      "id": 24,
+      "slug": "bokoblin-mask",
+      "title": "Bokoblin Mask",
+      "type": "adventure"
+    },
+    {
+      "id": 25,
+      "slug": "bring-peace-to-eldin!",
+      "title": "Bring Peace to Eldin!",
+      "type": "adventure"
+    },
+    {
+      "id": 26,
+      "slug": "mattison%27s-independence",
+      "title": "Mattison's Independence",
+      "type": "adventure"
+    },
+    {
+      "id": 27,
+      "slug": "the-search-for-koltin",
+      "title": "The Search for Koltin",
+      "type": "adventure"
+    },
+    {
+      "id": 28,
+      "slug": "bubbul-gems---rewards-and-tips",
+      "title": "Koltin's Shop",
+      "type": "adventure"
+    },
+    {
+      "id": 29,
+      "slug": "a-monstrous-collection-i",
+      "title": "A Monstrous Collection I",
+      "type": "adventure"
+    },
+    {
+      "id": 30,
+      "slug": "a-monstrous-collection-ii",
+      "title": "A Monstrous Collection II",
+      "type": "adventure"
+    },
+    {
+      "id": 31,
+      "slug": "a-monstrous-collection-iii",
+      "title": "A Monstrous Collection III",
+      "type": "adventure"
+    },
+    {
+      "id": 32,
+      "slug": "a-monstrous-collection-iv",
+      "title": "A Monstrous Collection IV",
+      "type": "adventure"
+    },
+    {
+      "id": 33,
+      "slug": "a-monstrous-collection-v",
+      "title": "A Monstrous Collection V",
+      "type": "adventure"
+    },
+    {
+      "id": 34,
+      "slug": "the-all-clucking-cucco",
+      "title": "The All-Clucking Cucco",
+      "type": "adventure"
+    },
+    {
+      "id": 35,
+      "slug": "bring-peace-to-akkala!",
+      "title": "Bring Peace to Akkala!",
+      "type": "adventure"
+    },
+    {
+      "id": 36,
+      "slug": "filling-out-the-compendium",
+      "title": "Filling Out the Compendium",
+      "type": "adventure"
+    },
+    {
+      "id": 37,
+      "slug": "presenting-the-travel-medallion",
+      "title": "Presenting: The Travel Medallion!",
+      "type": "adventure"
+    },
+    {
+      "id": 38,
+      "slug": "presenting-hero%27s-path-mode",
+      "title": "Presenting: Hero's Path Mode!",
+      "type": "adventure"
+    },
+    {
+      "id": 39,
+      "slug": "presenting-sensor-%2b!",
+      "title": "Presenting: Sensor +!",
+      "type": "adventure"
+    },
+    {
+      "id": 40,
+      "slug": "a-letter-to-koyin",
+      "title": "A Letter to Koyin",
+      "type": "adventure"
+    },
+    {
+      "id": 41,
+      "slug": "a-new-signature-food",
+      "title": "A New Signature Food",
+      "type": "adventure"
+    },
+    {
+      "id": 42,
+      "slug": "reede%27s-secret",
+      "title": "Reede's Secret",
+      "type": "adventure"
+    },
+    {
+      "id": 43,
+      "slug": "cece%27s-secret",
+      "title": "Cece's Secret",
+      "type": "adventure"
+    },
+    {
+      "id": 44,
+      "slug": "team-cece-or-team-reede%3f",
+      "title": "Team Cece or Team Reede?",
+      "type": "adventure"
+    },
+    {
+      "id": 45,
+      "slug": "the-mayoral-election",
+      "title": "The Mayoral Election",
+      "type": "adventure"
+    },
+    {
+      "id": 46,
+      "slug": "cece-hat",
+      "title": "Cece Hat",
+      "type": "adventure"
+    },
+    {
+      "id": 47,
+      "slug": "ruffian-infested-village",
+      "title": "Ruffian-Infested Village",
+      "type": "adventure"
+    },
+    {
+      "id": 48,
+      "slug": "lurelin-village-restoration-project",
+      "title": "Lurelin Village Restoration Project",
+      "type": "adventure"
+    },
+    {
+      "id": 49,
+      "slug": "the-missing-farm-tools",
+      "title": "The Missing Farm Tools",
+      "type": "adventure"
+    },
+    {
+      "id": 50,
+      "slug": "princess-zelda-kidnapped%3f!",
+      "title": "Princess Zelda Kidnapped?!",
+      "type": "adventure"
+    },
+    {
+      "id": 51,
+      "slug": "serenade-to-cotera",
+      "title": "Serenade to Cotera Tears of the Kingdom",
+      "type": "adventure"
+    },
+    {
+      "id": 52,
+      "slug": "bring-peace-to-necluda!",
+      "title": "Bring Peace to Necluda!",
+      "type": "adventure"
+    },
+    {
+      "id": 53,
+      "slug": "honey,-bee-mine",
+      "title": "Honey, Bee Mine",
+      "type": "adventure"
+    },
+    {
+      "id": 54,
+      "slug": "an-eerie-voice",
+      "title": "An Eerie Voice",
+      "type": "adventure"
+    },
+    {
+      "id": 55,
+      "slug": "the-flute-player%27s-plan",
+      "title": "The Flute Player's Plan Tears of the Kingdom",
+      "type": "adventure"
+    },
+    {
+      "id": 56,
+      "slug": "bring-peace-to-faron!",
+      "title": "Bring Peace to Faron!",
+      "type": "adventure"
+    },
+    {
+      "id": 57,
+      "slug": "the-blocked-well",
+      "title": "The Blocked Well",
+      "type": "adventure"
+    },
+    {
+      "id": 58,
+      "slug": "infiltrating-the-yiga-clan",
+      "title": "Infiltrating the Yiga Clan",
+      "type": "adventure"
+    },
+    {
+      "id": 59,
+      "slug": "the-yiga-clan-exam",
+      "title": "The Yiga Clan Exam Tears of the Kingdom",
+      "type": "adventure"
+    },
+    {
+      "id": 60,
+      "slug": "investigate-the-thyphlo-ruins",
+      "title": "Investigate the Thyphlo Ruins Tears of the Kingdom",
+      "type": "adventure"
+    },
+    {
+      "id": 61,
+      "slug": "the-owl-protected-by-dragons",
+      "title": "The Owl Protected by Dragons Tears of the Kingdom",
+      "type": "adventure"
+    },
+    {
+      "id": 62,
+      "slug": "the-corridor-between-two-dragons",
+      "title": "The Corridor between Two Dragons",
+      "type": "adventure"
+    },
+    {
+      "id": 63,
+      "slug": "the-six-dragons",
+      "title": "The Six Dragons Tears of the Kingdom",
+      "type": "adventure"
+    },
+    {
+      "id": 64,
+      "slug": "the-long-dragon",
+      "title": "The Long Dragon Tears of the Kingdom",
+      "type": "adventure"
+    },
+    {
+      "id": 65,
+      "slug": "legend-of-the-great-sky-island",
+      "title": "Legend of the Great Sky Island",
+      "type": "adventure"
+    },
+    {
+      "id": 66,
+      "slug": "master-kohga-of-the-yiga-clan",
+      "title": "Master Kohga of the Yiga Clan",
+      "type": "adventure"
+    },
+    {
+      "id": 67,
+      "slug": "all-schema-stone-locations",
+      "title": "All Schema Stone Locations",
+      "type": "adventure"
+    }
+  ],
+  "sideQuests": []
+}
