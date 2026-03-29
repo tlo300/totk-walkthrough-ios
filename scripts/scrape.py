@@ -9,7 +9,7 @@ import json
 import re
 import time
 from pathlib import Path, PurePosixPath
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, unquote
 
 import requests
 import yaml
@@ -112,6 +112,7 @@ def slugify_url(url: str) -> str:
     """
     path = urlparse(url).path.rstrip("/")
     stem = PurePosixPath(path).name
+    stem = unquote(stem)
     slug = stem.lower().replace("_", "-")
     # Strip characters that are invalid in Windows directory names
     return re.sub(r'[<>:"/\\|?*]', "", slug)

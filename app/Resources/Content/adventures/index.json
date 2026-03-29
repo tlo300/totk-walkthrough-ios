@@ -14,7 +14,7 @@
     },
     {
       "id": 3,
-      "slug": "who-goes-there%3f",
+      "slug": "who-goes-there",
       "title": "Who Goes There?",
       "type": "adventure"
     },
@@ -62,7 +62,7 @@
     },
     {
       "id": 11,
-      "slug": "hestu%e2%80%99s-concerns",
+      "slug": "hestu’s-concerns",
       "title": "Hestu's Concerns",
       "type": "adventure"
     },
@@ -92,7 +92,7 @@
     },
     {
       "id": 16,
-      "slug": "zelda%27s-golden-horse",
+      "slug": "zelda's-golden-horse",
       "title": "Zelda's Golden Horse",
       "type": "adventure"
     },
@@ -110,7 +110,7 @@
     },
     {
       "id": 19,
-      "slug": "the-hornist%27s-dramatic-escape",
+      "slug": "the-hornist's-dramatic-escape",
       "title": "The Hornist's Dramatic Escape",
       "type": "adventure"
     },
@@ -152,7 +152,7 @@
     },
     {
       "id": 26,
-      "slug": "mattison%27s-independence",
+      "slug": "mattison's-independence",
       "title": "Mattison's Independence",
       "type": "adventure"
     },
@@ -224,13 +224,13 @@
     },
     {
       "id": 38,
-      "slug": "presenting-hero%27s-path-mode",
+      "slug": "presenting-hero's-path-mode",
       "title": "Presenting: Hero's Path Mode!",
       "type": "adventure"
     },
     {
       "id": 39,
-      "slug": "presenting-sensor-%2b!",
+      "slug": "presenting-sensor-+!",
       "title": "Presenting: Sensor +!",
       "type": "adventure"
     },
@@ -248,19 +248,19 @@
     },
     {
       "id": 42,
-      "slug": "reede%27s-secret",
+      "slug": "reede's-secret",
       "title": "Reede's Secret",
       "type": "adventure"
     },
     {
       "id": 43,
-      "slug": "cece%27s-secret",
+      "slug": "cece's-secret",
       "title": "Cece's Secret",
       "type": "adventure"
     },
     {
       "id": 44,
-      "slug": "team-cece-or-team-reede%3f",
+      "slug": "team-cece-or-team-reede",
       "title": "Team Cece or Team Reede?",
       "type": "adventure"
     },
@@ -296,7 +296,7 @@
     },
     {
       "id": 50,
-      "slug": "princess-zelda-kidnapped%3f!",
+      "slug": "princess-zelda-kidnapped!",
       "title": "Princess Zelda Kidnapped?!",
       "type": "adventure"
     },
@@ -326,7 +326,7 @@
     },
     {
       "id": 55,
-      "slug": "the-flute-player%27s-plan",
+      "slug": "the-flute-player's-plan",
       "title": "The Flute Player's Plan Tears of the Kingdom",
       "type": "adventure"
     },

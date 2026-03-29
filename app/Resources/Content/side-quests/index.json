@@ -14,7 +14,7 @@
     },
     {
       "id": 3,
-      "slug": "today%e2%80%99s-menu",
+      "slug": "today’s-menu",
       "title": "Today's Menu",
       "type": "side-quest"
     },
@@ -68,7 +68,7 @@
     },
     {
       "id": 12,
-      "slug": "the-horse-guard%e2%80%99s-request",
+      "slug": "the-horse-guard’s-request",
       "title": "The Horse Guard's Request",
       "type": "side-quest"
     },
@@ -98,7 +98,7 @@
     },
     {
       "id": 17,
-      "slug": "misko%27s-treasure-of-awakening-iii",
+      "slug": "misko's-treasure-of-awakening-iii",
       "title": "Misko's Treasure of Awakening III",
       "type": "side-quest"
     },
@@ -140,7 +140,7 @@
     },
     {
       "id": 24,
-      "slug": "genli%27s-home-cooking",
+      "slug": "genli's-home-cooking",
       "title": "Genli's Home Cooking",
       "type": "side-quest"
     },
@@ -158,7 +158,7 @@
     },
     {
       "id": 27,
-      "slug": "molli-the-fletcher%27s-quest",
+      "slug": "molli-the-fletcher's-quest",
       "title": "Molli the Fletcher's Quest",
       "type": "side-quest"
     },
@@ -194,7 +194,7 @@
     },
     {
       "id": 33,
-      "slug": "misko%27s-treasure-of-awakening-ii",
+      "slug": "misko's-treasure-of-awakening-ii",
       "title": "Misko's Treasure of Awakening II",
       "type": "side-quest"
     },
@@ -254,13 +254,13 @@
     },
     {
       "id": 43,
-      "slug": "kaneli%e2%80%99s-flight-training",
+      "slug": "kaneli’s-flight-training",
       "title": "Kaneli’s Flight Training",
       "type": "side-quest"
     },
     {
       "id": 44,
-      "slug": "hebra%27s-colossal-fossil",
+      "slug": "hebra's-colossal-fossil",
       "title": "Hebra's Colossal Fossil",
       "type": "side-quest"
     },
@@ -320,7 +320,7 @@
     },
     {
       "id": 54,
-      "slug": "eldin%27s-colossal-fossil",
+      "slug": "eldin's-colossal-fossil",
       "title": "Eldin's Colossal Fossil",
       "type": "side-quest"
     },
@@ -350,7 +350,7 @@
     },
     {
       "id": 59,
-      "slug": "where-are-the-wells%3f",
+      "slug": "where-are-the-wells",
       "title": "Where Are the Wells - Well Locations Tears of the Kingdom",
       "type": "side-quest"
     },
@@ -368,7 +368,7 @@
     },
     {
       "id": 62,
-      "slug": "the-ancient-city-gorondia%3f",
+      "slug": "the-ancient-city-gorondia",
       "title": "The Ancient City Gorondia?",
       "type": "side-quest"
     },
@@ -458,7 +458,7 @@
     },
     {
       "id": 77,
-      "slug": "misko%27s-cave-of-chests",
+      "slug": "misko's-cave-of-chests",
       "title": "Misko's Cave of Chests",
       "type": "side-quest"
     },
@@ -470,7 +470,7 @@
     },
     {
       "id": 79,
-      "slug": "misko%27s-treasure-the-fierce-deity",
+      "slug": "misko's-treasure-the-fierce-deity",
       "title": "Misko's Treasure: The Fierce Deity Tears of the Kingdom",
       "type": "side-quest"
     },
@@ -482,43 +482,43 @@
     },
     {
       "id": 81,
-      "slug": "misko%27s-treasure-twins-manuscript",
+      "slug": "misko's-treasure-twins-manuscript",
       "title": "Misko's Treasure: Twins Manuscript",
       "type": "side-quest"
     },
     {
       "id": 82,
-      "slug": "tingle%27s-shirt",
+      "slug": "tingle's-shirt",
       "title": "Tingle's Shirt",
       "type": "side-quest"
     },
     {
       "id": 83,
-      "slug": "misko%27s-treasure-pirate-manuscript",
+      "slug": "misko's-treasure-pirate-manuscript",
       "title": "Misko's Treasure: Pirate Manuscript",
       "type": "side-quest"
     },
     {
       "id": 84,
-      "slug": "tingle%27s-tights",
+      "slug": "tingle's-tights",
       "title": "Tingle's Tights",
       "type": "side-quest"
     },
     {
       "id": 85,
-      "slug": "misko%27s-treasure-heroines-manuscript",
+      "slug": "misko's-treasure-heroines-manuscript",
       "title": "Misko's Treasure: Heroines Manuscript",
       "type": "side-quest"
     },
     {
       "id": 86,
-      "slug": "tingle%27s-hood",
+      "slug": "tingle's-hood",
       "title": "Tingle's Hood",
       "type": "side-quest"
     },
     {
       "id": 87,
-      "slug": "misko%27s-treasure-of-awakening-i",
+      "slug": "misko's-treasure-of-awakening-i",
       "title": "Misko's Treasure of Awakening I",
       "type": "side-quest"
     },
@@ -572,7 +572,7 @@
     },
     {
       "id": 96,
-      "slug": "codgers%27-quarrel",
+      "slug": "codgers'-quarrel",
       "title": "Codgers' Quarrel",
       "type": "side-quest"
     },
@@ -584,13 +584,13 @@
     },
     {
       "id": 98,
-      "slug": "a-new-champion%27s-tunic",
+      "slug": "a-new-champion's-tunic",
       "title": "A New Champion's Tunic",
       "type": "side-quest"
     },
     {
       "id": 99,
-      "slug": "champion%27s-leathers",
+      "slug": "champion's-leathers",
       "title": "Champion's Leathers",
       "type": "side-quest"
     },
@@ -608,7 +608,7 @@
     },
     {
       "id": 102,
-      "slug": "dantz%27s-prize-cows",
+      "slug": "dantz's-prize-cows",
       "title": "Dantz's Prize Cows",
       "type": "side-quest"
     },
@@ -626,13 +626,13 @@
     },
     {
       "id": 105,
-      "slug": "uma%27s-garden",
+      "slug": "uma's-garden",
       "title": "Uma's Garden",
       "type": "side-quest"
     },
     {
       "id": 106,
-      "slug": "manny%27s-beloved",
+      "slug": "manny's-beloved",
       "title": "Manny's Beloved",
       "type": "side-quest"
     },
@@ -644,7 +644,7 @@
     },
     {
       "id": 108,
-      "slug": "dad%27s-blue-shirt",
+      "slug": "dad's-blue-shirt",
       "title": "Dad's Blue Shirt",
       "type": "side-quest"
     },
@@ -704,13 +704,13 @@
     },
     {
       "id": 118,
-      "slug": "gerudo%27s-colossal-fossil",
+      "slug": "gerudo's-colossal-fossil",
       "title": "Gerudo's Colossal Fossil",
       "type": "side-quest"
     },
     {
       "id": 119,
-      "slug": "the-heroines%27-secret",
+      "slug": "the-heroines'-secret",
       "title": "The Heroines' Secret",
       "type": "side-quest"
     },
@@ -746,7 +746,7 @@
     },
     {
       "id": 125,
-      "slug": "dalia%27s-game",
+      "slug": "dalia's-game",
       "title": "Dalia's Game",
       "type": "side-quest"
     },
@@ -860,7 +860,7 @@
     },
     {
       "id": 144,
-      "slug": "walton%27s-treasure-hunt",
+      "slug": "walton's-treasure-hunt",
       "title": "Walton's Treasure Hunt",
       "type": "side-quest"
     },
@@ -914,7 +914,7 @@
     },
     {
       "id": 153,
-      "slug": "the-fort-at-ja%27abu-ridge",
+      "slug": "the-fort-at-ja'abu-ridge",
       "title": "The Fort at Ja'Abu Ridge",
       "type": "side-quest"
     },
@@ -956,7 +956,7 @@
     },
     {
       "id": 160,
-      "slug": "the-ultimate-dish%3f",
+      "slug": "the-ultimate-dish",
       "title": "The Ultimate Dish?",
       "type": "side-quest"
     },
@@ -992,7 +992,7 @@
     },
     {
       "id": 166,
-      "slug": "ancient-hero%27s-aspect",
+      "slug": "ancient-hero's-aspect",
       "title": "Ancient Hero’s Aspect",
       "type": "side-quest"
     }
