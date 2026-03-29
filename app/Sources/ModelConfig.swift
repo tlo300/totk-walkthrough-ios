@@ -9,4 +9,8 @@ enum ModelConfig {
     static let adventuresIndexPath = "adventures/index.json"
     static let progressBookmarkKey = "com.totk.bookmark"
     static let progressQuestsKey = "com.totk.quests"
+    static let regionOrder = [
+        "Great Sky Island", "Central Hyrule", "Eldin", "Akkala",
+        "Hebra", "Lanayru", "Necluda", "Faron", "Gerudo"
+    ]
 }

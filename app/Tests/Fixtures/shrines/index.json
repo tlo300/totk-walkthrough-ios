@@ -1,6 +1,6 @@
 {
   "quests": [
-    { "slug": "test-shrine", "title": "Test Shrine", "type": "shrine" }
+    { "slug": "test-shrine", "title": "Test Shrine", "type": "shrine", "region": "Central Hyrule" }
   ],
   "sideQuests": []
 }

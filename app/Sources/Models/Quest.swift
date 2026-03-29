@@ -12,6 +12,7 @@ struct Quest: Identifiable, Codable, Hashable {
     let slug: String
     let title: String
     let type: QuestType
+    let region: String?
 
     var id: String { slug }
 }
