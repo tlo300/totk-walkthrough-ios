@@ -94,21 +94,29 @@ def extract_oyster_image_map(page_html: str) -> dict[str, str]:
 
 
 def resolve_lazy_images(content_html: str, image_map: dict[str, str]) -> str:
-    """Replace data: placeholder src attrs with real URLs using the image_map.
+    """Replace data: placeholder src attrs with real URLs.
 
-    For each <img> whose src is a data: URI, the alt attribute (which IGN sets to
-    the original filename, e.g. "TotK GreatSky 16.jpg") is used to look up the
-    real URL via image_map. Images with no match are left unchanged.
+    Strategy (in order):
+    1. data-src attribute — IGN often stores the real URL here directly.
+    2. alt attribute lookup in image_map — alt is set to the original filename
+       (e.g. "TotK GreatSky 16.jpg"), normalised to underscores for the map key.
+
+    Images with no match are left unchanged (download_images will remove them).
     """
-    if not image_map:
-        return content_html
     soup = BeautifulSoup(content_html, "html.parser")
     for img in soup.find_all("img"):
         src = img.get("src", "")
         if not src.startswith("data:"):
             continue
+        # 1. data-src fallback
+        data_src = img.get("data-src", "").strip()
+        if data_src and not data_src.startswith("data:"):
+            img["src"] = data_src
+            continue
+        # 2. alt-text image_map lookup
+        if not image_map:
+            continue
         alt = img.get("alt", "").strip()
-        # alt may be "TotK GreatSky 16.jpg" — normalise spaces → underscores to match filename
         key = alt.replace(" ", "_")
         if key in image_map:
             img["src"] = image_map[key]

@@ -207,6 +207,52 @@ def test_html_to_markdown_table_cells_on_separate_lines():
     assert "Location" in lines
 
 
+# ── extract_oyster_image_map / resolve_lazy_images ────────────────────────────
+
+def test_extract_oyster_image_map_finds_urls():
+    from scripts.scrape import extract_oyster_image_map
+    html = """<html><head>
+    <script>var x = "https://oyster.ignimgs.com/wp/2023/TotK_Ukouh_1.jpg";</script>
+    </head></html>"""
+    mapping = extract_oyster_image_map(html)
+    assert "TotK_Ukouh_1.jpg" in mapping
+    assert mapping["TotK_Ukouh_1.jpg"] == "https://oyster.ignimgs.com/wp/2023/TotK_Ukouh_1.jpg"
+
+
+def test_extract_oyster_image_map_empty_when_none():
+    from scripts.scrape import extract_oyster_image_map
+    assert extract_oyster_image_map("<html><body><p>no scripts</p></body></html>") == {}
+
+
+def test_resolve_lazy_images_uses_data_src():
+    from scripts.scrape import resolve_lazy_images
+    html = '<img src="data:image/gif;base64,R0l" data-src="https://oyster.ignimgs.com/img.jpg" alt="img.jpg"/>'
+    result = resolve_lazy_images(html, {})
+    assert 'src="https://oyster.ignimgs.com/img.jpg"' in result
+
+
+def test_resolve_lazy_images_falls_back_to_image_map():
+    from scripts.scrape import resolve_lazy_images
+    html = '<img src="data:image/gif;base64,R0l" alt="TotK Ukouh 1.jpg"/>'
+    image_map = {"TotK_Ukouh_1.jpg": "https://oyster.ignimgs.com/TotK_Ukouh_1.jpg"}
+    result = resolve_lazy_images(html, image_map)
+    assert 'src="https://oyster.ignimgs.com/TotK_Ukouh_1.jpg"' in result
+
+
+def test_resolve_lazy_images_leaves_unmatched_unchanged():
+    from scripts.scrape import resolve_lazy_images
+    html = '<img src="data:image/gif;base64,R0l" alt="no-match.jpg"/>'
+    result = resolve_lazy_images(html, {})
+    assert "data:image/gif" in result
+
+
+def test_resolve_lazy_images_skips_non_data_src():
+    from scripts.scrape import resolve_lazy_images
+    html = '<img src="https://cdn.ign.com/real.jpg" alt="real.jpg"/>'
+    result = resolve_lazy_images(html, {})
+    assert 'src="https://cdn.ign.com/real.jpg"' in result
+
+
 # ── download_images ───────────────────────────────────────────────────────────
 
 @responses_lib.activate
