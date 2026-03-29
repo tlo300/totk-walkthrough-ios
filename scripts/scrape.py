@@ -56,22 +56,21 @@ def collect_items(html: str, selector: str, base_url: str, section_heading: str 
             (h for h in all_headings if needle in h.get_text(strip=True).lower()), None
         )
         if matched_heading is not None:
-            heading = matched_heading
-            level = int(heading.name[1])
-            parent = heading.parent
+            level = int(matched_heading.name[1])
+            parent = matched_heading.parent
             # If the heading's direct parent is a small wrapper (e.g. <section>
             # containing only the heading), use that parent's siblings as the
             # content scope.  Otherwise fall back to the heading's own siblings.
-            heading_siblings = list(heading.find_next_siblings())
-            parent_has_content = any(
+            heading_siblings = list(matched_heading.find_next_siblings())
+            has_sibling_content = any(
                 s for s in heading_siblings
                 if getattr(s, 'name', None) and s.name not in ('html', 'body')
             )
-            if not parent_has_content and parent and parent.name not in ('html', 'body', '[document]'):
+            if not has_sibling_content and parent and parent.name not in ('html', 'body', '[document]'):
                 # Walk siblings of the parent container
                 scope_node = parent
             else:
-                scope_node = heading
+                scope_node = matched_heading
 
             fragments: list[str] = []
             for sib in scope_node.find_next_siblings():
