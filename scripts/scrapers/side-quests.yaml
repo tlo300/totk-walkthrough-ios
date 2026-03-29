@@ -2,6 +2,7 @@ index_url: "https://www.ign.com/wikis/the-legend-of-zelda-tears-of-the-kingdom/S
 content_type: "side-quest"
 output_dir: "app/Resources/Content/side-quests"
 item_links: "a[data-cy='styled-link']"
-title_selector: "h1"
+title_selector: ".page-header h1"
+title_strip: " - Tears of the Kingdom"
 content_area: "div.wiki-page-container"
 delay_seconds: 1.5
