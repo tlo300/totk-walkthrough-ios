@@ -24,6 +24,9 @@ targets:
     info:
       path: app/Info.plist
       properties:
+        CFBundleIcons:
+          CFBundlePrimaryIcon:
+            CFBundleIconName: AppIcon
         CFBundleName: TOTKWalkthrough
         CFBundleDisplayName: TOTK Walkthrough
         CFBundleIdentifier: com.totk.walkthrough
