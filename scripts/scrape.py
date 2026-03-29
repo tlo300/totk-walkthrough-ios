@@ -32,15 +32,70 @@ def load_config(path: Path) -> dict:
     return cfg
 
 
-def collect_items(html: str, selector: str, base_url: str) -> list[tuple[str, str]]:
+def collect_items(html: str, selector: str, base_url: str, section_heading: str | None = None) -> list[tuple[str, str]]:
     """Parse the index page HTML and return (title, absolute_url) pairs.
 
     Only links matching selector are returned. Relative hrefs are resolved
     against base_url (e.g. "https://www.ign.com").
+
+    If section_heading is given, link collection is scoped to the nearest
+    ancestor container of the first heading element whose text contains
+    section_heading (case-insensitive). Falls back to sibling collection
+    if the heading has no meaningful parent.
     """
     soup = BeautifulSoup(html, "html.parser")
+
+    if section_heading:
+        search_root = soup  # fallback
+        needle = section_heading.lower()
+        # Prefer an exact case-insensitive match; fall back to substring match.
+        all_headings = soup.find_all(re.compile(r'^h[1-6]$'))
+        matched_heading = next(
+            (h for h in all_headings if h.get_text(strip=True).lower() == needle), None
+        ) or next(
+            (h for h in all_headings if needle in h.get_text(strip=True).lower()), None
+        )
+        if matched_heading is not None:
+            heading = matched_heading
+            level = int(heading.name[1])
+            parent = heading.parent
+            # If the heading's direct parent is a small wrapper (e.g. <section>
+            # containing only the heading), use that parent's siblings as the
+            # content scope.  Otherwise fall back to the heading's own siblings.
+            heading_siblings = list(heading.find_next_siblings())
+            parent_has_content = any(
+                s for s in heading_siblings
+                if getattr(s, 'name', None) and s.name not in ('html', 'body')
+            )
+            if not parent_has_content and parent and parent.name not in ('html', 'body', '[document]'):
+                # Walk siblings of the parent container
+                scope_node = parent
+            else:
+                scope_node = heading
+
+            fragments: list[str] = []
+            for sib in scope_node.find_next_siblings():
+                # Stop if the sibling itself is a same-or-higher-level heading
+                if sib.name and re.match(r'^h[1-6]$', sib.name) and int(sib.name[1]) <= level:
+                    break
+                # Stop if the sibling has a *direct child* heading at the same/higher level
+                # (IGN wraps each section heading in its own <section> element)
+                direct_heading = next(
+                    (c for c in sib.children
+                     if hasattr(c, 'name') and c.name and re.match(r'^h[1-6]$', c.name)
+                     and int(c.name[1]) <= level),
+                    None,
+                ) if hasattr(sib, 'children') else None
+                if direct_heading is not None:
+                    break
+                fragments.append(str(sib))
+            if fragments:
+                search_root = BeautifulSoup("".join(fragments), "html.parser")
+    else:
+        search_root = soup
+
     items = []
-    for a in soup.select(selector):
+    for a in search_root.select(selector):
         href = a.get("href", "").strip()
         if not href:
             continue
@@ -217,6 +272,7 @@ def scrape(config_path: Path, limit: int | None = None) -> None:
     content_type: str = cfg["content_type"]
     output_dir = Path(cfg["output_dir"])
     item_links_selector: str = cfg["item_links"]
+    section_heading: str | None = cfg.get("section_heading")
     title_selector: str = cfg.get("title_selector", "h1")
     title_strip: str = cfg.get("title_strip", "")
     content_area_selector: str = cfg["content_area"]
@@ -228,7 +284,7 @@ def scrape(config_path: Path, limit: int | None = None) -> None:
 
     # 1. Fetch index page and collect item links
     index_html = _fetch(session, index_url, delay=0).text
-    items = collect_items(index_html, item_links_selector, base_url)
+    items = collect_items(index_html, item_links_selector, base_url, section_heading=section_heading)
     # Deduplicate by URL — index pages sometimes link the same page multiple times
     seen: set[str] = set()
     items = [(t, u) for t, u in items if not (u in seen or seen.add(u))]  # type: ignore[func-returns-value]
