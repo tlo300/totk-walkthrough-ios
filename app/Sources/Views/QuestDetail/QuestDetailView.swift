@@ -11,7 +11,12 @@ struct QuestDetailView: View {
     @State private var loadError: String?
 
     private var questContentURL: URL {
-        let folder = quest.type == .main ? "quests" : "side-quests"
+        let folder: String
+        switch quest.type {
+        case .main: folder = "quests"
+        case .side: folder = "side-quests"
+        case .shrine: folder = "shrines"
+        }
         return contentStore.contentURL
             .appendingPathComponent(folder)
             .appendingPathComponent(quest.slug)
@@ -59,6 +64,7 @@ struct QuestDetailView: View {
     @ViewBuilder
     private var completeButton: some View {
         let isComplete = progressStore.isQuestComplete(quest.slug)
+        let actionLabel = quest.type == .shrine ? "Mark Shrine Complete" : "Mark Quest Complete"
         Button {
             progressStore.toggleQuest(quest.slug)
         } label: {
@@ -66,7 +72,7 @@ struct QuestDetailView: View {
                 if isComplete {
                     Image(systemName: "checkmark.circle.fill")
                 }
-                Text(isComplete ? "Completed" : "Mark Quest Complete")
+                Text(isComplete ? "Completed" : actionLabel)
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 12)

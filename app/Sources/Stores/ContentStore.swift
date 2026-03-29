@@ -1,4 +1,4 @@
-// ContentStore.swift — Loads quest-order.json and quest content from the app bundle.
+// ContentStore.swift — Loads quest-order.json, shrines/index.json, and quest content from the app bundle.
 import Foundation
 
 @MainActor
@@ -11,6 +11,7 @@ final class ContentStore: ObservableObject {
 
     @Published private(set) var quests: [Quest] = []
     @Published private(set) var sideQuests: [Quest] = []
+    @Published private(set) var shrines: [Quest] = []
 
     let contentURL: URL
 
@@ -25,14 +26,26 @@ final class ContentStore: ObservableObject {
         guard FileManager.default.fileExists(atPath: orderURL.path) else {
             throw ContentError.questOrderNotFound
         }
-        let data = try Data(contentsOf: orderURL)
-        let order = try JSONDecoder().decode(QuestOrder.self, from: data)
+        let orderData = try Data(contentsOf: orderURL)
+        let order = try JSONDecoder().decode(QuestOrder.self, from: orderData)
         quests = order.quests
         sideQuests = order.sideQuests
+
+        let shrinesURL = contentURL.appendingPathComponent(ModelConfig.shrinesIndexPath)
+        if FileManager.default.fileExists(atPath: shrinesURL.path) {
+            let shrinesData = try Data(contentsOf: shrinesURL)
+            let shrineOrder = try JSONDecoder().decode(QuestOrder.self, from: shrinesData)
+            shrines = shrineOrder.quests
+        }
     }
 
     func contentBlocks(for quest: Quest) throws -> [ContentBlock] {
-        let folder = quest.type == .main ? "quests" : "side-quests"
+        let folder: String
+        switch quest.type {
+        case .main: folder = "quests"
+        case .side: folder = "side-quests"
+        case .shrine: folder = "shrines"
+        }
         let mdURL = contentURL
             .appendingPathComponent(folder)
             .appendingPathComponent(quest.slug)

@@ -77,6 +77,44 @@ def extract_content_html(html: str, selector: str) -> str:
     return str(el) if el else ""
 
 
+def extract_oyster_image_map(page_html: str) -> dict[str, str]:
+    """Return a mapping of {filename: url} for oyster.ignimgs.com images found in script tags.
+
+    IGN lazy-loads images — the real URLs live in inline JS, not in img[src].
+    This scans all <script> tags and indexes each URL by its filename component.
+    """
+    soup = BeautifulSoup(page_html, "html.parser")
+    mapping: dict[str, str] = {}
+    for script in soup.find_all("script"):
+        content = script.string or ""
+        for url in re.findall(r'https://oyster\.ignimgs\.com/[^\s"\']+\.(?:jpg|jpeg|png|webp|gif)', content):
+            filename = PurePosixPath(urlparse(url).path).name
+            mapping[filename] = url
+    return mapping
+
+
+def resolve_lazy_images(content_html: str, image_map: dict[str, str]) -> str:
+    """Replace data: placeholder src attrs with real URLs using the image_map.
+
+    For each <img> whose src is a data: URI, the alt attribute (which IGN sets to
+    the original filename, e.g. "TotK GreatSky 16.jpg") is used to look up the
+    real URL via image_map. Images with no match are left unchanged.
+    """
+    if not image_map:
+        return content_html
+    soup = BeautifulSoup(content_html, "html.parser")
+    for img in soup.find_all("img"):
+        src = img.get("src", "")
+        if not src.startswith("data:"):
+            continue
+        alt = img.get("alt", "").strip()
+        # alt may be "TotK GreatSky 16.jpg" — normalise spaces → underscores to match filename
+        key = alt.replace(" ", "_")
+        if key in image_map:
+            img["src"] = image_map[key]
+    return str(soup)
+
+
 def html_to_markdown(html: str) -> str:
     """Convert content area HTML to Markdown per spec rules.
 
@@ -217,6 +255,8 @@ def scrape(config_path: Path, limit: int | None = None) -> None:
             print(f"WARNING: content_area selector '{content_area_selector}' found nothing on {detail_url}")
 
         slug_dir.mkdir(parents=True, exist_ok=True)
+        image_map = extract_oyster_image_map(detail_html)
+        content_html = resolve_lazy_images(content_html, image_map)
         content_html = download_images(session, content_html, slug_dir, delay=delay)
         markdown = html_to_markdown(content_html)
 

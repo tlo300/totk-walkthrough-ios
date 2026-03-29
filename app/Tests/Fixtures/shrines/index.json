@@ -1,0 +1,6 @@
+{
+  "quests": [
+    { "slug": "test-shrine", "title": "Test Shrine", "type": "shrine" }
+  ],
+  "sideQuests": []
+}

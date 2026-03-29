@@ -4,6 +4,7 @@ import Foundation
 enum QuestType: String, Codable {
     case main
     case side
+    case shrine
 }
 
 struct Quest: Identifiable, Codable, Hashable {

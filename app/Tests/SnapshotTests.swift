@@ -60,4 +60,9 @@ final class SnapshotTests: XCTestCase {
         }
         snapshotView(QuestDetailView(quest: quest), named: "QuestDetail")
     }
+
+    func test_shrinesTab_snapshot() async throws {
+        try await contentStore.load()
+        snapshotView(ShrinesTabView(), named: "ShrinesTab")
+    }
 }
