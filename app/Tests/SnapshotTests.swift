@@ -37,9 +37,9 @@ final class SnapshotTests: XCTestCase {
         snapshotView(WalkthroughTabView(), named: "WalkthroughTab")
     }
 
-    func test_questsTab_snapshot() async throws {
+    func test_adventuresTab_snapshot() async throws {
         try await contentStore.load()
-        snapshotView(QuestsTabView(), named: "QuestsTab")
+        snapshotView(AdventuresTabView(), named: "AdventuresTab")
     }
 
     func test_sideQuestsTab_snapshot() async throws {
