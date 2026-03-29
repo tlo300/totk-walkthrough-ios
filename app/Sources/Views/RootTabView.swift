@@ -10,9 +10,9 @@ struct RootTabView: View {
                 .tabItem {
                     Label("Walkthrough", systemImage: "map")
                 }
-            QuestsTabView()
+            AdventuresTabView()
                 .tabItem {
-                    Label("Quests", systemImage: "sword")
+                    Label("Adventures", systemImage: "figure.walk")
                 }
             SideQuestsTabView()
                 .tabItem {
