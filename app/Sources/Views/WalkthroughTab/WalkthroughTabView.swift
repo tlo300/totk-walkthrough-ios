@@ -96,6 +96,9 @@ struct WalkthroughTabView: View {
                 .toolbar(.hidden, for: .navigationBar)
             }
             .background(themeManager.colors.background)
+            .onAppear {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            }
             .sheet(isPresented: $showingSettings) {
                 SettingsSheet().environmentObject(themeManager)
             }

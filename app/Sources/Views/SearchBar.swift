@@ -4,6 +4,7 @@ import SwiftUI
 struct SearchBar: View {
     @Binding var text: String
     @EnvironmentObject private var themeManager: ThemeManager
+    @FocusState private var isFocused: Bool
 
     var body: some View {
         HStack(spacing: 8) {
@@ -12,6 +13,13 @@ struct SearchBar: View {
             TextField("Search", text: $text)
                 .foregroundStyle(themeManager.colors.primaryText)
                 .tint(themeManager.colors.accent)
+                .focused($isFocused)
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        Button("Done") { isFocused = false }
+                    }
+                }
             if !text.isEmpty {
                 Button {
                     text = ""
