@@ -76,8 +76,7 @@ final class SnapshotTests: XCTestCase {
         snapshotView(
             ZoomableScrollView(image: uiImage, zoomScale: .constant(1.0))
                 .frame(width: 390, height: 300),
-            named: "ZoomableScrollView",
-            record: true
+            named: "ZoomableScrollView"
         )
     }
 }
