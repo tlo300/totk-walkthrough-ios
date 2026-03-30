@@ -13,7 +13,6 @@ struct ImageViewerOverlay: View {
         ZStack(alignment: .topTrailing) {
             Color.black
                 .ignoresSafeArea()
-                .opacity(backgroundOpacity)
 
             if let img = image {
                 ZoomableScrollView(image: img, zoomScale: $zoomScale)
