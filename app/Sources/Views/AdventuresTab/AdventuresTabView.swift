@@ -6,6 +6,7 @@ struct AdventuresTabView: View {
     @EnvironmentObject private var progressStore: ProgressStore
     @EnvironmentObject private var themeManager: ThemeManager
     @State private var showingSettings = false
+    @State private var searchText = ""
 
     private var completionFraction: Double {
         let total = contentStore.adventures.count
@@ -14,14 +15,19 @@ struct AdventuresTabView: View {
         return Double(done) / Double(total)
     }
 
-    private var grouped: [String: [Quest]] {
-        Dictionary(grouping: contentStore.adventures) { $0.region ?? "Other" }
+    private var filteredGrouped: [String: [Quest]] {
+        let items = searchText.isEmpty
+            ? contentStore.adventures
+            : contentStore.adventures.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
+        return Dictionary(grouping: items) { $0.region ?? "Other" }
     }
 
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
                 TabHeaderView(title: "Adventures", showingSettings: $showingSettings)
+                    .environmentObject(themeManager)
+                SearchBar(text: $searchText)
                     .environmentObject(themeManager)
 
                 List {
@@ -43,9 +49,17 @@ struct AdventuresTabView: View {
                         .listRowBackground(themeManager.colors.cardBackground)
                     }
 
-                    ForEach(ModelConfig.regionOrder.filter { grouped[$0] != nil }, id: \.self) { region in
+                    if !searchText.isEmpty && filteredGrouped.isEmpty {
                         Section {
-                            ForEach(grouped[region]!) { quest in
+                            Text("No results")
+                                .foregroundStyle(themeManager.colors.secondaryText)
+                                .listRowBackground(themeManager.colors.cardBackground)
+                        }
+                    }
+
+                    ForEach(ModelConfig.regionOrder.filter { filteredGrouped[$0] != nil }, id: \.self) { region in
+                        Section {
+                            ForEach(filteredGrouped[region]!) { quest in
                                 HStack(spacing: 12) {
                                     Button {
                                         progressStore.toggleQuest(quest.slug)

@@ -6,6 +6,7 @@ struct WalkthroughTabView: View {
     @EnvironmentObject private var progressStore: ProgressStore
     @EnvironmentObject private var themeManager: ThemeManager
     @State private var showingSettings = false
+    @State private var searchText = ""
 
     private var completionFraction: Double {
         let total = contentStore.quests.count
@@ -14,10 +15,18 @@ struct WalkthroughTabView: View {
         return Double(done) / Double(total)
     }
 
+    private var filteredQuests: [Quest] {
+        searchText.isEmpty
+            ? contentStore.quests
+            : contentStore.quests.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
+    }
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
                 TabHeaderView(title: "Walkthrough", showingSettings: $showingSettings)
+                    .environmentObject(themeManager)
+                SearchBar(text: $searchText)
                     .environmentObject(themeManager)
 
                 List {
@@ -43,7 +52,12 @@ struct WalkthroughTabView: View {
                     }
 
                     Section {
-                        ForEach(contentStore.quests) { quest in
+                        if !searchText.isEmpty && filteredQuests.isEmpty {
+                            Text("No results")
+                                .foregroundStyle(themeManager.colors.secondaryText)
+                                .listRowBackground(themeManager.colors.cardBackground)
+                        }
+                        ForEach(filteredQuests) { quest in
                             HStack(spacing: 12) {
                                 Button {
                                     progressStore.toggleQuest(quest.slug)
