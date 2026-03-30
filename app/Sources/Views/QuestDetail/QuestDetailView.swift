@@ -43,10 +43,9 @@ struct QuestDetailView: View {
         }
         .background(themeManager.colors.background)
         .overlay {
-            if selectedImage != nil {
-                ImageViewerOverlay(image: $selectedImage)
-                    .ignoresSafeArea()
-            }
+            ImageViewerOverlay(image: $selectedImage)
+                .ignoresSafeArea()
+                .allowsHitTesting(selectedImage != nil)
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
