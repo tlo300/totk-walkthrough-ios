@@ -9,6 +9,7 @@ struct QuestDetailView: View {
 
     @State private var blocks: [ContentBlock] = []
     @State private var loadError: String?
+    @State private var selectedImage: UIImage?
 
     private var questContentURL: URL {
         let folder: String
@@ -41,6 +42,12 @@ struct QuestDetailView: View {
             .padding()
         }
         .background(themeManager.colors.background)
+        .overlay {
+            if selectedImage != nil {
+                ImageViewerOverlay(image: $selectedImage)
+                    .ignoresSafeArea()
+            }
+        }
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(quest.title)
@@ -106,14 +113,28 @@ struct QuestDetailView: View {
         case .image(let filename):
             let imagePath = questContentURL.appendingPathComponent(filename).path
             if let uiImage = UIImage(contentsOfFile: imagePath) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .strokeBorder(themeManager.colors.cardBorder, lineWidth: 1)
-                    )
+                Button {
+                    selectedImage = uiImage
+                } label: {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .strokeBorder(themeManager.colors.cardBorder, lineWidth: 1)
+                        )
+                        .overlay(alignment: .bottomTrailing) {
+                            Image(systemName: "magnifyingglass")
+                                .font(.caption)
+                                .padding(6)
+                                .background(.black.opacity(0.5))
+                                .foregroundStyle(.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 6))
+                                .padding(6)
+                        }
+                }
+                .buttonStyle(.plain)
             }
 
         case .checkpoint(let id, let label):
