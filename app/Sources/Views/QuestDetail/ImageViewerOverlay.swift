@@ -36,7 +36,7 @@ struct ImageViewerOverlay: View {
                     .padding()
             }
         }
-        .opacity(backgroundOpacity)
+        .opacity(image != nil ? backgroundOpacity : 0)
         .animation(.easeInOut(duration: 0.25), value: image != nil)
     }
 
