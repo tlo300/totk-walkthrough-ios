@@ -65,4 +65,32 @@ final class SnapshotTests: XCTestCase {
         try await contentStore.load()
         snapshotView(ShrinesTabView(), named: "ShrinesTab")
     }
+
+    func test_imageViewerOverlay_snapshot() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 300, height: 200))
+        let uiImage = renderer.image { ctx in
+            UIColor.systemBlue.setFill()
+            ctx.fill(CGRect(x: 0, y: 0, width: 300, height: 200))
+        }
+        var image: UIImage? = uiImage
+        let binding = Binding(get: { image }, set: { image = $0 })
+        snapshotView(
+            ImageViewerOverlay(image: binding),
+            named: "ImageViewerOverlay"
+        )
+    }
+
+    func test_zoomableScrollView_snapshot() {
+        // Use a simple 300×200 solid-color image as fixture
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 300, height: 200))
+        let uiImage = renderer.image { ctx in
+            UIColor.systemGreen.setFill()
+            ctx.fill(CGRect(x: 0, y: 0, width: 300, height: 200))
+        }
+        snapshotView(
+            ZoomableScrollView(image: uiImage, zoomScale: .constant(1.0))
+                .frame(width: 390, height: 300),
+            named: "ZoomableScrollView"
+        )
+    }
 }
