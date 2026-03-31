@@ -83,7 +83,7 @@ def main() -> None:
     print("Fetching tower coordinates...")
     tower_rows = fetch_csv(TOWERS_CSV_URL)
     for row in tower_rows:
-        name = (row.get("Tower Name") or row.get("Name") or "").strip()
+        name = (row.get("Tower Name") or row.get("Name") or row.get("tower") or "").strip()
         if not name:
             continue
         slug = slugify(name)
