@@ -28,8 +28,8 @@ DELAY = 1.5
 
 def slugify(name: str) -> str:
     name = name.lower()
-    name = re.sub(r"\s+guide$", "", name)
     name = re.sub(r"[^a-z0-9]+", "-", name)
+    name = re.sub(r"-guide$", "", name)
     return name.strip("-")
 
 
@@ -50,6 +50,7 @@ def fetch_csv(url: str) -> list[dict]:
 
 
 def main() -> None:
+    CONTENT_DIR.mkdir(parents=True, exist_ok=True)
     index_data = json.loads(SHRINES_INDEX.read_text(encoding="utf-8"))
     slug_set = {q["slug"] for q in index_data["quests"]}
 
@@ -87,13 +88,18 @@ def main() -> None:
             continue
         slug = slugify(name)
         layer_raw = row.get("Map Layer") or row.get("Layer") or "surface"
+        x_raw = row.get("X") or row.get("x") or ""
+        y_raw = row.get("Y") or row.get("y") or ""
+        if not x_raw or not y_raw:
+            print(f"WARNING: skipping tower {name!r} — missing coordinates", file=sys.stderr)
+            continue
         pins.append(
             {
                 "slug": slug,
                 "type": "tower",
                 "layer": layer_from_str(layer_raw),
-                "x": float(row.get("X") or row.get("x") or 0),
-                "y": float(row.get("Y") or row.get("y") or 0),
+                "x": float(x_raw),
+                "y": float(y_raw),
                 "name": name,
             }
         )
