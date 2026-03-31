@@ -60,4 +60,45 @@ final class ProgressStoreTests: XCTestCase {
         let store2 = ProgressStore(defaults: defaults)
         XCTAssertTrue(store2.isQuestComplete("persistent-quest"))
     }
+
+    func test_initialState_noCompletedTowers() {
+        let store = makeStore()
+        XCTAssertTrue(store.completedTowers.isEmpty)
+    }
+
+    func test_toggleTower_marksComplete() {
+        let store = makeStore()
+        store.toggleTower("akkala-skyview-tower")
+        XCTAssertTrue(store.isTowerComplete("akkala-skyview-tower"))
+    }
+
+    func test_toggleTower_togglesOff() {
+        let store = makeStore()
+        store.toggleTower("akkala-skyview-tower")
+        store.toggleTower("akkala-skyview-tower")
+        XCTAssertFalse(store.isTowerComplete("akkala-skyview-tower"))
+    }
+
+    func test_toggleTower_doesNotAffectOtherTowers() {
+        let store = makeStore()
+        store.toggleTower("akkala-skyview-tower")
+        XCTAssertFalse(store.isTowerComplete("eldin-skyview-tower"))
+    }
+
+    func test_reset_clearsCompletedTowers() {
+        let store = makeStore()
+        store.toggleTower("akkala-skyview-tower")
+        store.reset()
+        XCTAssertTrue(store.completedTowers.isEmpty)
+    }
+
+    func test_tower_persistence_acrossInstances() {
+        let suite = UUID().uuidString
+        let defaults = UserDefaults(suiteName: suite)!
+        let store1 = ProgressStore(defaults: defaults)
+        store1.toggleTower("akkala-skyview-tower")
+
+        let store2 = ProgressStore(defaults: defaults)
+        XCTAssertTrue(store2.isTowerComplete("akkala-skyview-tower"))
+    }
 }
