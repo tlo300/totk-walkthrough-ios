@@ -1,4 +1,4 @@
-// RootTabView.swift — Root 5-tab navigation container.
+// RootTabView.swift — Root 6-tab navigation container.
 import SwiftUI
 
 struct RootTabView: View {
@@ -21,6 +21,10 @@ struct RootTabView: View {
             ShrinesTabView()
                 .tabItem {
                     Label("Shrines", systemImage: "diamond")
+                }
+            MapTabView()
+                .tabItem {
+                    Label("Map", systemImage: "mappin.and.ellipse")
                 }
             ProgressTabView()
                 .tabItem {

@@ -5,6 +5,7 @@ import SwiftUI
 struct TOTKWalkthroughApp: App {
     @StateObject private var contentStore = ContentStore()
     @StateObject private var progressStore = ProgressStore()
+    @StateObject private var mapStore = MapStore()
     @StateObject private var themeManager = ThemeManager()
 
     var body: some Scene {
@@ -12,9 +13,11 @@ struct TOTKWalkthroughApp: App {
             RootTabView()
                 .environmentObject(contentStore)
                 .environmentObject(progressStore)
+                .environmentObject(mapStore)
                 .environmentObject(themeManager)
                 .task {
                     try? await contentStore.load()
+                    try? await mapStore.load()
                 }
         }
     }
