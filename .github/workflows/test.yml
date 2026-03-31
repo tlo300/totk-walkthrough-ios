@@ -39,6 +39,7 @@ jobs:
             -only-testing:TOTKWalkthroughTests/QuestContentParserTests \
             -only-testing:TOTKWalkthroughTests/ContentStoreTests \
             -only-testing:TOTKWalkthroughTests/ProgressStoreTests \
+            -only-testing:TOTKWalkthroughTests/MapStoreTests \
             | xcpretty
 
       - name: Run snapshot tests (record mode on first run)
