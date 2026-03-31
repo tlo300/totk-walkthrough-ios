@@ -1,0 +1,5 @@
+[
+  { "slug": "test-shrine-surface", "type": "shrine", "layer": "surface", "x": 0.0, "y": 0.0 },
+  { "slug": "test-shrine-sky",     "type": "shrine", "layer": "sky",     "x": 275.0, "y": -913.0 },
+  { "slug": "test-tower",          "type": "tower",  "layer": "surface", "x": 4416.0, "y": 1625.0, "name": "Test Skyview Tower" }
+]
