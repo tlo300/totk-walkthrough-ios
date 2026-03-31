@@ -17,6 +17,8 @@ jobs:
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - name: Install xcodegen
         run: brew install xcodegen
