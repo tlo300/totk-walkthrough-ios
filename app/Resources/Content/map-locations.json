@@ -1,0 +1,1066 @@
+[
+  {
+    "slug": "ukouh-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 275.0,
+    "y": -913.0
+  },
+  {
+    "slug": "gutanbac-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 709.0,
+    "y": -1383.0
+  },
+  {
+    "slug": "in-isa-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 26.0,
+    "y": -1504.0
+  },
+  {
+    "slug": "nachoyah-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 390.0,
+    "y": -1661.0
+  },
+  {
+    "slug": "sinatanika-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3842.0,
+    "y": 2300.0
+  },
+  {
+    "slug": "rasitakiwak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 4167.0,
+    "y": 1323.0
+  },
+  {
+    "slug": "gemimik-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 4513.0,
+    "y": 2116.0
+  },
+  {
+    "slug": "domizuin-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3305.0,
+    "y": 1443.0
+  },
+  {
+    "slug": "gatanisis-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 4498.0,
+    "y": 826.0
+  },
+  {
+    "slug": "jochi-ihiga-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3811.0,
+    "y": 1219.0
+  },
+  {
+    "slug": "rasiwak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 4664.0,
+    "y": 3263.0
+  },
+  {
+    "slug": "igashuk-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 4655.0,
+    "y": 3714.0
+  },
+  {
+    "slug": "jochi-iu-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 4347.0,
+    "y": 2876.0
+  },
+  {
+    "slug": "kamatukis-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3431.0,
+    "y": 3357.0
+  },
+  {
+    "slug": "musanokir-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 408.0,
+    "y": 2134.0
+  },
+  {
+    "slug": "kiuyoyou-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1107.0,
+    "y": 2088.0
+  },
+  {
+    "slug": "ekochiu-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1063.0,
+    "y": 1280.0
+  },
+  {
+    "slug": "kikakin-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -396.0,
+    "y": 2736.0
+  },
+  {
+    "slug": "ninjis-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 355.0,
+    "y": 1892.0
+  },
+  {
+    "slug": "sakunbomar-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 167.0,
+    "y": 2320.0
+  },
+  {
+    "slug": "pupunke-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 621.0,
+    "y": 2211.0
+  },
+  {
+    "slug": "yamiyo-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 333.0,
+    "y": 470.0
+  },
+  {
+    "slug": "teniten-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -75.0,
+    "y": -1116.0
+  },
+  {
+    "slug": "kyononis-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -205.0,
+    "y": 451.0
+  },
+  {
+    "slug": "kamizun-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -178.0,
+    "y": -1558.0
+  },
+  {
+    "slug": "jojon-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1202.0,
+    "y": 330.0
+  },
+  {
+    "slug": "tajikats-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 344.0,
+    "y": -1009.0
+  },
+  {
+    "slug": "mayachin-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -706.0,
+    "y": -869.0
+  },
+  {
+    "slug": "ren-iz-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 756.0,
+    "y": 824.0
+  },
+  {
+    "slug": "serutabomac-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -179.0,
+    "y": 1170.0
+  },
+  {
+    "slug": "sinakawak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1415.0,
+    "y": 757.0
+  },
+  {
+    "slug": "riogok-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1441.0,
+    "y": -1616.0
+  },
+  {
+    "slug": "ishodag-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -879.0,
+    "y": 423.0
+  },
+  {
+    "slug": "tadarok-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1082.0,
+    "y": -2187.0
+  },
+  {
+    "slug": "tsutsu-um-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1423.0,
+    "y": -1351.0
+  },
+  {
+    "slug": "sepapa-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 222.0,
+    "y": 1085.0
+  },
+  {
+    "slug": "susuyai-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -785.0,
+    "y": -434.0
+  },
+  {
+    "slug": "kyokugon-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -709.0,
+    "y": -1551.0
+  },
+  {
+    "slug": "jiosin-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -241.0,
+    "y": -371.0
+  },
+  {
+    "slug": "tenmaten-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -595.0,
+    "y": 1551.0
+  },
+  {
+    "slug": "makurukis-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -2847.0,
+    "y": 630.0
+  },
+  {
+    "slug": "sonapan-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1922.0,
+    "y": -359.0
+  },
+  {
+    "slug": "runakit-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -2530.0,
+    "y": 1170.0
+  },
+  {
+    "slug": "taki-ihaban-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1830.0,
+    "y": 1195.0
+  },
+  {
+    "slug": "usazum-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -2139.0,
+    "y": -874.0
+  },
+  {
+    "slug": "en-oma-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 103.0,
+    "y": -2518.0
+  },
+  {
+    "slug": "sitsum-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2369.0,
+    "y": 2596.0
+  },
+  {
+    "slug": "isisim-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1842.0,
+    "y": 2842.0
+  },
+  {
+    "slug": "mayachideg-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3061.0,
+    "y": 1824.0
+  },
+  {
+    "slug": "kimayat-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2864.0,
+    "y": 3638.0
+  },
+  {
+    "slug": "kisinona-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2568.0,
+    "y": 1246.0
+  },
+  {
+    "slug": "sibajitak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2400.0,
+    "y": 3275.0
+  },
+  {
+    "slug": "marakuguc-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1762.0,
+    "y": 2510.0
+  },
+  {
+    "slug": "timawak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1800.0,
+    "y": 1640.0
+  },
+  {
+    "slug": "momosik-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2960.0,
+    "y": 2758.0
+  },
+  {
+    "slug": "moshapin-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2679.0,
+    "y": 1904.0
+  },
+  {
+    "slug": "jiotak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1834.0,
+    "y": 3180.0
+  },
+  {
+    "slug": "mayak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1270.0,
+    "y": 3733.0
+  },
+  {
+    "slug": "sikukuu-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 699.0,
+    "y": 2793.0
+  },
+  {
+    "slug": "minetak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 394.0,
+    "y": 3485.0
+  },
+  {
+    "slug": "jiukoum-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 868.0,
+    "y": -2278.0
+  },
+  {
+    "slug": "utsushok-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 670.0,
+    "y": -3358.0
+  },
+  {
+    "slug": "ishokin-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -565.0,
+    "y": -3524.0
+  },
+  {
+    "slug": "miryotanog-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -4680.0,
+    "y": -3086.0
+  },
+  {
+    "slug": "soryotanog-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3882.0,
+    "y": -2963.0
+  },
+  {
+    "slug": "siwakama-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -2446.0,
+    "y": -3344.0
+  },
+  {
+    "slug": "karahatag-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3728.0,
+    "y": -3625.0
+  },
+  {
+    "slug": "mayatat-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3291.0,
+    "y": -2512.0
+  },
+  {
+    "slug": "kudanisar-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -4167.0,
+    "y": -2143.0
+  },
+  {
+    "slug": "chichim-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3211.0,
+    "y": -3007.0
+  },
+  {
+    "slug": "irasak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -4159.0,
+    "y": -3825.0
+  },
+  {
+    "slug": "rotsumamu-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3407.0,
+    "y": -1363.0
+  },
+  {
+    "slug": "mayamats-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -4638.0,
+    "y": -1513.0
+  },
+  {
+    "slug": "turakamik-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -2657.0,
+    "y": -2237.0
+  },
+  {
+    "slug": "kitawak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1530.0,
+    "y": -2929.0
+  },
+  {
+    "slug": "otutsum-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -4469.0,
+    "y": -671.0
+  },
+  {
+    "slug": "suariwak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -2524.0,
+    "y": -1770.0
+  },
+  {
+    "slug": "rakakudaj-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -2037.0,
+    "y": -1853.0
+  },
+  {
+    "slug": "motsusis-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1795.0,
+    "y": -3487.0
+  },
+  {
+    "slug": "eutoum-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3507.0,
+    "y": 3570.0
+  },
+  {
+    "slug": "otak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -4391.0,
+    "y": 3714.0
+  },
+  {
+    "slug": "sahirow-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3354.0,
+    "y": 2386.0
+  },
+  {
+    "slug": "orochium-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1637.0,
+    "y": 2642.0
+  },
+  {
+    "slug": "tauyosipun-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -4539.0,
+    "y": 2880.0
+  },
+  {
+    "slug": "oshozan-u-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1404.0,
+    "y": 3678.0
+  },
+  {
+    "slug": "wao-os-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -4058.0,
+    "y": 1990.0
+  },
+  {
+    "slug": "rutafu-um-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -2998.0,
+    "y": 3102.0
+  },
+  {
+    "slug": "mayaotaki-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -825.0,
+    "y": 3535.0
+  },
+  {
+    "slug": "sisuran-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -2559.0,
+    "y": 3354.0
+  },
+  {
+    "slug": "nouda-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -2318.0,
+    "y": 2201.0
+  },
+  {
+    "slug": "oromuwak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3079.0,
+    "y": 1617.0
+  },
+  {
+    "slug": "iun-orok-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3539.0,
+    "y": 851.0
+  },
+  {
+    "slug": "turakawak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3498.0,
+    "y": -197.0
+  },
+  {
+    "slug": "mayausiy-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -1167.0,
+    "y": 2602.0
+  },
+  {
+    "slug": "gasas-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -4153.0,
+    "y": 98.0
+  },
+  {
+    "slug": "gatakis-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3652.0,
+    "y": 1806.0
+  },
+  {
+    "slug": "ikatak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": -3951.0,
+    "y": 1139.0
+  },
+  {
+    "slug": "mogawak-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3300.0,
+    "y": 424.0
+  },
+  {
+    "slug": "ihen-a-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3786.0,
+    "y": 578.0
+  },
+  {
+    "slug": "apogek-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3887.0,
+    "y": -217.0
+  },
+  {
+    "slug": "yomizuk-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 4413.0,
+    "y": -613.0
+  },
+  {
+    "slug": "joniu-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2918.0,
+    "y": 507.0
+  },
+  {
+    "slug": "o-ogim-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2756.0,
+    "y": -1089.0
+  },
+  {
+    "slug": "kurakat-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2361.0,
+    "y": -511.0
+  },
+  {
+    "slug": "tukarok-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 915.0,
+    "y": -251.0
+  },
+  {
+    "slug": "jonsau-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1744.0,
+    "y": 18.0
+  },
+  {
+    "slug": "morok-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1182.0,
+    "y": -779.0
+  },
+  {
+    "slug": "maoikes-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2276.0,
+    "y": 147.0
+  },
+  {
+    "slug": "zakusu-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3526.0,
+    "y": -1482.0
+  },
+  {
+    "slug": "jikais-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 4267.0,
+    "y": -1673.0
+  },
+  {
+    "slug": "sifumim-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2826.0,
+    "y": -3270.0
+  },
+  {
+    "slug": "zanmik-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3470.0,
+    "y": -2181.0
+  },
+  {
+    "slug": "anedamimik-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 4232.0,
+    "y": -2178.0
+  },
+  {
+    "slug": "utojis-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1218.0,
+    "y": -2543.0
+  },
+  {
+    "slug": "mayahisik-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3729.0,
+    "y": -2059.0
+  },
+  {
+    "slug": "jogou-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3346.0,
+    "y": -1187.0
+  },
+  {
+    "slug": "bamitok-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 3094.0,
+    "y": -3210.0
+  },
+  {
+    "slug": "marari-in-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 4631.0,
+    "y": -3712.0
+  },
+  {
+    "slug": "eshos-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1566.0,
+    "y": -1945.0
+  },
+  {
+    "slug": "makasura-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1770.0,
+    "y": -1052.0
+  },
+  {
+    "slug": "joju-u-u-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 1515.0,
+    "y": -3577.0
+  },
+  {
+    "slug": "tokiy-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 2304.0,
+    "y": -2378.0
+  },
+  {
+    "slug": "susub-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 349.0,
+    "y": -2052.0
+  },
+  {
+    "slug": "jochisiu-shrine",
+    "type": "shrine",
+    "layer": "surface",
+    "x": 931.0,
+    "y": -1903.0
+  },
+  {
+    "slug": "gikaku-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 4506.0,
+    "y": 2166.0
+  },
+  {
+    "slug": "natak-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 3671.0,
+    "y": 1484.0
+  },
+  {
+    "slug": "mogisari-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 4655.0,
+    "y": 3500.0
+  },
+  {
+    "slug": "jinodok-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -1257.0,
+    "y": -1487.0
+  },
+  {
+    "slug": "simosiwak-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 162.0,
+    "y": 1972.0
+  },
+  {
+    "slug": "mayam-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 340.0,
+    "y": 2815.0
+  },
+  {
+    "slug": "taunhiy-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -2402.0,
+    "y": 825.0
+  },
+  {
+    "slug": "kadaunar-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 1882.0,
+    "y": 1203.0
+  },
+  {
+    "slug": "joku-usin-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 1075.0,
+    "y": -3348.0
+  },
+  {
+    "slug": "joku-u-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 1376.0,
+    "y": -3340.0
+  },
+  {
+    "slug": "rakashog-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -1715.0,
+    "y": -2119.0
+  },
+  {
+    "slug": "siyamotsus-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -1795.0,
+    "y": -3295.0
+  },
+  {
+    "slug": "mayasiar-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -3547.0,
+    "y": -321.0
+  },
+  {
+    "slug": "tenbez-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -970.0,
+    "y": 3535.0
+  },
+  {
+    "slug": "ijo-o-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -3861.0,
+    "y": 2682.0
+  },
+  {
+    "slug": "mayaumekis-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -2948.0,
+    "y": 3051.0
+  },
+  {
+    "slug": "kahatanaum-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -3296.0,
+    "y": 3432.0
+  },
+  {
+    "slug": "taninoud-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -1802.0,
+    "y": 3407.0
+  },
+  {
+    "slug": "ganos-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -3370.0,
+    "y": 467.0
+  },
+  {
+    "slug": "ga-ahisas-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": -3596.0,
+    "y": 961.0
+  },
+  {
+    "slug": "jirutagumac-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 2916.0,
+    "y": 534.0
+  },
+  {
+    "slug": "igoshon-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 3481.0,
+    "y": 666.0
+  },
+  {
+    "slug": "sihajog-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 4546.0,
+    "y": -846.0
+  },
+  {
+    "slug": "mayanas-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 4613.0,
+    "y": -947.0
+  },
+  {
+    "slug": "yansamin-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 2351.0,
+    "y": -1783.0
+  },
+  {
+    "slug": "kumamayn-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 2857.0,
+    "y": -2856.0
+  },
+  {
+    "slug": "josiu-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 1758.0,
+    "y": -1208.0
+  },
+  {
+    "slug": "ukoojisi-shrine",
+    "type": "shrine",
+    "layer": "sky",
+    "x": 1469.0,
+    "y": -2169.0
+  }
+]
